@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertex</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-size: auto;
+      color: #fff;
+      z-index: -10;
+      overflow: hidden;
+    }
+
+    nav span {
+      color: #fff;
+      padding: 10px;
+      text-align: left;
+      font-size: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav {
+      background-color: #000103;
+      overflow: hidden;
+      height: 11vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+      border-image: linear-gradient(to right, #4287f5, #01061a);
+      border-image-slice: 1;
+    }
+
+    nav a {
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav a i {
+      margin-right: 5px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: #fff;
+      padding: 10px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: fixed;
+      margin-left: 20px;
+      min-width: 64px;
+      z-index: 10000;
+      text-align: left;
+      background-color: black;
+      color: white;
+      border-radius: 8px;
+      opacity: 0.85;
+      border: 1px rgba(255, 255, 255, 0.1) solid;
+    }
+
+    .dropdown-content:hover {
+      opacity: 1;
+      transition-delay: 0.015s;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+      font-size: 14px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: rgba(255, 255, 255, 0.01);
+      color: white;
+      border-left: white 2px solid;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .landing-page {
+      text-align: center;
+    }
+
+    .landing-page h1 {
+      font-size: 36px;
+    }
+
+    iframe {
+      width: 100vw;
+      height: 89vh;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="e">
+    <span>Vertex</span>
+    <div>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-gamepad"></i> Games &#9662;</button>
+        <div class="dropdown-content">
+          <a href="cloakify.html">Bloons TD 2</a>
+          <a href="cloakify.html">Bloons TD 3</a>
+          <a href="/games/1.5.2.html">Minecraft 1.5.2</a>
+          <a href="/games/1.8.8.html">Minecraft 1.8.8</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-th"></i> Apps &#9662;</button>
+        <div class="dropdown-content">
+          <a href="/apps/cloakify.html">Cloakify</a>
+          <a href="#">Sandbox</a>
+          <a href="#">Flash Emulator</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="landing-page">
+    <iframe id="x2w" src="https://zerogptai.org/chat/" width="100vw" height="100vw" frameborder="0"></iframe>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script>
+    function focus() {
+      document.getElementById("x2w").focus();
+    }
+
+    document.getElementById("e").addEventListener("click", focus);
+    document.getElementById("x2w").addEventListener("click", focus);
+
+    document.getElementById("x2w").focus();
+  </script>
+</body>
+
+</html>

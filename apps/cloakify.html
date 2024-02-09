@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertex</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #060a0f;
+      color: #fff;
+      z-index: -10;
+    }
+
+    nav span {
+      color: #fff;
+      padding: 10px;
+      text-align: left;
+      font-size: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav {
+      background-color: #000103;
+      overflow: hidden;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+      border-image: linear-gradient(to right, #4287f5, #01061a);
+      border-image-slice: 1;
+    }
+
+    nav a {
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav a i {
+      margin-right: 5px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: #fff;
+      padding: 10px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: fixed;
+      margin-left: 20px;
+      min-width: 64px;
+      z-index: 10000;
+      text-align: left;
+      background-color: black;
+      color: white;
+      border-radius: 8px;
+      opacity: 0.85;
+      border: 1px rgba(255, 255, 255, 0.1) solid;
+    }
+
+    .dropdown-content:hover {
+      opacity: 1;
+      transition-delay: 0.015s;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+      font-size: 14px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: rgba(255, 255, 255, 0.01);
+      color: white;
+      border-left: white 2px solid;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .landing-page button {
+      transition: transform 0.5s, opacity 0.5s;
+      color: #ffffff;
+      border: none;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #4287f5;
+      padding: 10px 20px;
+      margin-top: 20px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      width: 210px;
+      height: 54px;
+    }
+
+    .landing-page button:hover {
+      opacity: 0.775;
+    }
+
+    *::placeholder {
+      color: lightgray;
+    }
+
+    input {
+      background-color: #000103;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 16px;
+      margin-bottom: 16px;
+      width: 256px;
+      transition: border-color 0.3s ease-in-out, scale 0.3s ease-in-out;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #4287f5;
+      scale: 1.015;
+    }
+
+    .dropdown-content:hover {
+      opacity: 1;
+      transition-delay: 0.015s;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+      font-size: 14px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: rgba(255, 255, 255, 0.01);
+      color: white;
+      border-left: white 2px solid;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .landing-page {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .landing-page h1 {
+      font-size: 36px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <span>Vertex</span>
+    <div>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-gamepad"></i> Games &#9662;</button>
+        <div class="dropdown-content">
+          <a href="cloakify.html">Bloons TD 2</a>
+          <a href="cloakify.html">Bloons TD 3</a>
+          <a href="cloakify.html">Minecraft 1.5.2</a>
+          <a href="cloakify.html">Minecraft 1.8.8</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-th"></i> Apps &#9662;</button>
+        <div class="dropdown-content">
+          <a href="/apps/cloakify.html">Cloakify</a>
+          <a href="#">Sandbox</a>
+          <a href="#">Flash Emulator</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="landing-page">
+    <h1 style="transform:scale(1.025);">Cloakify</h1>
+    <p style="transform:scale(1.2);">Enter a URL to cloak:</p>
+    <input id="i" type="text" placeholder="Enter URL..."></input><br>
+    <button id="d"><i class="fas fa-eye-slash"></i> Cloak</button>
+    <iframe id="iframe" style="display:none; position:fixed; top:11vh; left:0; bottom:0; right:0; width:100%; height:89vh; border-width: 0px; outline: none;"></iframe>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script>
+    const d = document.getElementById("d");
+    const iframe = document.getElementById("iframe");
+
+    d.addEventListener("click", () => {
+      const i = document.getElementById("i");
+      const u = i.value;
+      
+      iframe.src = u;
+      iframe.style.display = "block";
+    });
+  </script>
+</body>
+
+</html>
