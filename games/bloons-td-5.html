@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertex</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/favicon.png">
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-size: auto;
+      color: #fff;
+      z-index: -10;
+      overflow: hidden;
+    }
+
+    nav span {
+      color: #fff;
+      padding: 10px;
+      text-align: left;
+      font-size: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav {
+      background-color: #000103;
+      overflow: hidden;
+      height: 11vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+      border-image: linear-gradient(to right, #4287f5, #01061a);
+      border-image-slice: 1;
+    }
+
+    nav a {
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav a i {
+      margin-right: 5px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: #fff;
+      padding: 10px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: fixed;
+      margin-left: 20px;
+      min-width: 64px;
+      z-index: 10000;
+      text-align: left;
+      background-color: black;
+      color: white;
+      border-radius: 8px;
+      opacity: 0.85;
+      border: 1px rgba(255, 255, 255, 0.1) solid;
+    }
+
+    .dropdown-content:hover {
+      opacity: 1;
+      transition-delay: 0.015s;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+      font-size: 14px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: rgba(255, 255, 255, 0.01);
+      color: white;
+      border-left: white 2px solid;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .landing-page {
+      text-align: center;
+    }
+
+    .landing-page h1 {
+      font-size: 36px;
+    }
+
+    iframe {
+      width: 100vw;
+      height: 89vh;
+    }
+
+    #toggleFullscreenButton {
+      border-radius: 4px;
+      height: 32px;
+      border: none;
+      color: white;
+      padding: 6px;
+      padding-top: 3px;
+      background-color: #4287f5;
+    }
+
+    #toggleFullscreenButton:hover {
+      background-color: #629bf5;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body id="body">
+  <nav id="e">
+    <span>Vertex</span>
+    <div>
+      <button id="toggleFullscreenButton"><svg style="top:3px;position:relative;width:16px;height:16px;"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path fill="#ffffff"
+            d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z" />
+        </svg> Toggle Fullscreen</button>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-gamepad"></i> Games &#9662;</button>
+        <div class="dropdown-content">
+          <a href="cloakify.html">Bloons TD 2</a>
+          <a href="cloakify.html">Bloons TD 3</a>
+          <a href="/games/1.5.2.html">Minecraft 1.5.2</a>
+          <a href="/games/1.8.8.html">Minecraft 1.8.8</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-th"></i> Apps &#9662;</button>
+        <div class="dropdown-content">
+          <a href="/apps/cloakify.html">Cloakify</a>
+          <a href="#">Sandbox</a>
+          <a href="#">Flash Emulator</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+      player.style.width = '100vw';
+      player.style.height = '89vh';
+      const container = document.getElementById("body");
+      container.appendChild(player);
+      player.load("../games/b5.swf");
+
+      function makeIframeFullscreen() {
+        if (player.requestFullscreen) {
+          player.requestFullscreen();
+        } else if (player.webkitRequestFullscreen) {
+          player.webkitRequestFullscreen();
+        }
+      }
+
+      const toggleFullscreenButton = document.getElementById('toggleFullscreenButton');
+      toggleFullscreenButton.addEventListener('click', makeIframeFullscreen);
+    });
+  </script>
+</body>
+
+</html>
