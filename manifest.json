@@ -1,0 +1,16 @@
+{
+    "name": "e",
+    "short_name": "e",
+    "description": "e",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ]
+}
