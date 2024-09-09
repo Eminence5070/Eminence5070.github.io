@@ -28,6 +28,13 @@
         "description": "Minecraft 1.5.2 ported to the web!"
     },
     {
+        "title": "BTD 1",
+        "icon": "icons/btd_old.jpeg",
+        "url": "games/flash.html?href=https://archive.org/download/the-btd-flash-archives/The%20BTD%20Flash%20Archives.zip/The%20BTD%20Flash%20Archives%2FBloonsTD.swf",
+        "category": "Games",
+        "description": "Bloons TD 1!"
+    },
+    {
         "title": "Eaglercraft 1.2.5",
         "icon": "icons/minecraft.svg",
         "url": "games/eaglercraft1.2.5.html",
@@ -74,6 +81,6 @@
         "icon": "icons/stack.png",
         "url": "games/stack-game/stack.html",
         "category": "Games",
-        "description": "Test your reaction skills!"
+        "description": "Test your reaction is skills!"
     }
 ]
