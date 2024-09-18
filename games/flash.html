@@ -20,10 +20,6 @@
             width: 100%;
             height: 100vh;
         }
-        canvas {
-            width: 100% !important;
-            height: 100vh !important;
-        }
     </style>
 </head>
 <body>
@@ -32,7 +28,7 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const flashUrl = urlParams.get('href');
- 
+
         if (flashUrl) {
             const rufflePlayer = window.RufflePlayer.newest();
             const player = rufflePlayer.createPlayer();
@@ -40,11 +36,8 @@
 
             player.load(flashUrl);
 
-            const canvas = document.querySelector("canvas");
-            if (canvas) {
-                canvas.style.width = '100%';
-                canvas.style.height = '100vh';
-            }
+            player.style.width = "100%";
+            player.style.height = "100vh";
         } else {
             console.error("No 'href' parameter found in the URL.");
         }
