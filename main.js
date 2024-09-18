@@ -1,13 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.addEventListener('keydown', function(event) {
-        if (event.altKey && event.code === 'Backquote') {
-            event.preventDefault();
-            window.location.href = 'index.html';
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
     let currentPage = 1;
     let itemsPerPage = 6;
     let currentFilter = 'All';

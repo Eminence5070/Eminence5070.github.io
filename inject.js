@@ -12,3 +12,11 @@ document.addEventListener("visibilitychange", () => {
         document.body.focus();
     }
 });
+
+// quick-hide shortcut
+document.addEventListener('keydown', function(event) {
+    if (event.altKey && event.code === 'Backquote') {
+        event.preventDefault();
+        window.location.href = 'index.html';
+    }
+});
