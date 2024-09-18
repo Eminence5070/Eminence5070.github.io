@@ -9,3 +9,7 @@ channel = "stable-23_11"
 publicDir = "/"
 deploymentTarget = "static"
 run = ["sh", "-c", "node_modules/.bin/serve -l 8080 ."]
+
+[[ports]]
+localPort = 8080
+externalPort = 80
