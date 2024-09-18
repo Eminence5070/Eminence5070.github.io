@@ -8,11 +8,15 @@ function beforeUnload(event) {
 window.addEventListener('beforeunload', beforeUnload);
 
 // prevents unfocusing the window
-document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'hidden') {
-        document.body.focus();
-    }
+document.addEventListener("click", function() {
+    const focusElement = document.createElement("input");
+    focusElement.style.opacity = 0;
+    focusElement.style.position = "absolute";
+    document.body.appendChild(focusElement);
+    focusElement.focus();
+    document.body.removeChild(focusElement);
 });
+
 
 // quick-hide shortcut
 document.addEventListener('keydown', function(event) {
