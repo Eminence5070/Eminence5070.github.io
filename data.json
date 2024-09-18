@@ -29,11 +29,7 @@
     },
     {
         "title": "BTD 1",
-<<<<<<< HEAD
         "icon": "icons/btd_old.jpeg",
-=======
-        "icon": "icons/IMG_0462.jpeg",
->>>>>>> 418f0c1fc2329ce01f5f2424eeac6b019fd2eb63
         "url": "games/flash.html?href=https://archive.org/download/the-btd-flash-archives/The%20BTD%20Flash%20Archives.zip/The%20BTD%20Flash%20Archives%2FBloonsTD.swf",
         "category": "Games",
         "description": "Bloons TD 1!"
