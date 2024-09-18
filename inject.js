@@ -1,14 +1,15 @@
 // prevents GoGuardian tab closing
-window.addEventListener('beforeunload', function (event) {
+function beforeUnload(event) {
     const message = 'Are you sure you want to leave? Your changes may not be saved.';
-
     event.returnValue = message;
     return message;
-});
+}
+
+window.addEventListener('beforeunload', beforeUnload);
 
 // prevents unfocusing the window
-document.addEventListener("visibilitychange", () => {
-    if ((document.visibilityState === 'visible')) {
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
         document.body.focus();
     }
 });
@@ -16,7 +17,16 @@ document.addEventListener("visibilitychange", () => {
 // quick-hide shortcut
 document.addEventListener('keydown', function(event) {
     if (event.altKey && event.code === 'Backquote') {
+
+        window.removeEventListener('beforeunload', beforeUnload);
+        if (window.onbeforeunload) {
+            window.onbeforeunload = null;
+        }
+        
         event.preventDefault();
-        window.location.href = 'index.html';
+
+        setTimeout(function() {
+            window.location.href = '/index.html';
+        }, 100);
     }
 });
