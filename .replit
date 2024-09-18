@@ -1,6 +1,6 @@
 hidden=[".config"]
 modules = ["web:v2-20230623-0b7a606"]
-run = "npx serve -l 8080 ."
+run = "node_modules/.bin/serve -l 8080 ."
 
 [nix]
 channel = "stable-23_11"
@@ -8,8 +8,4 @@ channel = "stable-23_11"
 [deployment]
 publicDir = "/"
 deploymentTarget = "static"
-run = ["npx", "serve", "-l", "8080", "."]
-
-[[ports]]
-localPort = 8080
-externalPort = 80
+run = ["sh", "-c", "node_modules/.bin/serve -l 8080 ."]
