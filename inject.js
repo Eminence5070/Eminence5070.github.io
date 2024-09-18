@@ -7,18 +7,8 @@ window.addEventListener('beforeunload', function (event) {
 });
 
 // prevents unfocusing the window
-function focusOnDocument() {
-    if (document.hasFocus()) {
+document.addEventListener("visibilitychange", () => {
+    if ((document.visibilityState === 'visible')) {
         document.body.focus();
     }
-}
-
-document.addEventListener('visibilitychange', function () {
-    if (!document.hidden) {
-        focusOnDocument();
-    }
-});
-
-window.addEventListener('focus', function () {
-    focusOnDocument();
 });
