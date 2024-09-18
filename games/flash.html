@@ -26,7 +26,6 @@
     <div id="flash-player"></div>
 
     <script>
-        // Get the 'href' parameter from the URL
         const urlParams = new URLSearchParams(window.location.search);
         const flashUrl = urlParams.get('href');
 
@@ -35,8 +34,8 @@
             const player = rufflePlayer.createPlayer();
             document.getElementById("flash-player").appendChild(player);
 
-            // Load the SWF file specified in the href parameter
             player.load(flashUrl);
+            player.requestFullscreen();
         } else {
             console.error("No 'href' parameter found in the URL.");
         }
