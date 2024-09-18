@@ -63,13 +63,6 @@
         "description": "Bloons TD 5!"
     },
     {
-        "title": "Bloons Monkey City",
-        "icon": "icons/bmc.webp",
-        "url": "games/flash.html?href=flash/btd_mc.swf",
-        "category": "Games",
-        "description": "Create a prospering city!"
-    },
-    {
         "title": "Eaglercraft 1.2.5",
         "icon": "icons/minecraft.svg",
         "url": "games/eaglercraft1.2.5.html",
