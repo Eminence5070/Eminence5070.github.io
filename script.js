@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 let flashUrl = inputText.slice(8).trim();
                 window.location.href = `/games/flash.html?href=${encodeURIComponent(flashUrl)}`;
               } else {
-                window.open('https://www.google.com/search?q=' + inputText)
+                window.open('https://www.google.com/search?q=' + inputText, '__blank');
               }
         }
     });
