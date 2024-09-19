@@ -9,12 +9,7 @@ window.addEventListener('beforeunload', beforeUnload);
 
 // prevents unfocusing the window
 document.addEventListener("click", function() {
-    const focusElement = document.createElement("input");
-    focusElement.style.opacity = 0;
-    focusElement.style.position = "absolute";
-    document.body.appendChild(focusElement);
-    focusElement.focus();
-    document.body.removeChild(focusElement);
+    window.focus()
 });
 
 

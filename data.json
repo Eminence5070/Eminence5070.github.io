@@ -14,7 +14,42 @@
         "description": "Minecraft 1.9.4 ported to the web!"
     },
     {
-        "title": "Time Shooter",
+        "title": "GBA.JS",
+        "icon": "icons/gba.png",
+        "url": "apps/gbajs/index.html",
+        "category": "Apps",
+        "description": "Only true sigmas play this!"
+    },
+    {
+        "title": "Slope",
+        "icon": "icons/slope.webp",
+        "url": "games/slope/index.html",
+        "category": "Games",
+        "description": "Only true sigmas play this!"
+    },
+    {
+        "title": "Drift Hunters",
+        "icon": "icons/drift.jpg",
+        "url": "https://webglmath.github.io/drift-hunters/",
+        "category": "Games",
+        "description": "Only true sigmas play this!"
+    },
+    {
+        "title": "1v1.lol",
+        "icon": "icons/1v1.jpg",
+        "url": "games/1v1/index.html",
+        "category": "Games",
+        "description": "Only true sigmas play this!"
+    },
+    {
+        "title": "FNAW",
+        "icon": "icons/fnaw.png",
+        "url": "games/fnaw.html",
+        "category": "Games",
+        "description": "Five Nights at Freddy's made by the Eaglercraft developer!"
+    },
+    {
+        "title": "Time Shooter 2",
         "icon": "icons/timeshooter.jpeg",
         "url": "games/timeshooter/index.html",
         "category": "Games",
@@ -29,7 +64,7 @@
     },
     {
         "title": "Eaglercraft",
-        "icon": "icons/minecraft_old.jpeg",
+        "icon": "icons/minecraft_old.svg",
         "url": "games/eaglercraft.html",
         "category": "Games",
         "description": "Minecraft 1.5.2 ported to the web!"
@@ -37,35 +72,35 @@
     {
         "title": "BTD 1",
         "icon": "icons/btd_old.jpeg",
-        "url": "games/flash.html?href=flash/btd1.swf",
+        "url": "games/flash?href=flash/btd1.swf",
         "category": "Games",
         "description": "Bloons TD 1!"
     },
     {
         "title": "BTD 2",
         "icon": "icons/btd_old.jpeg",
-        "url": "games/flash.html?href=flash/btd2.swf",
+        "url": "games/flash?href=flash/btd2.swf",
         "category": "Games",
         "description": "Bloons TD 2!"
     },
     {
         "title": "BTD 3",
         "icon": "icons/btd3.jpg",
-        "url": "games/flash.html?href=flash/btd3.swf",
+        "url": "games/flash?href=flash/btd3.swf",
         "category": "Games",
         "description": "Bloons TD 3!"
     },
     {
         "title": "BTD 4",
         "icon": "icons/btd4.webp",
-        "url": "games/flash.html?href=flash/btd4.swf",
+        "url": "games/flash?href=flash/btd4.swf",
         "category": "Games",
         "description": "Bloons TD 4!"
     },
     {
         "title": "BTD 5",
         "icon": "icons/btd5.png",
-        "url": "games/flash.html?href=flash/btd5.swf",
+        "url": "games/flash?href=flash/btd5.swf",
         "category": "Games",
         "description": "Bloons TD 5!"
     },

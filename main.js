@@ -61,8 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const btn = document.createElement('button');
             btn.textContent = i;
             if (i === currentPage) {
-                btn.style.backgroundColor = '#4f6d66';
-                btn.style.scale = '0.95';
+                btn.style.backgroundColor = '#272727';
+                btn.style.top = '2px';
+                btn.style.position = 'relative';
             }
             btn.addEventListener('click', function() {
                 currentPage = i;
@@ -84,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(data => {
                     contextMenu.innerHTML = parseChangelog(data);
                     contextMenu.style.display = 'block';
-                    contextMenu.style.left = `75vw`;
-                    contextMenu.style.top = `24px`;
+                    contextMenu.style.left = `77.35vw`;
+                    contextMenu.style.top = `62px`;
                     isChangelogOpen = true;
                 });
 

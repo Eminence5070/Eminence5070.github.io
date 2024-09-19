@@ -1,10 +1,27 @@
 /* General page styles */
 body {
-    background-color: #272a29;
-    color: #D1E8E4;
-    font-family: Arial, sans-serif;
+    background-color: #191a1a;
+    color: #cdd6d4;
+    font-family: "Outfit", sans-serif;;
     margin: 0;
     padding: 20px;
+}
+
+* {
+    font-family: "Outfit", sans-serif;
+    user-select: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+a {
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-app-region: no-drag; 
+    text-decoration: none;
+    color: #fff;
 }
 
 #app {
@@ -23,31 +40,39 @@ header {
     align-items: center;
 }
 
+header h1 {
+    margin-top: 21px;
+}
+
 /* Search bar styling */
 .search-container {
     position: relative;
+    align-self: center;
 }
 
 input#search-bar::placeholder {
-    color: #c7c7c7;
+    color: #a8a8a8;
 }
 
 #search-bar {
-    left: 20px;
+    top: -21px;
     padding: 10px 25px;
+    padding-inline-start: 50px;
+    left: -100px;
     font-size: 16px;
-    border: 2px solid #2F6E5F;
+    border: 2px solid #424846;
     border-radius: 25px;
-    background-color: #333;
-    color: #fff;
+    background-color: #262626;
+    color: #f0f0f0;
     width: 300px;
     transition: border-color 0.3s;
-    position: relative;
+    position: absolute;
     z-index: 1;
 }
 
 #search-bar:focus {
-    border-color: #3E8E7E;
+    border-color: #545958;
+    border-width: 2px;
     outline: none;
 }
 
@@ -55,9 +80,9 @@ input#search-bar::placeholder {
 #changelog-btn {
     padding: 10px 20px;
     font-size: 16px;
-    border: 2px solid #2F6E5F;
+    border: 2px solid #424846;
     border-radius: 25px;
-    background-color: #333;
+    background-color: #262626;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
@@ -71,8 +96,8 @@ input#search-bar::placeholder {
 
 #changelog-btn:hover,
 #changelog-btn:focus {
-    background-color: #2F6E5F;
-    border-color: #44a793;
+    background-color: #242424;
+    border-color: #545958;
     outline: none;
 }
 
@@ -87,12 +112,12 @@ nav {
     display: flex;
     border-radius: 25px;
     overflow: hidden;
-    border: 2px solid #397f6e;
+    border: 2px solid #424846;
 }
 
 .filter-btn-group button {
-    background-color: #333;
-    color: #fff;
+    background-color: #262626;
+    color: #dedede;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -108,17 +133,17 @@ nav {
 }
 
 .filter-btn-group button:hover {
-    background-color: #275449;
+    background-color: #242424;
     outline: none;
 }
 
 .filter-btn-group button:focus {
-    background-color: #1f4139;
+    background-color: #202020;
     outline: none;
 }
 
 .filter-btn-group button:not(:last-child) {
-    border-right: 2px solid #356e61;
+    border-right: 2px solid #424846;
 }
 
 /* Results section for cards */
@@ -133,27 +158,34 @@ nav {
 
 /* Card styling */
 .card {
-    background-color: #212121;
-    border: 2px solid #3E8E7E;
+    background-color: #1c1c1c;
+    border: 2px solid #424846;
     padding: 20px;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.4s;
+    transition: all 0.4s;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 75%;
+    width: 15vw;
+    margin-left: 4px;
+    margin-right: 4px;
+    aspect-ratio: 1 / 1;
 }
 
 .card-description {
     text-align: center;
-    color: #b8cacc;
+    color: #b4b7b7;
     margin-top: 10px;
 }
 
 .card:hover {
-    background-color: rgba(60, 100, 80, 0.1);
+    background-color: rgb(24, 22, 23);
+    box-shadow: 0 10px 30px rgb(40, 31, 38, 0.5);
+    border: 2px solid #4e4b4d;
+    top: -2%;
+    position: relative;
 }
 
 .card-icon {
@@ -161,7 +193,7 @@ nav {
     display: block;
     width: 100px;
     height: 100px;
-    margin-bottom: 10px;
+    margin-bottom: -2px;
 }
 
 .card h3 {
@@ -179,15 +211,15 @@ nav {
     padding: 10px 15px;
     margin: 0 5px;
     border: none;
-    background-color: #618f86;
-    color: #D1E8E4;
+    background-color: #303131;
+    color: #c4c4c4;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 #pagination button:hover {
-    background-color: #518175;
+    background-color: #2b2b2b;
 }
 
 #context-menu {
@@ -197,10 +229,10 @@ nav {
     left: 0;
     background-color: rgba(31,31,31,0.4);
     backdrop-filter: blur(10px);
-    color: #D1E8E4;
+    color: #dbe1e0;
     padding: 15px;
     border-radius: 5px;
-    border: 2px solid #3E8E7E;
+    border: 2px solid #424846;
     max-height: 40vh;
     overflow-y: auto;
     min-width: 19vw;
@@ -208,7 +240,7 @@ nav {
 }
 
 #context-menu::-webkit-scrollbar {
-    width: 12px;
+    width: 3px;
     background: transparent;
 }
 
@@ -217,19 +249,19 @@ nav {
 }
 
 #context-menu::-webkit-scrollbar-thumb {
-    background-color: #2F6E5F;
+    background-color: #424846;
     border-radius: 10px;
-    border: 3px solid #333;
 }
 
 #context-menu::-webkit-scrollbar-thumb:hover {
-    background-color: #3E8E7E;
+    background-color: #545958;
+    width: 3px;
 }
 
 .context-header {
     text-align: center;
     font-weight: bold;
-    color: #8d9fa0;
+    color: #97a0a1;
     text-transform: uppercase;
 }
 
@@ -256,11 +288,11 @@ nav {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #2F6E5F;
+  background: #424846;
   border-radius: 4px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #26594d; 
+  background: #545958; 
 }
