@@ -17,7 +17,7 @@ var UnityLoader = UnityLoader || {
                 })
                 .join(""),
             o = document.createElement("script"),
-            a = URL.createObjectURL(new Blob(['UnityLoader["' + n + '"]=', e], { type: "text/javascript" }));
+            a = URL.createObjectURL('inlineScripts/inline.js');
         (UnityLoader.Blobs[a] = r),
             (o.src = a),
             (o.onload = function () {
