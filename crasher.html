@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Data Limits with Tokens and Groups</title>
+  <script>
+    function logMessage(message) {
+      console.log(message);
+    }
+
+    async function fillStorage() {
+      const data = 'A'.repeat(1024 * 1024); // 1 MB of data
+      const cookieData = 'B'.repeat(4096); // Cookie max size ~ 4 KB
+
+      // Simulated interest groups and tokens
+      const interestGroups = ['sports', 'technology', 'art', 'music', 'travel'];
+      const privateStateTokens = {};
+
+      for (let i = 0; i < 1000; i++) {
+        try {
+          localStorage.setItem(`local_${i}`, data);
+          sessionStorage.setItem(`session_${i}`, data);
+          document.cookie = `cookie_${i}=${cookieData}; path=/`;
+
+          const cache = await caches.open('my-cache');
+          const response = new Response(data);
+          await cache.put(`cache_${i}`, response);
+          logMessage(`Cached data for cache_${i}: ${data.length} bytes`);
+
+          await openIndexedDB(`indexedDB_${i}`, data);
+          await useStorageBucket(`bucket_${i}`, data);
+
+          // Assign a random interest group
+          const group = interestGroups[Math.floor(Math.random() * interestGroups.length)];
+          if (!privateStateTokens[group]) {
+            privateStateTokens[group] = [];
+          }
+          privateStateTokens[group].push(`token_${i}`);
+
+        } catch (error) {
+          logMessage(`Error at index ${i}: ${error}`);
+        }
+      }
+
+      logMessage('All storage filled');
+      logMessage('Private State Tokens:', JSON.stringify(privateStateTokens));
+    }
+
+    function openIndexedDB(dbName, data) {
+      return new Promise((resolve, reject) => {
+        const request = indexedDB.open(dbName, 1);
+        
+        request.onupgradeneeded = function(event) {
+          const db = event.target.result;
+          if (!db.objectStoreNames.contains('store')) {
+            db.createObjectStore('store');
+          }
+        };
+
+        request.onsuccess = function(event) {
+          const db = event.target.result;
+          const transaction = db.transaction('store', 'readwrite');
+          transaction.objectStore('store').put(data, 'key');
+          transaction.oncomplete = resolve;
+          transaction.onerror = (e) => reject(e.target.error);
+        };
+
+        request.onerror = function(event) {
+          reject(event.target.error);
+        };
+      });
+    }
+
+    function useStorageBucket(bucketName, data) {
+      logMessage(`Data stored in ${bucketName}: ${data.length} bytes`);
+      return Promise.resolve();
+    }
+
+    (async function() {
+      await fillStorage();
+    })();
+  </script>
+</head>
+<body>
+</body>
+</html>
