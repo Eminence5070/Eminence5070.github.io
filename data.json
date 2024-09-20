@@ -28,9 +28,9 @@
         "description": "Only true sigmas play this!"
     },
     {
-        "title": "Drift Hunters",
+        "title": "Drift Hunters 2",
         "icon": "icons/drift.jpg",
-        "url": "https://webglmath.github.io/drift-hunters/",
+        "url": "games/drift/index.html",
         "category": "Games",
         "description": "Only true sigmas play this!"
     },
