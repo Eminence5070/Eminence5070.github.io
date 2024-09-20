@@ -7,11 +7,11 @@
     
     <meta charset="utf-8" />
     <title>1v1.LOL</title>
-    <script src="1v1/js/googleAnalytics.js"></script>
-    <script src="1v1/lib/jquery.min.js"></script>
-    <script src="1v1/js/IronSourceRV.js"></script>
-    <script src="1v1/js/mobileRedirect.js"></script>
-    <script src="1v1/js/fullscreen.js"></script>
+    <script src="js/googleAnalytics.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="js/IronSourceRV.js"></script>
+    <script src="js/mobileRedirect.js"></script>
+    <script src="js/fullscreen.js"></script>
     <script>
       var gameLoaded = false;
       window.addEventListener("beforeunload", function (e) {
@@ -24,15 +24,15 @@
         console.log(e);
       };
     </script>
-    <link rel="icon" type="image/png" href="1v1/favicon.png?v2" />
+    <link rel="icon" type="image/png" href="favicon.png?v2" />
     <meta property="og:title" content="1v1.LOL" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Discover 1v1, the online building simulator & third person shooting game. Battle royale, build fight, box fight, zone wars and more game modes to enjoy!" />
-    <link rel="stylesheet" href="1v1/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta name="description" content="Discover 1v1, the online building simulator & third person shooting game. Battle royale, build fight, box fight, zone wars and more game modes to enjoy!" />
     <meta name="keywords" content="just,build,simulator,practice,free,online,battle,royale" />
-    <script type="text/javascript" src="1v1/js/sdkloader/ima3.js"></script>
+    <script type="text/javascript" src="js/sdkloader/ima3.js"></script>
 
     <!-- ZONETAG - PLACE INTO HEAD SECTION OR RUN CODE AT STARTUP -->
     <script>
@@ -89,7 +89,7 @@
         });
     </script>
     <!-- MIDROLL/INTERSTITIAL VIDEO API -->
-    <script src="1v1/js/cpmstar.js"></script>
+    <script src="js/cpmstar.js"></script>
   </head>
 
   <body>
@@ -136,17 +136,17 @@
     <!-- <div id="interAdsContainer" style="display: none;"></div> -->
     <div id="gameContainer"></div>
     <div id="loader">
-      <img class="logo" src="1v1/logo.png" />
+      <img class="logo" src="logo.png" />
       <div class="spinner"></div>
       <div class="progress">
         <div class="full"></div>
       </div>
     </div>
 
-    <script id="unity-loader" src="1v1/UnityLoader.js"></script>
+    <script id="unity-loader" src="UnityLoader.js"></script>
     <!--<script src="Build/UnityLoader.js"></script>-->
     <script>
-      var gameJsonUrl = "https://justbuild.nyc3.cdn.digitaloceanspaces.com/CI/1v1/Prod/162/WebGL.json"; //%gameJsonUrl
+      var gameJsonUrl = "https://justbuild.nyc3.cdn.digitaloceanspaces.com/CI/Prod/162/WebGL.json"; //%gameJsonUrl
       var hostname = window.location.hostname;
       if (hostname.indexOf("dev1v1") >= 0 || hostname.indexOf("dev.1v1") >= 0 || hostname.indexOf("test1v1") >= 0 || hostname.indexOf("test.1v1") >= 0) {
         let urlParams = new URLSearchParams(window.location.search);
@@ -307,17 +307,17 @@
       }
     </script>
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="1v1/firebase/firebase-app.js"></script>
+    <script src="firebase/firebase-app.js"></script>
 
     <!-- Add Firebase products that you want to use -->
-    <script src="1v1/firebase/firebase-analytics.js"></script>
-    <script src="1v1/firebase/firebase-auth.js"></script>
-    <script src="1v1/firebase/firebase-firestore.js"></script>
-    <script src="1v1/firebase/firebase-remote-config.js"></script>
+    <script src="firebase/firebase-analytics.js"></script>
+    <script src="firebase/firebase-auth.js"></script>
+    <script src="firebase/firebase-firestore.js"></script>
+    <script src="firebase/firebase-remote-config.js"></script>
 
-    <script src="1v1/js/firebase.js?v=147"></script>
-    <script src="1v1/js/login.js?v=147"></script>
-    <script src="1v1/js/firebase-config.js?v=147"></script>
+    <script src="js/firebase.js?v=147"></script>
+    <script src="js/login.js?v=147"></script>
+    <script src="js/firebase-config.js?v=147"></script>
 
     <script>
       var hostname = window.location.hostname;
@@ -330,10 +330,10 @@
       initRemoteConfig();
     </script>
 
-    <script src="1v1/js/windowResize.js"></script>
-    <script src="1v1/js/adblockManager.js"></script>
-    <script src="1v1/js/macUserAgent.js"></script>
-    <script src="1v1/js/visibilityChangeListener.js"></script>
+    <script src="js/windowResize.js"></script>
+    <script src="js/adblockManager.js"></script>
+    <script src="js/macUserAgent.js"></script>
+    <script src="js/visibilityChangeListener.js"></script>
     <script>
       function onUnityReady() {
         checkAdBlock();
@@ -342,6 +342,6 @@
 
       fixMacUserAgent();
     </script>
-    <script src="1v1/js/main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
