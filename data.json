@@ -28,11 +28,11 @@
         "description": "Only true sigmas play this!"
     },
     {
-        "title": "Drift Hunters 2",
-        "icon": "icons/drift.jpg",
-        "url": "games/drift/index.html",
+        "title": "Slowroads",
+        "icon": "games/slowroads/static/media/favicon_circle_white.eb1953e3.svg",
+        "url": "games/slowroads/index.html",
         "category": "Games",
-        "description": "Only true sigmas play this!"
+        "description": "Currently, assets may be missing."
     },
     {
         "title": "1v1.lol",
