@@ -17,13 +17,12 @@ var UnityLoader = UnityLoader || {
                 })
                 .join(""),
             o = document.createElement("script"),
-            a = URL.createObjectURL('inlineScripts/inline.js');
-        (UnityLoader.Blobs[a] = r),
-            (o.src = a),
-            (o.onload = function () {
-                URL.revokeObjectURL(a), t(n);
-            }),
-            document.body.appendChild(o);
+            a = 'inlineScripts/inline.js'; // Change this to the path of your static file
+        o.src = a;
+        o.onload = function () {
+            t(n);
+        };
+        document.body.appendChild(o);
     },
     allocateHeapJob: function (e, t) {
         for (var r = e.TOTAL_STACK || 5242880, n = e.TOTAL_MEMORY || (e.buffer ? e.buffer.byteLength : 268435456), o = 65536, a = 16777216, i = o; i < n || i < 2 * r; ) i += i < a ? i : a;
