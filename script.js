@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.code === 'Backquote') {
             let password = prompt('Enter authentication key:');
             if (password === 'correct-password') {
+                localStorage.setItem("auth", "correct-password");
                 window.location.href = 'main.html';
             } else {
                 alert('Incorrect password!');

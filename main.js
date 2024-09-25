@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    if (localStorage.getItem("auth") !== 'correct-password') {
+        window.location.href = "index.html";
+    }
     let currentPage = 1;
     let itemsPerPage = 6;
     let currentFilter = 'All';
