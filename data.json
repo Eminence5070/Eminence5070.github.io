@@ -14,6 +14,13 @@
         "description": "Minecraft 1.9.4 ported to the web!"
     },
     {
+        "title": "Ruffle",
+        "icon": "icons/ruffle.png",
+        "url": "apps/ruffle/index.html",
+        "category": "Apps",
+        "description": "Flash game emulator!"
+    },
+    {
         "title": "GBA.JS",
         "icon": "icons/gba.png",
         "url": "apps/gbajs/index.html",
