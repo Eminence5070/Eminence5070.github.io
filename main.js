@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     if (localStorage.getItem("auth") !== 'correct-password') {
+        alert('Session not authorized.');
         window.location.href = "index.html";
     }
     let currentPage = 1;
