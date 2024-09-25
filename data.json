@@ -15,7 +15,7 @@
     },
     {
         "title": "Fireboy & Watergirl",
-        "icon": "icons/fireboy.jpeg",
+        "icon": "icons/fireboy.png",
         "url": "games/flash?href=flash/fireboy.swf",
         "category": "Games",
         "description": "A fun 2-player game!"
