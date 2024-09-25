@@ -14,6 +14,13 @@
         "description": "Minecraft 1.9.4 ported to the web!"
     },
     {
+        "title": "A Dance of Fire & Ice",
+        "icon": "icons/fireandice.webp",
+        "url": "games/dance/",
+        "category": "Games",
+        "description": "A fun one-button rhythm game!"
+    },
+    {
         "title": "Fireboy & Watergirl",
         "icon": "icons/fireboy.png",
         "url": "games/flash?href=flash/fireboy.swf",
