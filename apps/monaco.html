@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monaco Editor Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/monaco-editor@latest/min/vs/editor/editor.main.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: #1e1e1e;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #header {
+            display: flex;
+            justify-content: flex-start;
+            background-color: #2a2a2a;
+            padding: 10px;
+        }
+        #run-button {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #editor-container {
+            display: flex;
+            flex: 1;
+            position: relative;
+        }
+        #editor {
+            width: 50vw;
+            height: 100%;
+            border: 2px solid #cccccc12;
+            box-sizing: border-box;
+        }
+        #tabs {
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            background-color: #2a2a2a;
+        }
+        .tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #cccccc12;
+            color: #ffffff;
+            cursor: pointer;
+            user-select: none;
+        }
+        .tab:hover {
+            background-color: #333333;
+        }
+        .active {
+            background-color: #444444;
+        }
+        #webview {
+            width: 50%;
+            height: 100%;
+            border: 2px solid #cccccc12;
+            box-sizing: border-box;
+            overflow: auto;
+            background-color: #ffffff;
+        }
+        #console {
+            width: 100%;
+            height: 25vh;
+            border: 2px solid #cccccc12;
+            box-sizing: border-box;
+            position: relative;
+        }
+    </style>
+</head>
+<body>  
+    <div id="header">
+        <button id="run-button">Run</button>
+    </div>
+    <div id="editor-container">
+        <div id="tabs">
+            <div class="tab active" data-lang="html">HTML</div>
+            <div class="tab" data-lang="js">JavaScript</div>
+            <div class="tab" data-lang="css">CSS</div>
+        </div>
+        <div id="editor"></div>
+        <div id="webview"></div>
+    </div>
+    <div id="console"></div>
+    <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+    <script>
+        require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@latest/min/vs' }});
+        require(['vs/editor/editor.main'], function() {
+            const codeStorage = {
+                html: localStorage.getItem('html') || "<!DOCTYPE html>",
+                js: localStorage.getItem('js') || "// JavaScript Code",
+                css: localStorage.getItem('css') || "/* CSS Code */"
+            };
+
+            const editor = monaco.editor.create(document.getElementById('editor'), {
+                value: codeStorage.html,
+                language: "html",
+                theme: "vs-dark"
+            });
+
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    const lang = tab.dataset.lang;
+
+                    codeStorage[editor.getModel().getLanguageId()] = editor.getValue();
+                    localStorage.setItem(editor.getModel().getLanguageId(), codeStorage[editor.getModel().getLanguageId()]);
+
+                    monaco.editor.setModelLanguage(editor.getModel(), lang === 'js' ? 'javascript' : lang);
+                    editor.setValue(codeStorage[lang]);
+                });
+            });
+
+            document.getElementById('run-button').addEventListener('click', () => {
+                codeStorage.html = editor.getValue();
+                localStorage.setItem('html', codeStorage.html);
+                const webview = document.getElementById('webview');
+                webview.innerHTML = codeStorage.html;
+
+                const style = document.createElement('style');
+                style.textContent = codeStorage.css;
+                webview.appendChild(style);
+
+                const script = document.createElement('script');
+                script.textContent = codeStorage.js;
+                webview.appendChild(script);
+            });
+
+            editor.onDidChangeModelContent(() => {
+                const activeTab = document.querySelector('.tab.active').dataset.lang;
+                codeStorage[activeTab] = editor.getValue();
+                localStorage.setItem(activeTab, codeStorage[activeTab]);
+            });
+
+            window.addEventListener('load', () => {
+                const activeTab = document.querySelector('.tab.active');
+                const activeLang = activeTab.dataset.lang;
+                editor.setValue(codeStorage[activeLang]);
+            });
+
+            window.addEventListener('beforeunload', () => {
+                codeStorage[editor.getModel().getLanguageId()] = editor.getValue();
+                localStorage.setItem(editor.getModel().getLanguageId(), codeStorage[editor.getModel().getLanguageId()]);
+            });
+        });
+    </script>
+</body>
+</html>

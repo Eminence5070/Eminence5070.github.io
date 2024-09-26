@@ -14,6 +14,13 @@
         "description": "Minecraft 1.9.4 ported to the web!"
     },
     {
+        "title": "Vertex IDE",
+        "icon": "icons/cookie.webpe",
+        "url": "apps/monaco.html/",
+        "category": "Apps",
+        "description": "Still a work in progress!"
+    },
+    {
         "title": "Cookie Clicker",
         "icon": "icons/cookie.webp",
         "url": "games/cookieclicker/",
@@ -46,28 +53,28 @@
         "icon": "icons/gba.png",
         "url": "apps/gbajs/index.html",
         "category": "Apps",
-        "description": "Only true sigmas play this!"
+        "description": "Emulate retro games!"
     },
     {
         "title": "Slope",
         "icon": "icons/slope.webp",
         "url": "games/slope/index.html",
         "category": "Games",
-        "description": "Only true sigmas play this!"
+        "description": "Play with balls!"
     },
     {
         "title": "Slowroads",
         "icon": "games/slowroads/static/media/favicon_circle_white.eb1953e3.svg",
         "url": "games/slowroads/index.html",
         "category": "Games",
-        "description": "Currently, assets may be missing."
+        "description": "Vroom!"
     },
     {
         "title": "1v1.lol",
         "icon": "icons/1v1.jpg",
         "url": "games/1v1/index.html",
         "category": "Games",
-        "description": "Only true sigmas play this!"
+        "description": "Georgia school simulator!"
     },
     {
         "title": "FNAW",
