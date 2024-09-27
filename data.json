@@ -16,7 +16,7 @@
     {
         "title": "Vertex IDE",
         "icon": "icons/cookie.webpe",
-        "url": "apps/monaco.html/",
+        "url": "apps/monaco.html",
         "category": "Apps",
         "description": "Still a work in progress!"
     },
