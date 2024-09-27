@@ -14,6 +14,7 @@
             height: 100vh;
         }
         #header {
+            z-index: 1;
             display: flex;
             justify-content: flex-start;
             background-color: #2a2a2a;
@@ -32,25 +33,35 @@
             position: relative;
         }
         #editor {
+            z-index: 1;
             width: 50vw;
+            border: 2px solid #282828;
             height: 100%;
-            border: 2px solid #cccccc12;
             box-sizing: border-box;
         }
         #tabs {
+            z-index: 1;
             display: flex;
             flex-direction: column;
-            width: 100px;
             background-color: #2a2a2a;
         }
         .tab {
+            margin-left: -10px;
+            z-index: -1;
+            padding-top: 93px;
+            font-size: 16px;
+            font-family: Consolas;
+            rotate: 90deg;
+            width: 195%;
             flex: 1;
-            padding: 10px;
             text-align: center;
-            border-bottom: 2px solid #cccccc12;
+            border-bottom: 2px solid #cccccc03;
             color: #ffffff;
             cursor: pointer;
             user-select: none;
+        }
+        div {
+            white-space: pre;
         }
         .tab:hover {
             background-color: #333333;
@@ -67,11 +78,38 @@
             background-color: #ffffff;
         }
         #console {
+            z-index: 3;
             width: 100%;
             height: 25vh;
-            border: 2px solid #cccccc12;
+            border: 2px solid #282828;
+            border-top: none;
             box-sizing: border-box;
-            position: relative;
+            background-color: #1e1e1e;
+            color: white;
+            padding: 10px;
+            font-family: monospace;
+            overflow-y: auto;
+        }
+        #console-input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: #1e1e1e;
+            color: gray;
+            border: none;
+            outline: none;
+            font-family: Consolas;
+            padding-inline-start: 42px;
+        }
+
+        #console-arrow {
+            color: white;
+            color: gray;
+            margin-left: 17px;
+            margin-top: -27.5px;
+            user-select: none;
+            pointer-events: none;
+            font-family: Consolas;
         }
     </style>
 </head>
@@ -86,19 +124,22 @@
             <div class="tab" data-lang="css">CSS</div>
         </div>
         <div id="editor"></div>
-        <div id="webview"></div>
+        <iframe id="webview"></iframe>
     </div>
     <div id="console"></div>
+    <input id="console-input" placeholder="Enter JavaScript code:">
+    <span id="console-arrow">></span>
+    
     <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
     <script>
-        require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@latest/min/vs' }});
+        require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@latest/min/vs' } });
         require(['vs/editor/editor.main'], function() {
             const codeStorage = {
                 html: localStorage.getItem('html') || "<!DOCTYPE html>",
                 js: localStorage.getItem('js') || "// JavaScript Code",
                 css: localStorage.getItem('css') || "/* CSS Code */"
             };
-
+    
             const editor = monaco.editor.create(document.getElementById('editor'), {
                 value: codeStorage.html,
                 language: "html",
@@ -111,47 +152,89 @@
                     tabs.forEach(t => t.classList.remove('active'));
                     tab.classList.add('active');
                     const lang = tab.dataset.lang;
-
+    
                     codeStorage[editor.getModel().getLanguageId()] = editor.getValue();
                     localStorage.setItem(editor.getModel().getLanguageId(), codeStorage[editor.getModel().getLanguageId()]);
-
+    
                     monaco.editor.setModelLanguage(editor.getModel(), lang === 'js' ? 'javascript' : lang);
                     editor.setValue(codeStorage[lang]);
                 });
             });
-
+    
             document.getElementById('run-button').addEventListener('click', () => {
-                codeStorage.html = editor.getValue();
-                localStorage.setItem('html', codeStorage.html);
-                const webview = document.getElementById('webview');
-                webview.innerHTML = codeStorage.html;
-
-                const style = document.createElement('style');
-                style.textContent = codeStorage.css;
-                webview.appendChild(style);
-
-                const script = document.createElement('script');
-                script.textContent = codeStorage.js;
-                webview.appendChild(script);
+                const iframe = document.getElementById('webview');
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                iframeDoc.open();
+                iframeDoc.write('<html><head><style>'+ codeStorage.css + '</style><\/head><body>' + codeStorage.html + '<script>' + 'function customLog(type, args) {' + '   window.parent.postMessage({ type: type, data: args }, "*");' + '}' + 'console.log = function(...args) { customLog("console-log", args); };' + 'console.error = function(...args) { customLog("console-error", args); };' + 'console.warn = function(...args) { customLog("console-warn", args); };' + 'console.debug = function(...args) { customLog("console-debug", args); };' + '(function() {' + codeStorage.js + '})();<\/script><\/body><\/html>');
+                iframeDoc.close();
             });
-
+    
             editor.onDidChangeModelContent(() => {
                 const activeTab = document.querySelector('.tab.active').dataset.lang;
                 codeStorage[activeTab] = editor.getValue();
                 localStorage.setItem(activeTab, codeStorage[activeTab]);
             });
-
+    
+            window.addEventListener('message', (event) => {
+                const logDiv = document.getElementById('console');
+                event.data.data.forEach(log => {
+                    const logMessage = document.createElement('div');
+                    if (event.data.type === 'console-error') {
+                        logMessage.style.color = 'red';
+                        logMessage.textContent = 'Error: ' + log;
+                    } else if (event.data.type === 'console-warn') {
+                        logMessage.style.color = 'yellow';
+                        logMessage.textContent = 'Warning: ' + log;
+                    } else if (event.data.type === 'console-debug') {
+                        logMessage.style.color = 'lightblue';
+                        logMessage.textContent = 'Debug: ' + log;
+                    } else {
+                        logMessage.textContent = log;
+                    }
+                    logDiv.appendChild(logMessage);
+                    logDiv.scrollTop = logDiv.scrollHeight;
+                });
+            });
+    
             window.addEventListener('load', () => {
                 const activeTab = document.querySelector('.tab.active');
                 const activeLang = activeTab.dataset.lang;
                 editor.setValue(codeStorage[activeLang]);
             });
-
+    
             window.addEventListener('beforeunload', () => {
                 codeStorage[editor.getModel().getLanguageId()] = editor.getValue();
                 localStorage.setItem(editor.getModel().getLanguageId(), codeStorage[editor.getModel().getLanguageId()]);
             });
+    
+            const consoleInput = document.getElementById('console-input');
+            const customConsole = document.getElementById('console');
+    
+            consoleInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    const input = consoleInput.value;
+                    consoleInput.value = '';
+                    const iframe = document.getElementById('webview');
+                    const iframeWindow = iframe.contentWindow;
+                    try {
+                        const result = iframeWindow.eval(input);
+                        if (result !== undefined) {
+                            logToConsole(`> ${input}\n${result}`);
+                        }
+                    } catch (error) {
+                        logToConsole(`\> ${input}` + '\r\n' + `Error: ${error.message}`);
+                    }
+                }
+            });
+    
+            function logToConsole(message) {
+                const newLog = document.createElement('div');
+                newLog.textContent = message;
+                customConsole.appendChild(newLog);
+                customConsole.scrollTop = customConsole.scrollHeight;
+            }
         });
     </script>
+    
 </body>
 </html>
