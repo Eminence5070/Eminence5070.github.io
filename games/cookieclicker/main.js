@@ -16863,7 +16863,7 @@ window.onload=function()
 					var launch=function(){
 						Game.Launch();
 						//if (top!=self) Game.ErrorFrame();
-						else
+						//else
 						{
 							console.log('[=== '+choose([
 								'Oh, hello!',
