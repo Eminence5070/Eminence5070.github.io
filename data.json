@@ -14,6 +14,13 @@
         "description": "Minecraft 1.9.4 ported to the web!"
     },
     {
+        "title": "Monkey Mart",
+        "icon": "icons/monkeymart.jpg",
+        "url": "games/monkeymart/",
+        "category": "Games",
+        "description": "Sell bananas and buy monkeys!"
+    },
+    {
         "title": "Vertex IDE",
         "icon": "icons/cookie.webpe",
         "url": "apps/monaco.html",
@@ -39,7 +46,7 @@
         "icon": "icons/fireboy.png",
         "url": "games/flash?href=flash/fireboy.swf",
         "category": "Games",
-        "description": "A fun 2-player game!"
+        "description": "A fun 2-player platformer!"
     },
     {
         "title": "Ruffle",
@@ -186,6 +193,6 @@
         "icon": "icons/stack.png",
         "url": "games/stack-game/stack.html",
         "category": "Games",
-        "description": "Test your reaction is skills!"
+        "description": "Test your reaction skills!"
     }
 ]
