@@ -14,6 +14,20 @@
         "description": "Minecraft 1.9.4 ported to the web!"
     },
     {
+        "title": "Time Shooter 3",
+        "icon": "icons/timeshooter3.jpg",
+        "url": "games/timeshooter3/",
+        "category": "Games",
+        "description": "More content and more fun!"
+    },
+    {
+        "title": "Bitplanes",
+        "icon": "icons/bitplanes.svg",
+        "url": "games/bitplanes/",
+        "category": "Games",
+        "description": "Fun aerial combat game!"
+    },
+    {
         "title": "Jchabin Cars",
         "icon": "icons/jchabin.png",
         "url": "games/jchabin/",
