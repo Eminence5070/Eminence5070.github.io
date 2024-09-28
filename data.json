@@ -14,6 +14,13 @@
         "description": "Minecraft 1.9.4 ported to the web!"
     },
     {
+        "title": "Tiny Fishing",
+        "icon": "icons/tinyfishing.webp",
+        "url": "games/tinyfishing/",
+        "category": "Games",
+        "description": "Become the best fisherman!"
+    },
+    {
         "title": "Web Proxy",
         "icon": "icons/unblocker.jpeg",
         "url": "https://doge.lamplifesteal.xyz/",
