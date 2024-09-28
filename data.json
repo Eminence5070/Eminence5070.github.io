@@ -14,6 +14,13 @@
         "description": "Minecraft 1.9.4 ported to the web!"
     },
     {
+        "title": "Drive Mad",
+        "icon": "icons/drivemad.jpg",
+        "url": "games/drivemad/",
+        "category": "Games",
+        "description": "Soberness optional!"
+    },
+    {
         "title": "Monkey Mart",
         "icon": "icons/monkeymart.jpg",
         "url": "games/monkeymart/",
