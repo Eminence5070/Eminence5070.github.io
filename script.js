@@ -3,7 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(event) {
         if (event.code === 'Backquote') {
             event.preventDefault()
-            window.location.href = 'login.html'
+            if (localStorage.getItem('vertex_autologin_setting') !== 'true') {
+              window.location.href = 'login.html'
+            } else {
+              window.location.href = 'main.html'
+            }
         }
     });
     

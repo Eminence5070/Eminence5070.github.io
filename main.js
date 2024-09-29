@@ -1,12 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
     if (localStorage.getItem("auth") !== 'correct-password') {
+        localStorage.setItem('enable-beforeunload', 'false')
         alert('Session not authorized.');
-        window.location.href = "index.html";
+        window.location.href = "login.html";
     }
     let currentPage = 1;
     let itemsPerPage = 6;
     let currentFilter = 'All';
     let isChangelogOpen = false;
+
+    Array.from(document.getElementsByClassName('button-action')).forEach(button => {
+        button.addEventListener('click', () => {
+            localStorage.setItem('enable-beforeunload', 'false');
+        });
+    });
+    
 
     function loadResults() {
         const query = document.getElementById('search-bar').value.toLowerCase();

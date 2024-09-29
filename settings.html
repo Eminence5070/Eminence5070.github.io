@@ -1,0 +1,255 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <style>
+        body {
+            background-color: #191a1a;
+            color: #cdd6d4;
+            overflow: hidden;
+            font-family: "Outfit", sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin-top:20px;
+            margin-bottom: -15px;
+            border: none;
+            background-color: #303131;
+            color: #c4c4c4;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Outfit";
+            transition: background-color 0.3s, transform 0.2s;
+            width: 250px;
+            height: 50px;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #292929;
+        }
+
+        #main {
+            scale: 1.5;
+            margin: 0 auto;
+            background-color: rgba(161, 203, 206, 0.019);
+            border-radius: 8px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.342);
+        }
+
+        i {
+            scale: 1.5;
+            margin-right: 0px;
+            rotate: 90deg;
+            color: #ffffff6e;
+        }
+
+        h1 {
+            font-weight: 400;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.545);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 11px;
+            color: #ffffff6e;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 14px;
+            margin: 12px;
+            color: #ffffff6e;
+        }
+
+        #div {
+            scale: 2;
+            font-size: 1.5em;
+            margin-top: 4px;
+            width: 1px;
+            background-color: #ffffff4b;
+            border-radius: 1px;
+            height: 20px;
+        }
+
+        #toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .toggle-text {
+            margin-right: 10px;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .toggle-input {
+            display: none;
+        }
+
+        .toggle-label {
+            width: 40px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 15px;
+            display: block;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-label::before {
+            display: flex;
+            content: "";
+            position: relative;
+            top: 50%;
+            left: 5%;
+            width: 12px;
+            height: 12px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+            transform: translateY(-50%);
+        }
+
+        .toggle-input:checked + .toggle-label {
+            background-color: #4fd6ada1;
+        }
+
+        .toggle-input:checked + .toggle-label::before {
+            transform: translate(20px, -50%);
+        }
+
+        nav {
+            scale: 2;
+            top: 12%;
+            display: flex;
+            position: absolute;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+    </style>
+    <nav>
+        <i style="rotate: 90deg;" class="fa-brands fa-hive"></i>
+        <h2>Vertex</h2>
+        <div id="div"></div>
+        <h3>Settings</h3>
+    </nav>
+    <div id="main">
+        <div id="toggle-container" class="toggle-item">
+            <span class="toggle-text">Disable GoGuardian anti-close:</span>
+            <input type="checkbox" id="toggle1" class="toggle-input">
+            <label for="toggle1" class="toggle-label"></label>
+        </div>
+        <div id="toggle-container" class="toggle-item">
+            <span class="toggle-text">Enable action bar:</span>
+            <input type="checkbox" id="toggle2" class="toggle-input">
+            <label for="toggle2" class="toggle-label"></label>
+        </div>
+        <div id="toggle-container" class="toggle-item">
+            <span class="toggle-text">Auto-login:</span>
+            <input type="checkbox" id="toggle3" class="toggle-input">
+            <label for="toggle3" class="toggle-label"></label>
+        </div>
+        <div id="toggle-container" class="toggle-item">
+            <span class="toggle-text">Theme: (Coming soon)</span>
+            <select id="optg1" disabled onchange="save()">
+                <optgroup label="Light Mode">
+                    <option value="quartz">Quartz</option>
+                    <option value="egypt">Egypt</option>
+                </optgroup>
+                <optgroup label="Dark Mode">
+                    <option value="default" selected="selected">Dusk (Default)</option>
+                    <option value="midnight">Midnight</option>
+                    <option value="forest">Forest</option>
+                    <option value="crimson">Crimson</option>
+                </optgroup>
+            </select>
+        </div>
+        <button id="back" onClick="location.href = '/main.html'">Back</button>
+    </div>
+    <script>
+        var toggle1 = document.getElementById('toggle1');
+
+        if (localStorage.getItem('vertex_beforeunload_setting') === null) {
+            localStorage.setItem('vertex_beforeunload_setting', false);
+        }
+
+        toggle1.checked = (localStorage.getItem('vertex_beforeunload_setting') === 'true');
+
+        toggle1.addEventListener('click', () => {
+            var setting1 = localStorage.getItem('vertex_beforeunload_setting');
+            if (setting1 === null) {
+                setting1 = false;
+            } else {
+                setting1 = setting1 === 'true';
+                setting1 = !setting1;
+            }
+            localStorage.setItem('vertex_beforeunload_setting', setting1);
+        });
+
+        var toggle2 = document.getElementById('toggle2');
+        if (localStorage.getItem('vertex_action_bar_setting') === null) {
+            localStorage.setItem('vertex_action_bar_setting', true);
+        }
+
+        toggle2.checked = localStorage.getItem('vertex_action_bar_setting') === 'true';
+
+        toggle2.addEventListener('click', () => {
+            var setting2 = localStorage.getItem('vertex_action_bar_setting');
+            setting2 = setting2 === 'true';
+            setting2 = !setting2;
+            localStorage.setItem('vertex_action_bar_setting', setting2);
+            toggle2.checked = setting2;
+        });
+
+        var toggle3 = document.getElementById('toggle3');
+        if (localStorage.getItem('vertex_autologin_setting') === null) {
+            localStorage.setItem('vertex_autologin_setting', false);
+        }
+
+        toggle3.checked = localStorage.getItem('vertex_autologin_setting') === 'true';
+
+        toggle3.addEventListener('click', () => {
+            var setting3 = localStorage.getItem('vertex_autologin_setting');
+            if (setting3 === null) {
+                setting3 = false;
+            } else {
+                setting3 = setting3 === 'true';
+                setting3 = !setting3;
+            }
+            localStorage.setItem('vertex_autologin_setting', setting3);
+        });
+
+        var opt1 = document.getElementById('optg1');
+        if (localStorage.getItem('vertex_theme') === null) {
+            localStorage.setItem('vertex_theme', 'default');
+        }
+
+        optg1.value = localStorage.getItem('vertex_theme');
+
+        function save() {
+            localStorage.setItem("vertex_theme", document.getElementById('optg1').value);
+        }
+    </script>
+</body>
