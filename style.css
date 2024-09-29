@@ -1,4 +1,3 @@
-/* General page styles */
 body {
     background-color: #191a1a;
     color: #cdd6d4;
@@ -31,7 +30,6 @@ a {
     justify-content: center;
 }
 
-/* Header styles */
 header {
     margin-top: -25px;
     width: 100%;
@@ -44,7 +42,6 @@ header h1 {
     margin-top: 21px;
 }
 
-/* Search bar styling */
 .search-container {
     position: relative;
     align-self: center;
@@ -76,7 +73,6 @@ input#search-bar::placeholder {
     outline: none;
 }
 
-/* Changelog button styling */
 #changelog-btn {
     padding: 10px 20px;
     font-size: 16px;
@@ -96,7 +92,6 @@ input#search-bar::placeholder {
     outline: none;
 }
 
-/* Filter button group styling */
 nav {
     display: flex;
     justify-content: center;
@@ -141,7 +136,6 @@ nav {
     border-right: 2px solid #424846;
 }
 
-/* Results section for cards */
 #results {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -151,7 +145,6 @@ nav {
     justify-items: center;
 }
 
-/* Card styling */
 .card {
     background-color: #1c1c1c;
     border: 2px solid #424846;
@@ -196,7 +189,6 @@ nav {
     text-align: center;
 }
 
-/* Pagination styles */
 #pagination {
     display: flex;
     justify-content: center;
@@ -271,24 +263,19 @@ nav {
     margin-right: 5px;
 }
 
-/* General scrollbar styling for the entire page */
-
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: transparent; 
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #424846;
   border-radius: 4px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #545958; 
 }
