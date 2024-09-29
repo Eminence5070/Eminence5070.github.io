@@ -7,9 +7,52 @@ function beforeUnload(event) {
             return message;
         }
     }
-}   
-
+} 
 window.addEventListener('beforeunload', beforeUnload);
+
+
+window.addEventListener('beforeinstallprompt', (event) => {
+    event.preventDefault();
+    // Optionally store the event for triggering later
+    let deferredPrompt = event;
+  
+    // Trigger the prompt manually when you need it
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the PWA install prompt.');
+      } else {
+        console.log('User dismissed the PWA install prompt.');
+      }
+      deferredPrompt = null;
+    });
+  });
+  
+
+// load additional urls
+var link = document.createElement('link');
+link.href = '/manifest.json';
+link.rel = 'manifest';
+document.head.appendChild(link);
+
+var link = document.createElement('link');
+link.href = '/res/vertex-384x384.png';
+link.rel = 'icon';
+link.type = 'image/x-icon';
+document.head.appendChild(link);
+
+var title = document.createElement('title');
+title.innerHTML = 'Vertex'
+document.head.appendChild(title);
+
+// loads a service worker
+if (typeof navigator !== 'undefined') {
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js');
+        });
+    }
+}
 
 // prevents unfocusing the window
 document.addEventListener("click", function() {
@@ -70,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        transition: all 0.3s ease;
+                        transition: all 0.1s ease;
                         cursor: pointer;
                         z-index: 1000;
                     }
@@ -127,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         background-color: rgba(255, 255, 255, 0.1);
                         border-radius: 50%;
                         padding: 4px;
+                        box-sizing:border-box;
                     }
                     .fa-hive {
                         position: absolute;
