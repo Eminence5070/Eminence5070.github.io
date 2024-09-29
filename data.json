@@ -14,11 +14,18 @@
         "description": "Minecraft 1.9.4 ported to the web!"
     },
     {
+        "title": "Super Mario 64",
+        "icon": "icons/sm64.jpg",
+        "url": "games/sm64/",
+        "category": "Games",
+        "description": "A classic 3D platformer!"
+    },
+    {
         "title": "Tunnel Rush",
         "icon": "icons/tunnelrush.jpg",
         "url": "games/tunnelrush/",
         "category": "Games",
-        "description": "Rush in a tunnel!"
+        "description": "Navigate a 3D tunnel and avoid obstacles!"
     },
     {
         "title": "Drift Hunters",
