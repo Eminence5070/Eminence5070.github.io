@@ -121,8 +121,17 @@
             }
         }
 
+        const inputField = document.getElementById('password-input');
+
+
+        inputField.addEventListener('keydown', function(event) {
+            if (event.code === 'Enter') {
+                event.preventDefault()
+                login()
+            }
+        });
+
         function login() {
-            const inputField = document.getElementById('password-input');
             if (inputField.value === correctPassword) {
                 localStorage.setItem("auth", "correct-password");
                 window.location.href = 'main.html';
