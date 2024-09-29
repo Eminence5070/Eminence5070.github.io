@@ -12,36 +12,8 @@
     <title>Vertex</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        let installPrompt = null;
-        const installButton = document.getElementById("install");
-
-        window.addEventListener("beforeinstallprompt", (event) => {
-            event.preventDefault();
-            installPrompt = event;
-            installButton.removeAttribute("hidden");
-        });
-
-        installButton.addEventListener("click", async () => {
-            if (!installPrompt) {
-                return;
-            }
-            installPrompt.prompt();
-            const result = await installPrompt.userChoice;
-            console.log(`Install prompt was: ${result.outcome}`);
-            disableInAppInstallPrompt();
-        });
-
-        function disableInAppInstallPrompt() {
-            installPrompt = null;
-            installButton.setAttribute("hidden", "");
-        }
-    });
-    </script>
 </head>
 <body>
-    <button id="install" hidden>Install App</button>
     <div id="app">
         <header>
             <h1><i style="margin-right: 9px;rotate: 90deg;" class="fa-brands fa-hive"></i>Vertex</h1>

@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const filteredData = data.filter(item => {
                     let categoryMatches = false;
 
-                    // Swap logic for Apps and Games
                     if (currentFilter === 'Apps') {
                         categoryMatches = item.category === 'Apps';
                     } else if (currentFilter === 'Games') {

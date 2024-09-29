@@ -10,7 +10,7 @@ function beforeUnload(event) {
 } 
 window.addEventListener('beforeunload', beforeUnload);
   
-// load additional urls
+// load additional resources
 var link = document.createElement('link');
 link.href = '/manifest.json';
 link.rel = 'manifest';
@@ -26,7 +26,7 @@ var title = document.createElement('title');
 title.innerHTML = 'Vertex'
 document.head.appendChild(title);
 
-// loads a service worker
+// load service worker
 if (typeof navigator !== 'undefined') {
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
