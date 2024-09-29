@@ -15,7 +15,7 @@
         None: function (t) {
           return t;
         },
-      },
+      },/**/
       Quadratic: {
         In: function (t) {
           return t * t;

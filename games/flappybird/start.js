@@ -12,7 +12,7 @@
         }
 
         return null;
-    };
+    };/**/
 
     var lastWindowHeight = window.innerHeight;
     var lastWindowWidth = window.innerWidth;
