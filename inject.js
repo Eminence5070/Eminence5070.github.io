@@ -9,26 +9,7 @@ function beforeUnload(event) {
     }
 } 
 window.addEventListener('beforeunload', beforeUnload);
-
-
-window.addEventListener('beforeinstallprompt', (event) => {
-    event.preventDefault();
-    // Optionally store the event for triggering later
-    let deferredPrompt = event;
   
-    // Trigger the prompt manually when you need it
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the PWA install prompt.');
-      } else {
-        console.log('User dismissed the PWA install prompt.');
-      }
-      deferredPrompt = null;
-    });
-  });
-  
-
 // load additional urls
 var link = document.createElement('link');
 link.href = '/manifest.json';
