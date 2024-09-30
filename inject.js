@@ -173,8 +173,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         font-family: 'Consolas';
                         pointer-events: none;
                         z-index: 1001;
-                        background-color: rgba(75, 75, 75, 0.80);
-                        outline: 1px solid rgba(75, 75, 75, 0.89);
+                        background-color: rgb(255 255 255 / 9%);
+                        outline: 1px solid rgb(53 52 52 / 38%);
                         backdrop-filter: blur(3px)
                     }
                     .icon-container:hover .tooltip {
