@@ -14,6 +14,41 @@
         "description": "Minecraft 1.9.4 ported to the web!"
     },
     {
+        "title": "Burrito Bison",
+        "icon": "icons/burritobison.png",
+        "url": "games/burritobison/",
+        "category": "Games",
+        "description": "Smash hordes of gummy bears!"
+    },
+    {
+        "title": "Geometry Dash",
+        "icon": "icons/geometrydash.jpg",
+        "url": "games/geometrydash/",
+        "category": "Games",
+        "description": "Challenge your reflexes in Geometry Dash!"
+    },
+    {
+        "title": "Pacman",
+        "icon": "icons/pacman.png",
+        "url": "games/pacman/index.html#bg=black&autoplay",
+        "category": "Games",
+        "description": "The retro arcade game you know and love!"
+    },
+    {
+        "title": "Tanuki Sunset",
+        "icon": "icons/tanukisunset.jpg",
+        "url": "games/tanukisunset/",
+        "category": "Games",
+        "description": "Third-person longboard-skating game!"
+    },
+    {
+        "title": "Snake",
+        "icon": "icons/snake.jpg",
+        "url": "games/snake/",
+        "category": "Games",
+        "description": "Play with a very long snake!"
+    },
+    {
         "title": "Super Mario 64",
         "icon": "icons/sm64.jpg",
         "url": "games/sm64/",
@@ -96,13 +131,6 @@
         "url": "games/monkeymart/",
         "category": "Games",
         "description": "Sell bananas and buy monkeys!"
-    },
-    {
-        "title": "Vertex IDE",
-        "icon": "icons/cookie.webpe",
-        "url": "apps/monaco.html",
-        "category": "Apps",
-        "description": "Still a work in progress!"
     },
     {
         "title": "Cookie Clicker",
