@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <script src="/inject.js"></script>
+    <script src="stylesheets/styler.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,16 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vertex</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link id="stylesheet" rel="stylesheet" href="stylesheets/main-default.css">
 </head>
 <body>
     <div id="app">
         <header>
             <h1><i style="margin-right: 9px;rotate: 90deg;" class="fa-brands fa-hive"></i>Vertex</h1>
-            <div class="search-container">
-                <input type="text" id="search-bar" placeholder="Search...">
-                <i style="z-index:1;opacity:0.6;left:-21px;top:-7px;position:absolute;" class="fa-solid fa-magnifying-glass"></i>
-            </div>
             <div>
             <button id="changelog-btn">
                 <i class="fa-solid fa-chart-column"></i>
@@ -38,6 +35,10 @@
             </button></div>
         </header>
         <nav>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search...">
+                <i style="z-index:1;opacity:0.6;left:-21px;top:-7px;position:absolute;" class="fa-solid fa-magnifying-glass"></i>
+            </div>
             <div class="filter-btn-group">
                 <button class="filter-btn" data-filter="All">All</button>
                 <button class="filter-btn" data-filter="Apps">Apps</button>

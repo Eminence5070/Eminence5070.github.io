@@ -1,5 +1,13 @@
+document.addEventListener('mousemove', function() {
+    if (localStorage.getItem("auth") !== 'hotdog' || localStorage.getItem("vertex_sso") !== 'true') {
+        localStorage.setItem('enable-beforeunload', 'false')
+        alert('Session not authorized.');
+        window.location.href = "login.html";
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
-    if (localStorage.getItem("auth") !== 'correct-password') {
+    if (localStorage.getItem("auth") !== 'hotdog' || localStorage.getItem("vertex_sso") !== 'true') {
         localStorage.setItem('enable-beforeunload', 'false')
         alert('Session not authorized.');
         window.location.href = "login.html";

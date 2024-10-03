@@ -1,5 +1,5 @@
 body {
-    background-color: #191a1a;
+    background-color: #221a1a;
     color: #cdd6d4;
     font-family: "Outfit", sans-serif;;
     margin: 0;
@@ -45,6 +45,7 @@ header h1 {
 .search-container {
     position: relative;
     align-self: center;
+    left: -70%;
 }
 
 input#search-bar::placeholder {
@@ -57,9 +58,9 @@ input#search-bar::placeholder {
     padding-inline-start: 50px;
     left: -45px;
     font-size: 16px;
-    border: 2px solid #424846;
+    border: 2px solid #513430;
     border-radius: 25px;
-    background-color: #262626;
+    background-color: #2b1e1e;
     color: #f0f0f0;
     width: 300px;
     transition: border-color 0.3s;
@@ -68,7 +69,7 @@ input#search-bar::placeholder {
 }
 
 #search-bar:focus {
-    border-color: #545958;
+    border-color: #5b3b3b;
     border-width: 2px;
     outline: none;
 }
@@ -76,9 +77,9 @@ input#search-bar::placeholder {
 #changelog-btn {
     padding: 10px 20px;
     font-size: 16px;
-    border: 2px solid #424846;
+    border: 2px solid #513430;
     border-radius: 25px;
-    background-color: #262626;
+    background-color: #2b1e1e;
     color: #dedede;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
@@ -87,8 +88,8 @@ input#search-bar::placeholder {
 
 #changelog-btn:hover,
 #changelog-btn:focus {
-    background-color: #242424;
-    border-color: #545958;
+    background-color: #342121;
+    border-color: #5b3b3b;
     outline: none;
 }
 
@@ -102,11 +103,13 @@ nav {
     display: flex;
     border-radius: 25px;
     overflow: hidden;
-    border: 2px solid #424846;
+    border: 2px solid #513430;
+    position: relative;
+    right: -90%;
 }
 
 .filter-btn-group button {
-    background-color: #262626;
+    background-color: #342323;
     color: #dedede;
     padding: 10px 20px;
     border: none;
@@ -123,17 +126,17 @@ nav {
 }
 
 .filter-btn-group button:hover {
-    background-color: #242424;
+    background-color: #331616;
     outline: none;
 }
 
 .filter-btn-group button:focus {
-    background-color: #202020;
+    background-color: #331616;
     outline: none;
 }
 
 .filter-btn-group button:not(:last-child) {
-    border-right: 2px solid #424846;
+    border-right: 2px solid #513430;
 }
 
 #results {
@@ -146,8 +149,8 @@ nav {
 }
 
 .card {
-    background-color: #1c1c1c;
-    border: 2px solid #424846;
+    background-color: #35212189;
+    border: 2px solid #482b2b;
     padding: 20px;
     border-radius: 10px;
     cursor: pointer;
@@ -165,14 +168,14 @@ nav {
 
 .card-description {
     text-align: center;
-    color: #b4b7b7;
+    color: #c7b7b7;
     margin-top: 10px;
 }
 
 .card:hover {
-    background-color: rgb(24, 22, 23);
-    box-shadow: 0 10px 30px rgb(40, 31, 38, 0.5);
-    border: 2px solid #4e4b4d;
+    background-color: #2a151589;
+    box-shadow: 0 10px 30px rgba(40, 31, 31, 0.5);
+    border: 2px solid #492828;
     margin-top: -2%;
     position: relative;
 }
@@ -180,8 +183,8 @@ nav {
 .card-icon {
     border-radius: 12px;
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin-bottom: -2px;
 }
 
@@ -215,13 +218,13 @@ nav {
     position: fixed;
     top: 100%;
     left: 0;
-    background-color: rgba(31,31,31,0.4);
+    background-color: rgba(51, 24, 24, 0.4);
     backdrop-filter: blur(10px);
     color: #dbe1e0;
     padding: 15px;
     border-radius: 5px;
-    border: 2px solid #424846;
-    max-height: 40vh;
+    border: 2px solid #552d2d;
+    max-height: 50vh;
     overflow-y: auto;
     min-width: 19vw;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);

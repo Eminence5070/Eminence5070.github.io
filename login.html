@@ -1,128 +1,39 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link id="stylesheet" rel="stylesheet" href="stylesheets/main-default.css">
+    <script src="stylesheets/styler.js"></script>
 </head>
 <body>
-    <style>
-        body {
-            background-color: #191a1a;
-            color: #cdd6d4;
-            overflow: hidden;
-            font-family: "Outfit", sans-serif;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        button {
-            padding: 12px 20px;
-            margin: 20px 0;
-            border: none;
-            background-color: #303131;
-            color: #c4c4c4;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: "Outfit";
-            transition: background-color 0.3s, transform 0.2s;
-            width: 250px;
-            height: 50px;
-            font-size: 18px;
-        }
-
-        button:hover {
-            background-color: #292929;
-        }
-
-        input {
-            padding: 12px 15px;
-            margin: 20px 0;
-            border: none;
-            background-color: #303131;
-            color: #c4c4c4;
-            border-radius: 5px;
-            font-family: 'Outfit';
-            width: 250px;
-            height: 50px;
-            font-size: 16px;
-            transition: background-color 0.5s, outline 0s;
-            -webkit-text-security: disc;
-            text-security: disc;
-        }
-
-        input::placeholder {
-            color: #999999;
-        }
-
-        input:focus {
-            outline: 2px solid #515050;
-            background-color: #2b2b2b;
-        }
-
-        .green {
-            transition: none !important;
-            background-color: #013c14 !important;
-            outline: 2px solid #017221 !important;
-        }
-
-        .red {
-            transition: none !important;
-            background-color: #3c0117 !important;
-            outline: 2px solid #72012e !important;
-        }
-
-        div {
-            scale: 1.5;
-            margin: 0 auto;
-            background-color: rgba(198, 196, 196, 0.019);
-            border-radius: 8px;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 300px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.342);
-        }
-
-        h1 {
-            font-weight: 400;
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.545);
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        h2 {
-            scale: 2;
-            position: absolute;
-            top: 5%;
-            color: #ffffff6e;
-        }
-    </style>
     <h2><i style="margin-right: 14px;rotate: 90deg;" class="fa-brands fa-hive"></i>Vertex</h2>
     <div>
-        <h1>Enter your auth key to continue.</h1>
+        <h1 id="auth-text">Enter your auth key to continue.</h1>
         <input type="password" id="fake-password" name="email" style="display:none;"> 
         <input autocomplete="off" oninput="checkPassword()" id="password-input" placeholder="Enter password..." type="text" readonly onfocus="this.removeAttribute('readonly');"/>
         <button onclick="login()">Login</button>
     </div>
     <script>
-        let correctPassword = 'correct-password';
+        let correctPassword = 'hotdog';
 
         function checkPassword() {
             const inputField = document.getElementById('password-input');
             const typedValue = inputField.value;
-
-            if (typedValue == correctPassword) {
-                inputField.classList = 'green';
-            } else if (typedValue == ''){
-                inputField.classList = '';
+            if (document.getElementById('auth-text').textContent.includes("auth")) {
+                if (typedValue == correctPassword) {
+                    inputField.classList = 'green';
+                } else if (typedValue == ''){
+                    inputField.classList = '';
+                } else {
+                    inputField.classList = 'red'
+                }
             } else {
-                inputField.classList = 'red'
+                if (typedValue == 'OK8GJ') {
+                    inputField.classList = 'green';
+                } else if (typedValue == ''){
+                    inputField.classList = '';
+                } else {
+                    inputField.classList = 'red'
+                }
             }
         }
 
@@ -135,12 +46,25 @@
             }
         });
 
-        function login() {
-            if (inputField.value === correctPassword) {
-                localStorage.setItem("auth", "correct-password");
-                window.location.href = 'main.html';
+        function login() {;
+            if (document.getElementById('auth-text').textContent.includes("auth")) {
+                if (inputField.value === correctPassword) {
+                    localStorage.setItem("auth", correctPassword);
+                    if (localStorage.getItem('vertex_sso') == 'true') {
+                        window.location.href = 'main.html';
+                    } else {
+                        document.getElementById('auth-text').textContent = 'Now, enter your sso key.'
+                    }
+                } else {
+                    alert('Incorrect password!');
+                }
             } else {
-                alert('Incorrect password!');
+                if (inputField.value === 'OK8GJ') {
+                    localStorage.setItem('vertex_sso', 'true');
+                    window.location.href = 'index.html';
+                } else {
+                    alert('Your SSO key is incorrect. You are now device-banned from Vertex.')
+                }
             }
         }
     </script>
