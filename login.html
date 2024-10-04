@@ -61,9 +61,10 @@
             } else {
                 if (inputField.value === 'A114K') {
                     localStorage.setItem('vertex_sso', 'true');
-                    window.location.href = 'index.html';
+                    window.location.href = 'main.html';
                 } else {
                     alert('Your SSO key is incorrect. You are now device-banned from Vertex.')
+                    window.location.href = 'index.html';
                 }
             }
         }
