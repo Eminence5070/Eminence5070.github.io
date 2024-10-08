@@ -27,7 +27,7 @@
                     inputField.classList = 'red'
                 }
             } else {
-                if (typedValue == '077K2') {
+                if (typedValue == 'K9777') {
                     inputField.classList = 'green';
                 } else if (typedValue == ''){
                     inputField.classList = '';
@@ -46,7 +46,7 @@
             }
         });
 
-        function login() {;
+        function login() {
             if (document.getElementById('auth-text').textContent.includes("auth")) {
                 if (inputField.value === correctPassword) {
                     localStorage.setItem("auth", correctPassword);
