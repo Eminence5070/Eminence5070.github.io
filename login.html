@@ -27,7 +27,7 @@
                     inputField.classList = 'red'
                 }
             } else {
-                if (typedValue == 'K9777') {
+                if (typedValue == '14141') {
                     inputField.classList = 'green';
                 } else if (typedValue == ''){
                     inputField.classList = '';
@@ -50,16 +50,18 @@
             if (document.getElementById('auth-text').textContent.includes("auth")) {
                 if (inputField.value === correctPassword) {
                     localStorage.setItem("auth", correctPassword);
-                    if (localStorage.getItem('vertex_sso') == 'true') {
+                    if (localStorage.getItem('vertex_sso') == 'true')  {
                         window.location.href = 'main.html';
                     } else {
+                        inputField.value = ''
+                        inputField.classList = ''
                         document.getElementById('auth-text').textContent = 'Now, enter your sso key.'
                     }
                 } else {
                     alert('Incorrect password!');
                 }
             } else {
-                if (inputField.value === 'k9777') {
+                if (inputField.value === '14141') {
                     localStorage.setItem('vertex_sso', 'true');
                     window.location.href = 'main.html';
                 } else {
