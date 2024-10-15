@@ -1,5 +1,26 @@
 [
     {
+        "title": "2048",
+        "icon": "icons/2048.png",
+        "url": "games/2048",
+        "category": "Games",
+        "description": "Merge the tiles and reach 2048!"
+    },
+    {
+        "title": "Tetris",
+        "icon": "icons/tetris.jpg",
+        "url": "games/tetris/tetris.html",
+        "category": "Games",
+        "description": "The world's favorite puzzle game!"
+    },
+    {
+        "title": "Motherload",
+        "icon": "icons/motherload.jpg",
+        "url": "games/flash?href=flash/motherload.swf",
+        "category": "Games",
+        "description": "Mine deep into the ground!"
+    },
+    {
         "title": "EaglercraftX",
         "icon": "icons/minecraft.svg",
         "url": "games/eaglercraftx.html",
