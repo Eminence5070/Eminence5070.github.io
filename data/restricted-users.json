@@ -1,5 +1,12 @@
 {
+<<<<<<< HEAD
     "users": {
       "dca69aec-8bcb-46e7-ac9d-5bb14a6b2433": true
     }
   }
+=======
+  "users": {
+    "dca69aec-8bcb-46e7-ac9d-5bb14a6b2433": true
+  }
+}
+>>>>>>> 86bfd7df213dd6c03f6b0af1528116de14bfbf0e
