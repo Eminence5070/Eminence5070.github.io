@@ -1,5 +1,5 @@
 export async function getFingerprint() {
-    // get font stuffs
+    // get font stuffz
     async function getFonts() {
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
