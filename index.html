@@ -1,45 +1,45 @@
-<html><head>
-  <title>New Tab</title>
-  <link rel="stylesheet" href="res/search.css">
-  <link rel="icon" href="favicon32.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" href="favicon32_dark.png" media="(prefers-color-scheme: dark)">
-  <script src="script.js"></script>
-</head>
+<html lang="en">
+  <head>
+    <title>New Tab</title>
+    <link rel="stylesheet" href="res/search.css">
+    <link rel="icon" href="favicon32.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="favicon32_dark.png" media="(prefers-color-scheme: dark)">
 
-<body>
-  <div id="content">
-    <div id="oneGoogleBar">
-      <header class="gb_pa gb_Va gb_Le gb_Hc" id="gb" role="banner" style="background-color:transparent">
-        <div class="gb_Fd gb_Wd gb_Md gb_Ld">
-          <div class="gb_Ed gb_Wc"></div>
-          <div class="gb_Ed gb_Pd gb_Ld gb_Ie gb_Ee"></div>
-          <div class="gb_Qd gb_Sa gb_Ed" data-ogsr-up="">
-            <div>
-              <div class="gb_2d gb_h gb_gg gb_7f" data-ogbl="">
-                <div class="gb_g gb_h"><a class="gb_f" data-pid="23" href="https://mail.google.com/mail/?tab=rm&amp;ogbl" target="_top">Gmail</a></div>
-                <div class="gb_g gb_h"><a class="gb_f" data-pid="2" href="https://www.google.com/imghp?hl=en&amp;tab=ri&amp;ogbl" target="_top">Images</a></div>
+    <script src="src/index.js" type="module" defer></script>
+  </head>
+  <body>
+    <div id="content">
+      <div id="oneGoogleBar">
+        <header class="gb_pa gb_Va gb_Le gb_Hc" id="gb" role="banner" style="background-color:transparent">
+          <div class="gb_Fd gb_Wd gb_Md gb_Ld">
+            <div class="gb_Ed gb_Wc"></div>
+            <div class="gb_Ed gb_Pd gb_Ld gb_Ie gb_Ee"></div>
+            <div class="gb_Qd gb_Sa gb_Ed" data-ogsr-up="">
+              <div>
+                <div class="gb_2d gb_h gb_gg gb_7f" data-ogbl="">
+                  <div class="gb_g gb_h"><a class="gb_f" data-pid="23" href="https://mail.google.com/mail/?tab=rm&amp;ogbl" target="_top">Gmail</a></div>
+                  <div class="gb_g gb_h"><a class="gb_f" data-pid="2" href="https://www.google.com/imghp?hl=en&amp;tab=ri&amp;ogbl" target="_top">Images</a></div>
+                </div>
               </div>
             </div>
-          </div>
-      </div></header>
+        </div></header>
+      </div>
+      <ntp-logo id="logo">
+        <div id="logo"></div>
+      </ntp-logo>
+      <ntp-realbox id="realbox" shown="">
+        <form id="inputWrapper" action="https://www.google.com/search" method="GET" role="search">
+          <input id="input" name="q" type="search" autocomplete="off" spellcheck="false" role="combobox" aria-live="polite" placeholder="Search Google or type a URL">
+          <ntp-realbox-icon id="icon" in-searchbox="" background-image="" mask-image="res/search.svg">
+            <div id="container" style="--container-bg-color: ;">
+              <div id="icon"></div>
+            </div>
+          </ntp-realbox-icon>
+          <button id="voiceSearchButton" class="realbox-icon-button" title="Search by voice"></button>
+          <button id="lensSearchButton" class="realbox-icon-button" title="Search by image"></button>
+          <ntp-realbox-dropdown id="matches" role="listbox" hidden=""></ntp-realbox-dropdown>
+        </form>
+      </ntp-realbox>
     </div>
-    <ntp-logo id="logo">
-      <div id="logo"></div>
-    </ntp-logo>
-    <ntp-realbox id="realbox" shown="">
-      <form id="inputWrapper" action="https://www.google.com/search" method="GET" role="search">
-        <input id="input" name="q" type="search" autocomplete="off" spellcheck="false" role="combobox" aria-live="polite" placeholder="Search Google or type a URL">
-        <ntp-realbox-icon id="icon" in-searchbox="" background-image="" mask-image="res/search.svg">
-          <div id="container" style="--container-bg-color: ;">
-            <div id="icon"></div>
-          </div>
-        </ntp-realbox-icon>
-        <button id="voiceSearchButton" class="realbox-icon-button" title="Search by voice"></button>
-        <button id="lensSearchButton" class="realbox-icon-button" title="Search by image"></button>
-        <ntp-realbox-dropdown id="matches" role="listbox" hidden=""></ntp-realbox-dropdown>
-      </form>
-    </ntp-realbox>
-  </div>
-
-
-</body></html>
+  </body>
+</html>
