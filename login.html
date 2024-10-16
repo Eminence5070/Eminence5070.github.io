@@ -1,74 +1,28 @@
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link id="stylesheet" rel="stylesheet" href="stylesheets/main-default.css">
-    <script src="stylesheets/styler.js"></script>
-</head>
-<body>
-    <h2><i style="margin-right: 14px;rotate: 90deg;" class="fa-brands fa-hive"></i>Vertex</h2>
-    <div>
-        <h1 id="auth-text">Enter your auth key to continue.</h1>
-        <input type="password" id="fake-password" name="email" style="display:none;"> 
-        <input autocomplete="off" oninput="checkPassword()" id="password-input" placeholder="Enter password..." type="text" readonly onfocus="this.removeAttribute('readonly');"/>
-        <button onclick="login()">Login</button>
-    </div>
-    <script>
-        let correctPassword = 'hotdog';
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link id="stylesheet" rel="stylesheet" href="stylesheets/login-default.css">
+        
+        <script src="stylesheets/styler.js"></script>   
+        <script src="src/firebase.js" type="module"></script>
+        <script src="src/login.js" type="module" defer></script>
 
-        function checkPassword() {
-            const inputField = document.getElementById('password-input');
-            const typedValue = inputField.value;
-            if (document.getElementById('auth-text').textContent.includes("auth")) {
-                if (typedValue == correctPassword) {
-                    inputField.classList = 'green';
-                } else if (typedValue == ''){
-                    inputField.classList = '';
-                } else {
-                    inputField.classList = 'red'
-                }
-            } else {
-                if (typedValue == '14141') {
-                    inputField.classList = 'green';
-                } else if (typedValue == ''){
-                    inputField.classList = '';
-                } else {
-                    inputField.classList = 'red'
-                }
+        <style>
+            .fa-hive {
+                margin-right: 14px;
+                rotate: 90deg;
             }
-        }
-
-        const inputField = document.getElementById('password-input');
-
-        inputField.addEventListener('keydown', function(event) {
-            if (event.code === 'Enter') {
-                event.preventDefault()
-                login()
-            }
-        });
-
-        function login() {
-            if (document.getElementById('auth-text').textContent.includes("auth")) {
-                if (inputField.value === correctPassword) {
-                    localStorage.setItem("auth", correctPassword);
-                    if (localStorage.getItem('vertex_sso') == 'true')  {
-                        window.location.href = 'main.html';
-                    } else {
-                        inputField.value = ''
-                        inputField.classList = ''
-                        document.getElementById('auth-text').textContent = 'Now, enter your sso key.'
-                    }
-                } else {
-                    alert('Incorrect password!');
-                }
-            } else {
-                if (inputField.value === '14141') {
-                    localStorage.setItem('vertex_sso', 'true');
-                    window.location.href = 'main.html';
-                } else {
-                    alert('Your SSO key is incorrect. You are now device-banned from Vertex.')
-                    window.location.href = 'index.html';
-                }
-            }
-        }
-    </script>
-</body>
+        </style>
+    </head>
+    <body>
+        <h2><i class="fa-brands fa-hive"></i>Vertex</h2>
+        <div>
+            <h1 id="auth-text">Enter your auth key to continue.</h1>
+            <input type="password" id="fake-password" name="email" style="display:none;"> 
+            <input autocomplete="off" id="password-input" placeholder="Enter password..." type="text" readonly onfocus="this.removeAttribute('readonly');"/>
+            <button id="login-button">Login</button>
+            <p style="font-size:10px;">By signing up, you are agreeing to Vertex's <a style="color:deepskyblue !important;" href="tos.html">Terms of Service</a>.</p>
+        </div>
+    </body>
+</html>

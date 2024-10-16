@@ -30,7 +30,7 @@ document.head.appendChild(title);
 if (typeof navigator !== 'undefined') {
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/sw.js');
+            navigator.serviceWorker.register('/src/sw.js');
         });
     }
 }
@@ -41,7 +41,7 @@ document.addEventListener("click", function() {
 });
 
 
-//action button
+// action bar
 document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('enable-beforeunload', 'true');
     setTimeout(() => {
