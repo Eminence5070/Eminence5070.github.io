@@ -1,12 +1,11 @@
-import { fetchKey } from './firebase.js';
+import { Utils } from './utils.js';
 
-let correctPassword = 'hotdog';
-let SSO = await fetchKey();
+let correctPassword = await Utils.fetchPassword();
+let SSO = await Utils.fetchKey();
 
 const inputField = document.getElementById('password-input');
 const loginButton = document.getElementById('login-button');
 
-// check password
 function checkPassword() {
     const typedValue = inputField.value;
     if (document.getElementById('auth-text').textContent.includes("auth")) {
@@ -28,44 +27,40 @@ function checkPassword() {
     }
 }
 
-// Event listener for checking password as the user types
-inputField.addEventListener('input', checkPassword); // Correctly listen for input events
+inputField.addEventListener('input', checkPassword);
 
-// Event listener for handling Enter key
 inputField.addEventListener('keydown', function(event) {
     if (event.code === 'Enter') {
-        event.preventDefault(); // Prevent the default action (like form submission)
-        login(); // Call the login function
+        event.preventDefault();
+        login();
     }
 });
 
-// Event listener for the login button
-loginButton.addEventListener('click', login); // Call login on button click
+loginButton.addEventListener('click', login);
 
-// Login function
 function login() {
     if (document.getElementById('auth-text').textContent.includes("auth")) {
         if (inputField.value === correctPassword) {
             localStorage.setItem("auth", correctPassword);
             if (localStorage.getItem('vertex_sso') === 'true') {
-                window.location.href = 'main.html'; // Redirect on successful login
+                window.location.href = 'main.html';
             } else {
-                inputField.value = ''; // Clear input
-                inputField.classList = ''; // Reset input style
-                document.getElementById('auth-text').textContent = 'Now, enter your sso key.'; // Update prompt
+                inputField.value = '';
+                inputField.classList = '';
+                document.getElementById('auth-text').textContent = 'Now, enter your sso key.';
                 inputField.setAttribute('placeholder', 'Enter SSO key...');
             }
         } else {
-            alert('Incorrect password!'); // Alert on wrong password
+            alert('Incorrect password!');
         }
     } else {
         if (inputField.value === SSO) {
-            localStorage.setItem('vertex_sso', 'true'); // Store SSO key
-            window.location.href = 'main.html'; // Redirect on successful SSO
+            localStorage.setItem('vertex_sso', 'true');
+            window.location.href = 'main.html';
         } else {
-            alert('Your SSO key is incorrect. You are now locked out of Vertex.'); // Alert for incorrect SSO
-            localStorage.setItem('vertex_isBanned', 'true'); // Store ban status
-            window.location.href = 'index.html'; // Redirect to index on ban
+            alert('Your SSO key is incorrect. You are now locked out of Vertex.');
+            localStorage.setItem('vertex_isBanned', 'true');
+            window.location.href = 'index.html';
         }
     }
 }

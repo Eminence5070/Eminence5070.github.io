@@ -1,10 +1,15 @@
 $
+-OCTOBER 16
+$
+>Rewrote a lot of old code!
+>Updated <a style="color:deepskyblue !important;" href="tos.html">Terms of Service</a> & added a print button!
+$
 -OCTOBER 15
 $
->Added unique fingerprinting!
->Created a Firebase Database!
->Created <a style="color:deepskyblue !important;" href="tos.html">Terms of Services</a>, so I don't get in trouble!
->Added device-blocking for entering an incorrect password!
+>Added device fingerprinting!
+>Created a Firestore Database!
+>Added <a style="color:deepskyblue !important;" href="tos.html">Terms of Service</a>!
+>Block devices that entered an incorrect password!
 $
 -OCTOBER 14
 $
