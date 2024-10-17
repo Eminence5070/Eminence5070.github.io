@@ -1,14 +1,14 @@
-import { checkUUID, ensureUUID, writeUUID } from "./validator.js";
+import { Utils } from "./utils.js";
 
 document.addEventListener('DOMContentLoaded', function() {
-    ensureUUID();
+    Utils.ensureUUID();
     document.addEventListener('keydown', function(event) {
-        if ('vertex_isBanned' || checkUUID(localStorage.getItem('vertex_uuid')) !== true) {
-          writeUUID(localStorage.getItem('vertex_uuid'))
-        }
         if (event.code === 'Backquote') {
+            if ('vertex_isBanned' || Utils.checkUUID(localStorage.getItem('vertex_uuid')) !== true) {
+              Utils.writeUUID(localStorage.getItem('vertex_uuid'))
+            }
             event.preventDefault()
-            if (localStorage.getItem('vertex_isBanned', 'true') === 'true' || checkUUID(localStorage.getItem('vertex_uuid')) === true) {
+            if (localStorage.getItem('vertex_isBanned') === 'true' || Utils.checkUUID(localStorage.getItem('vertex_uuid')) === true) {
               alert('Sorry, you are banned from Vertex.');
             }
             else if (localStorage.getItem('vertex_autologin_setting') !== 'true' ) {

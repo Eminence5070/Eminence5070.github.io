@@ -2,13 +2,19 @@
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-        <link id="stylesheet" rel="stylesheet" href="stylesheets/login-default.css">
+        <link id="stylesheet" rel="stylesheet" href="assets/stylesheets/login-default.css">
         
-        <script src="stylesheets/styler.js"></script>   
-        <script src="src/firebase.js" type="module"></script>
+        <script src="assets/stylesheets/mapper.js"></script>   
         <script src="src/login.js" type="module" defer></script>
 
         <style>
+            div[data-reactroot] {
+                /* stupid element vsc liveserver generates, ignore. */
+                display: none;
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+            }
             .fa-hive {
                 margin-right: 14px;
                 rotate: 90deg;
@@ -22,7 +28,7 @@
             <input type="password" id="fake-password" name="email" style="display:none;"> 
             <input autocomplete="off" id="password-input" placeholder="Enter password..." type="text" readonly onfocus="this.removeAttribute('readonly');"/>
             <button id="login-button">Login</button>
-            <p style="font-size:10px;">By signing up, you are agreeing to Vertex's <a style="color:deepskyblue !important;" href="tos.html">Terms of Service</a>.</p>
+            <p style="font-size:11px;scale:1.1;">By signing up, you are agreeing to Vertex's <a style="color:deepskyblue !important;" href="tos.html">Terms of Service</a>.</p>
         </div>
     </body>
 </html>

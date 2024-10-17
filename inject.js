@@ -12,12 +12,12 @@ window.addEventListener('beforeunload', beforeUnload);
   
 // load additional resources
 var link = document.createElement('link');
-link.href = '/manifest.json';
+link.href = '/assets/manifest.json';
 link.rel = 'manifest';
 document.head.appendChild(link);
 
 var link = document.createElement('link');
-link.href = '/res/vertex-384x384.png';
+link.href = '/assets/vertex-384x384.png';
 link.rel = 'icon';
 link.type = 'image/x-icon';
 document.head.appendChild(link);
