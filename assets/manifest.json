@@ -10,22 +10,22 @@
     "orientation": "any",
     "icons": [
       {
-        "src": "/res/vertex-192x192.png",
+        "src": "vertex-192x192.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-          "src": "/res/vertex-384x384.png",
+          "src": "vertex-384x384.png",
           "sizes": "384x384",
           "type": "image/png"
       },
       {
-          "src": "/res/vertex-180x180.png",
+          "src": "vertex-180x180.png",
           "sizes": "180x180",
           "type": "image/png"
       },
       {
-          "src": "/res/vertex-144x144.png",
+          "src": "vertex-144x144.png",
           "sizes": "144x144",
           "type": "image/png"
       }
