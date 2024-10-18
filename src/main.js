@@ -14,7 +14,6 @@ async function init() {
     document.addEventListener('mousemove', handleSessionCheck);
     handleSessionCheck();
         
-        // Pagination and search logic
         let currentPage = 1;
         let itemsPerPage = 6;
         let currentFilter = 'All';
@@ -39,7 +38,6 @@ async function init() {
         loadResults();
 
         function loadResults() {
-            console.log('hi');
             const query = document.getElementById('search-bar').value.toLowerCase();
             fetch('/data/content.json')
                 .then(response => response.json())
