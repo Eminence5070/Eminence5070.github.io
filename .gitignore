@@ -1,2 +1,5 @@
 node_modules/
-data/restricted-users.json
+data/blacklist.json
+.git/
+.idx/
+.vscode/
