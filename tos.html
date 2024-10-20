@@ -1,126 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terms of Service</title>
     <script>
-        HTMLElement.prototype.printMe = printMe;
-            function printMe(query){
-                var myframe = document.createElement('IFRAME');
-                myframe.domain = document.domain;
-                myframe.style.position = "absolute";
-                myframe.style.top = "-10000px";
-                document.body.appendChild(myframe);
-                myframe.contentDocument.write('<pre>' + this.innerHTML + '</pre>') ;
-                setTimeout(function(){
-                myframe.focus();
-                myframe.contentWindow.print();
-                myframe.parentNode.removeChild(myframe);
-            },300);
-            window.focus();
-        }
+      HTMLElement.prototype.printMe = printMe;
+      function printMe(query) {
+        var myframe = document.createElement("IFRAME");
+        myframe.domain = document.domain;
+        myframe.style.position = "absolute";
+        myframe.style.top = "-10000px";
+        document.body.appendChild(myframe);
+        myframe.contentDocument.write("<pre>" + this.innerHTML + "</pre>");
+        setTimeout(function () {
+          myframe.focus();
+          myframe.contentWindow.print();
+          myframe.parentNode.removeChild(myframe);
+        }, 300);
+        window.focus();
+      }
     </script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        details {
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f975; 
-        }
-        summary {
-            cursor: pointer;
-            font-weight: bold;
-        }
-        p {
-            margin: 10px 0;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      details {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f975;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: bold;
+      }
+      p {
+        margin: 10px 0;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Terms of Service</h1>
-    <button onclick="document.getElementById('print-output').printMe();">Print</button>
+    <button onclick="document.getElementById('print-output').printMe();">
+      Print
+    </button>
 
     <details>
-        <summary><strong>Definitions</strong></summary>
-        <br>
-        <summary><strong>Vertex</strong></summary>
-        <p>The services, products, and platforms provided under the name "Vertex" which users access and utilize. This includes all pages and/or files that make up Vertex, any databases or repositories that host its code, and/or any additional projects made by Vertex's owner(s).</p>
+      <summary><strong>Definitions</strong></summary>
+      <br />
+      <summary><strong>Vertex</strong></summary>
+      <p>
+        The services, products, and platforms provided under the name "Vertex"
+        which users access and utilize. This includes all pages and/or files
+        that make up Vertex, any databases or repositories that host its code,
+        and/or any additional projects made by Vertex's owner(s).
+      </p>
 
-        <summary><strong>Vertex's owner(s)</strong></summary>
-        <p>The individuals or entities who own and operate any of the Vertex services, responsible for the overall management and oversight.</p>
+      <summary><strong>Vertex's owner(s)</strong></summary>
+      <p>
+        The individuals or entities who own and operate any of the Vertex
+        services, responsible for the overall management and oversight.
+      </p>
 
-        <summary><strong>Vertex affiliates</strong></summary>
-        <p>Any related companies, entities, peoples, or organizations that have a partnership, association, or relationship with Vertex.</p>
+      <summary><strong>Vertex affiliates</strong></summary>
+      <p>
+        Any related companies, entities, peoples, or organizations that have a
+        partnership, association, or relationship with Vertex.
+      </p>
     </details>
 
     <details>
-        <summary><strong>Acceptance of Terms</strong></summary>
-        <p>By using any of the services provided by Vertex, Vertex's owner(s), and/or its affiliates, you agree to follow the terms and conditions outlined herein. If you terminate your usage with Vertex, you remain obligated to adhere to these terms.</p>
+      <summary><strong>Acceptance of Terms</strong></summary>
+      <p>
+        By using any of the services provided by Vertex, Vertex's owner(s),
+        and/or its affiliates, you agree to follow the terms and conditions
+        outlined herein. If you terminate your usage with Vertex, you remain
+        obligated to adhere to these terms.
+      </p>
     </details>
 
     <details>
-        <summary><strong>Disclaimer of Warranties</strong></summary>
-        <p>Vertex is provided "as is" without any express or implied warranties, including, but not limited to, implied warranties of merchantability and fitness for a particular purpose.</p>
+      <summary><strong>Disclaimer of Warranties</strong></summary>
+      <p>
+        Vertex is provided "as is" without any express or implied warranties,
+        including, but not limited to, implied warranties of merchantability and
+        fitness for a particular purpose.
+      </p>
     </details>
 
     <details>
-        <summary><strong>Compliance and Accountability</strong></summary>
-        <p>As a consumer of Vertex, you are solely responsible for your use of the services. Any activities conducted while using Vertex's services, whether malicious or otherwise, are not the responsibility of Vertex. You acknowledge that any violation of applicable policies, rules, or laws is your sole responsibility, and you agree to accept any consequences or penalties resulting from your actions.</p>
+      <summary><strong>Compliance and Accountability</strong></summary>
+      <p>
+        As a consumer of Vertex, you are solely responsible for your use of the
+        services. Any activities conducted while using Vertex's services,
+        whether malicious or otherwise, are not the responsibility of Vertex.
+        You acknowledge that any violation of applicable policies, rules, or
+        laws is your sole responsibility, and you agree to accept any
+        consequences or penalties resulting from your actions.
+      </p>
     </details>
 
     <details>
-        <summary><strong>Limitation of Liabilities</strong></summary>
-        <p>Vertex's owner(s) shall not be liable for any indirect, incidental, or consequential damages arising from your use of its services. You agree to indemnify and hold Vertex's owner(s) harmless from any claims, damages, or liabilities that arise from your use of the services. It is your responsibility to ensure compliance with all applicable laws and regulations while using Vertex's services.</p>
+      <summary><strong>Limitation of Liabilities</strong></summary>
+      <p>
+        Vertex's owner(s) shall not be liable for any indirect, incidental, or
+        consequential damages arising from your use of its services. You agree
+        to indemnify and hold Vertex's owner(s) harmless from any claims,
+        damages, or liabilities that arise from your use of the services. It is
+        your responsibility to ensure compliance with all applicable laws and
+        regulations while using Vertex's services.
+      </p>
     </details>
 
     <details>
-        <summary><strong>Modification of Terms</strong></summary>
-        <p>Vertex reserves the right to modify these terms at any time, with or without prior notice.</p>
+      <summary><strong>Modification of Terms</strong></summary>
+      <p>
+        Vertex reserves the right to modify these terms at any time, with or
+        without prior notice.
+      </p>
     </details>
 
     <details>
-        <summary><strong>Distribution and Modification</strong></summary>
-        <p>            You are strictly prohibited from discussing, sharing, or disclosing any information about Vertex to any individuals who are not current consumers or Vertex affiliates. Additionally, you are prohibited from distributing any private information related to Vertex without obtaining explicit permission from Vertex's owner(s). This restriction includes, but is not limited to, information such as Vertex's website credentials, Vertex's password, Vertex's Single Sign-On (SSO) key, and any sensitive data belonging to Vertex's owner(s).</p>
-        <p>You are permitted to download or modify Vertex's code, provided that the Terms of Service remain intact and unaltered. <br>However, should you choose to modify or download Vertex's code, you do not possess the authority to represent it as your own work or as the work of another entity.</p>
+      <summary><strong>Distribution and Modification</strong></summary>
+      <p>
+        You are strictly prohibited from discussing, sharing, or disclosing any
+        information about Vertex to any individuals who are not current
+        consumers or Vertex affiliates. Additionally, you are prohibited from
+        distributing any private information related to Vertex without obtaining
+        explicit permission from Vertex's owner(s). This restriction includes,
+        but is not limited to, information such as Vertex's website credentials,
+        Vertex's password, Vertex's Single Sign-On (SSO) key, and any sensitive
+        data belonging to Vertex's owner(s).
+      </p>
+      <p>
+        You are permitted to download or modify Vertex's code, provided that the
+        Terms of Service remain intact and unaltered. <br />However, should you
+        choose to modify or download Vertex's code, you do not possess the
+        authority to represent it as your own work or as the work of another
+        entity.
+      </p>
     </details>
 
     <details>
-        <summary><strong>User Termination</strong></summary>
-        <p>Vertex's owner(s) reserve the right to terminate any user's access to the services at their discretion. This termination may occur for violations of these terms or any actions deemed inappropriate or harmful to the services.</p>
+      <summary><strong>User Termination</strong></summary>
+      <p>
+        Vertex's owner(s) reserve the right to terminate any user's access to
+        the services at their discretion. This termination may occur for
+        violations of these terms or any actions deemed inappropriate or harmful
+        to the services.
+      </p>
     </details>
 
     <details>
-        <summary><strong>Utilization of Personal Data</strong></summary>
-        <p>Vertex reserves the right to collect, modify, and utilize personal data for various purposes, including user identification and enhancing website functionality. This data may encompass, but is not limited to:</p>
-        <ul>
-            <li>Game saves</li>
-            <li>Data provided by your browser</li>
-            <li>Digital fingerprints</li>
-            <li>IP addresses (for fingerprinting purposes)</li>
-            <li>User settings</li>
-            <li>Cached content</li>
-            <li>Session tokens</li>
-        </ul>
-        <p>Vertex will not distribute this data to third parties unless mandated by law.</p>
+      <summary><strong>Utilization of Personal Data</strong></summary>
+      <p>
+        Vertex reserves the right to collect, modify, and utilize personal data
+        for various purposes, including user identification and enhancing
+        website functionality. This data may encompass, but is not limited to:
+      </p>
+      <ul>
+        <li>Game saves</li>
+        <li>Data provided by your browser</li>
+        <li>Digital fingerprints</li>
+        <li>IP addresses (for fingerprinting purposes)</li>
+        <li>User settings</li>
+        <li>Cached content</li>
+        <li>Session tokens</li>
+      </ul>
+      <p>
+        Vertex will not distribute this data to third parties unless mandated by
+        law.
+      </p>
     </details>
-    
 
     <details>
-        <summary><strong>Asset Usage</strong></summary>
-        <p>Vertex does not claim ownership of any external assets utilized within its services. All licenses associated with these assets remain applicable and in full effect.</p>
+      <summary><strong>Asset Usage</strong></summary>
+      <p>
+        Vertex does not claim ownership of any external assets utilized within
+        its services. All licenses associated with these assets remain
+        applicable and in full effect.
+      </p>
     </details>
-    <pre id="print-output" style="display:none;">
+    <pre id="print-output" style="display: none">
         <style>
             signature-box {
                 width: 100vw;
@@ -137,7 +206,7 @@
                 width: calc(45% - 16px);
                 margin: 8px;
                 border-bottom: 1px solid #878787;
-                height: 0px; /* This ensures it looks like a line */
+                height: 0px;
                 display: block;
             }
             hr {
@@ -152,7 +221,6 @@
 DOCUMENT_ID: 119141</pre>
 <h1 style="text-align:center;">Vertex: Signature Field</h1>
         <signature-box>
-            <!-- Create 50 signature lines -->
             <signature></signature>
             <signature></signature>
             <signature></signature>
@@ -284,5 +352,5 @@ DOCUMENT_ID: 101291</pre>
     <pre>VERTEX TECHNOLOGIES © 2024
 PAGE: 2/2</pre>
     </pre>
-</body>
+  </body>
 </html>

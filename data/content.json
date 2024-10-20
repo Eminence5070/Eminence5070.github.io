@@ -1,324 +1,324 @@
 [
-    {
-        "title": "2048",
-        "icon": "icons/2048.png",
-        "url": "games/2048",
-        "category": "Games",
-        "description": "Merge the tiles and reach 2048!"
-    },
-    {
-        "title": "Tetris",
-        "icon": "icons/tetris.jpg",
-        "url": "games/tetris/tetris.html",
-        "category": "Games",
-        "description": "The world's favorite puzzle game!"
-    },
-    {
-        "title": "Motherload",
-        "icon": "icons/motherload.jpg",
-        "url": "games/flash?href=flash/motherload.swf",
-        "category": "Games",
-        "description": "Mine deep into the ground!"
-    },
-    {
-        "title": "EaglercraftX",
-        "icon": "icons/minecraft.svg",
-        "url": "games/eaglercraftx.html",
-        "category": "Games",
-        "description": "Minecraft 1.8.8 ported to the web!"
-    },
-    {
-        "title": "Eaglercraftʎ",
-        "icon": "icons/minecraft.svg",
-        "url": "games/eaglercraftl.html",
-        "category": "Games",
-        "description": "Minecraft 1.9.4 ported to the web!"
-    },
-    {
-        "title": "Burrito Bison",
-        "icon": "icons/burritobison.png",
-        "url": "games/burritobison/",
-        "category": "Games",
-        "description": "Smash hordes of gummy bears!"
-    },
-    {
-        "title": "Geometry Dash",
-        "icon": "icons/geometrydash.jpg",
-        "url": "games/geometrydash/",
-        "category": "Games",
-        "description": "Challenge your reflexes in Geometry Dash!"
-    },
-    {
-        "title": "Pacman",
-        "icon": "icons/pacman.png",
-        "url": "games/pacman/index.html#bg=black&autoplay",
-        "category": "Games",
-        "description": "The retro arcade game you know and love!"
-    },
-    {
-        "title": "Tanuki Sunset",
-        "icon": "icons/tanukisunset.jpg",
-        "url": "games/tanukisunset/",
-        "category": "Games",
-        "description": "Third-person longboard-skating game!"
-    },
-    {
-        "title": "Snake",
-        "icon": "icons/snake.jpg",
-        "url": "games/snake/",
-        "category": "Games",
-        "description": "Play with a very long snake!"
-    },
-    {
-        "title": "Super Mario 64",
-        "icon": "icons/sm64.jpg",
-        "url": "games/sm64/",
-        "category": "Games",
-        "description": "A classic 3D platformer!"
-    },
-    {
-        "title": "Tunnel Rush",
-        "icon": "icons/tunnelrush.jpg",
-        "url": "games/tunnelrush/",
-        "category": "Games",
-        "description": "Navigate a 3D tunnel and avoid obstacles!"
-    },
-    {
-        "title": "Drift Hunters",
-        "icon": "icons/drifthunters.png",
-        "url": "games/drifthunters/",
-        "category": "Games",
-        "description": "Experience improved with alcohol!"
-    },
-    {
-        "title": "Territorial.io",
-        "icon": "icons/territorial.png",
-        "url": "games/territorial.html",
-        "category": "Games",
-        "description": "Conquer the world!"
-    },
-    {
-        "title": "Tiny Fishing",
-        "icon": "icons/tinyfishing.webp",
-        "url": "games/tinyfishing/",
-        "category": "Games",
-        "description": "Become the best fisherman!"
-    },
-    {
-        "title": "Web Proxy",
-        "icon": "icons/unblocker.jpeg",
-        "url": "https://doge.lamplifesteal.xyz/",
-        "category": "Apps",
-        "description": "Unblock everything!"
-    },
-    {
-        "title": "Flappy Bird",
-        "icon": "icons/flappybird.jpg",
-        "url": "games/flappybird/",
-        "category": "Games",
-        "description": "Flap a bird!"
-    },
-    {
-        "title": "Time Shooter 3",
-        "icon": "icons/timeshooter3.jpg",
-        "url": "games/timeshooter3/",
-        "category": "Games",
-        "description": "More content and more fun!"
-    },
-    {
-        "title": "Bitplanes",
-        "icon": "icons/bitplanes.svg",
-        "url": "games/bitplanes/",
-        "category": "Games",
-        "description": "Fun aerial combat game!"
-    },
-    {
-        "title": "Jchabin Cars",
-        "icon": "icons/jchabin.png",
-        "url": "games/jchabin/",
-        "category": "Games",
-        "description": "Multiplayer racing game!"
-    },
-    {
-        "title": "Drive Mad",
-        "icon": "icons/drivemad.jpg",
-        "url": "games/drivemad/",
-        "category": "Games",
-        "description": "Soberness optional!"
-    },
-    {
-        "title": "Monkey Mart",
-        "icon": "icons/monkeymart.jpg",
-        "url": "games/monkeymart/",
-        "category": "Games",
-        "description": "Sell bananas and buy monkeys!"
-    },
-    {
-        "title": "Cookie Clicker",
-        "icon": "icons/cookie.webp",
-        "url": "games/cookieclicker/",
-        "category": "Games",
-        "description": "Money doesn't buy happiness, cookies do!"
-    },
-    {
-        "title": "A Dance of Fire & Ice",
-        "icon": "icons/fireandice.webp",
-        "url": "games/dance/",
-        "category": "Games",
-        "description": "A fun one-button rhythm game!"
-    },
-    {
-        "title": "Fireboy & Watergirl",
-        "icon": "icons/fireboy.png",
-        "url": "games/flash?href=flash/fireboy.swf",
-        "category": "Games",
-        "description": "A fun 2-player platformer!"
-    },
-    {
-        "title": "Ruffle",
-        "icon": "icons/ruffle.png",
-        "url": "apps/ruffle/index.html",
-        "category": "Apps",
-        "description": "Flash game emulator!"
-    },
-    {
-        "title": "GBA.JS",
-        "icon": "icons/gba.png",
-        "url": "apps/gbajs/index.html",
-        "category": "Apps",
-        "description": "Emulate retro games!"
-    },
-    {
-        "title": "Slope",
-        "icon": "icons/slope.webp",
-        "url": "games/slope/index.html",
-        "category": "Games",
-        "description": "Play with balls!"
-    },
-    {
-        "title": "Slowroads",
-        "icon": "games/slowroads/static/media/favicon_circle_white.eb1953e3.svg",
-        "url": "games/slowroads/index.html",
-        "category": "Games",
-        "description": "Vroom!"
-    },
-    {
-        "title": "1v1.lol",
-        "icon": "icons/1v1.jpg",
-        "url": "games/1v1/index.html",
-        "category": "Games",
-        "description": "Georgia school simulator!"
-    },
-    {
-        "title": "FNAW",
-        "icon": "icons/fnaw.png",
-        "url": "games/fnaw.html",
-        "category": "Games",
-        "description": "Five Nights at Freddy's made by the Eaglercraft developer!"
-    },
-    {
-        "title": "Time Shooter 2",
-        "icon": "icons/timeshooter.jpeg",
-        "url": "games/timeshooter/index.html",
-        "category": "Games",
-        "description": "Control time & fight bad guys!"
-    },
-    {
-        "title": "Discord",
-        "icon": "icons/discord.png",
-        "url": "apps/discord.html",
-        "category": "Apps",
-        "description": "The official Vertex discord server!"
-    },
-    {
-        "title": "Eaglercraft",
-        "icon": "icons/minecraft_old.svg",
-        "url": "games/eaglercraft.html",
-        "category": "Games",
-        "description": "Minecraft 1.5.2 ported to the web!"
-    },
-    {
-        "title": "BTD 1",
-        "icon": "icons/btd_old.jpeg",
-        "url": "games/flash?href=flash/btd1.swf",
-        "category": "Games",
-        "description": "Bloons TD 1!"
-    },
-    {
-        "title": "BTD 2",
-        "icon": "icons/btd_old.jpeg",
-        "url": "games/flash?href=flash/btd2.swf",
-        "category": "Games",
-        "description": "Bloons TD 2!"
-    },
-    {
-        "title": "BTD 3",
-        "icon": "icons/btd3.jpg",
-        "url": "games/flash?href=flash/btd3.swf",
-        "category": "Games",
-        "description": "Bloons TD 3!"
-    },
-    {
-        "title": "BTD 4",
-        "icon": "icons/btd4.webp",
-        "url": "games/flash?href=flash/btd4.swf",
-        "category": "Games",
-        "description": "Bloons TD 4!"
-    },
-    {
-        "title": "BTD 5",
-        "icon": "icons/btd5.png",
-        "url": "games/flash?href=flash/btd5.swf",
-        "category": "Games",
-        "description": "Bloons TD 5!"
-    },
-    {
-        "title": "Eaglercraft 1.2.5",
-        "icon": "icons/minecraft.svg",
-        "url": "games/eaglercraft1.2.5.html",
-        "category": "Games",
-        "description": "Minecraft 1.2.5 ported to the web!"
-    },
-    {
-        "title": "Eaglercraft b1.7.3",
-        "icon": "icons/minecraft_old.svg",
-        "url": "games/eaglercraftb1.7.3.html",
-        "category": "Games",
-        "description": "Minecraft beta 1.7.3 ported to the web!"
-    },
-    {
-        "title": "Eaglercraft b1.3",
-        "icon": "icons/minecraft_old.svg",
-        "url": "games/eaglercraftb1.3.html",
-        "category": "Games",
-        "description": "Minecraft beta 1.3 ported to the web!"
-    },
-    {
-        "title": "Eaglercraft a1.2.6",
-        "icon": "icons/minecraft_old.svg",
-        "url": "games/eaglercrafta1.2.6.html",
-        "category": "Games",
-        "description": "Minecraft alpha 1.2.6 ported to the web!"
-    },
-    {
-        "title": "Eaglercraft Infdev",
-        "icon": "icons/minecraft_old.svg",
-        "url": "games/eaglercraftinfdev.html",
-        "category": "Games",
-        "description": "Minecraft infdev ported to the web!"
-    },
-    {
-        "title": "Eaglercraft Indev",
-        "icon": "icons/minecraft_old.svg",
-        "url": "games/eaglercraftindev.html",
-        "category": "Games",
-        "description": "Minecraft indev ported to the web!"
-    },
-    {
-        "title": "Stack",
-        "icon": "icons/stack.png",
-        "url": "games/stack-game/stack.html",
-        "category": "Games",
-        "description": "Test your reaction skills!"
-    }
+  {
+    "title": "2048",
+    "icon": "icons/2048.png",
+    "url": "games/2048",
+    "category": "Games",
+    "description": "Merge the tiles and reach 2048!"
+  },
+  {
+    "title": "Tetris",
+    "icon": "icons/tetris.jpg",
+    "url": "games/tetris/tetris.html",
+    "category": "Games",
+    "description": "The world's favorite puzzle game!"
+  },
+  {
+    "title": "Motherload",
+    "icon": "icons/motherload.jpg",
+    "url": "games/flash?href=flash/motherload.swf",
+    "category": "Games",
+    "description": "Mine deep into the ground!"
+  },
+  {
+    "title": "EaglercraftX",
+    "icon": "icons/minecraft.svg",
+    "url": "games/eaglercraftx.html",
+    "category": "Games",
+    "description": "Minecraft 1.8.8 ported to the web!"
+  },
+  {
+    "title": "Eaglercraftʎ",
+    "icon": "icons/minecraft.svg",
+    "url": "games/eaglercraftl.html",
+    "category": "Games",
+    "description": "Minecraft 1.9.4 ported to the web!"
+  },
+  {
+    "title": "Burrito Bison",
+    "icon": "icons/burritobison.png",
+    "url": "games/burritobison/",
+    "category": "Games",
+    "description": "Smash hordes of gummy bears!"
+  },
+  {
+    "title": "Geometry Dash",
+    "icon": "icons/geometrydash.jpg",
+    "url": "games/geometrydash/",
+    "category": "Games",
+    "description": "Challenge your reflexes in Geometry Dash!"
+  },
+  {
+    "title": "Pacman",
+    "icon": "icons/pacman.png",
+    "url": "games/pacman/index.html#bg=black&autoplay",
+    "category": "Games",
+    "description": "The retro arcade game you know and love!"
+  },
+  {
+    "title": "Tanuki Sunset",
+    "icon": "icons/tanukisunset.jpg",
+    "url": "games/tanukisunset/",
+    "category": "Games",
+    "description": "Third-person longboard-skating game!"
+  },
+  {
+    "title": "Snake",
+    "icon": "icons/snake.jpg",
+    "url": "games/snake/",
+    "category": "Games",
+    "description": "Play with a very long snake!"
+  },
+  {
+    "title": "Super Mario 64",
+    "icon": "icons/sm64.jpg",
+    "url": "games/sm64/",
+    "category": "Games",
+    "description": "A classic 3D platformer!"
+  },
+  {
+    "title": "Tunnel Rush",
+    "icon": "icons/tunnelrush.jpg",
+    "url": "games/tunnelrush/",
+    "category": "Games",
+    "description": "Navigate a 3D tunnel and avoid obstacles!"
+  },
+  {
+    "title": "Drift Hunters",
+    "icon": "icons/drifthunters.png",
+    "url": "games/drifthunters/",
+    "category": "Games",
+    "description": "Experience improved with alcohol!"
+  },
+  {
+    "title": "Territorial.io",
+    "icon": "icons/territorial.png",
+    "url": "games/territorial.html",
+    "category": "Games",
+    "description": "Conquer the world!"
+  },
+  {
+    "title": "Tiny Fishing",
+    "icon": "icons/tinyfishing.webp",
+    "url": "games/tinyfishing/",
+    "category": "Games",
+    "description": "Become the best fisherman!"
+  },
+  {
+    "title": "Web Proxy",
+    "icon": "icons/unblocker.jpeg",
+    "url": "https://doge.lamplifesteal.xyz/",
+    "category": "Apps",
+    "description": "Unblock everything!"
+  },
+  {
+    "title": "Flappy Bird",
+    "icon": "icons/flappybird.jpg",
+    "url": "games/flappybird/",
+    "category": "Games",
+    "description": "Flap a bird!"
+  },
+  {
+    "title": "Time Shooter 3",
+    "icon": "icons/timeshooter3.jpg",
+    "url": "games/timeshooter3/",
+    "category": "Games",
+    "description": "More content and more fun!"
+  },
+  {
+    "title": "Bitplanes",
+    "icon": "icons/bitplanes.svg",
+    "url": "games/bitplanes/",
+    "category": "Games",
+    "description": "Fun aerial combat game!"
+  },
+  {
+    "title": "Jchabin Cars",
+    "icon": "icons/jchabin.png",
+    "url": "games/jchabin/",
+    "category": "Games",
+    "description": "Multiplayer racing game!"
+  },
+  {
+    "title": "Drive Mad",
+    "icon": "icons/drivemad.jpg",
+    "url": "games/drivemad/",
+    "category": "Games",
+    "description": "Soberness optional!"
+  },
+  {
+    "title": "Monkey Mart",
+    "icon": "icons/monkeymart.jpg",
+    "url": "games/monkeymart/",
+    "category": "Games",
+    "description": "Sell bananas and buy monkeys!"
+  },
+  {
+    "title": "Cookie Clicker",
+    "icon": "icons/cookie.webp",
+    "url": "games/cookieclicker/",
+    "category": "Games",
+    "description": "Money doesn't buy happiness, cookies do!"
+  },
+  {
+    "title": "A Dance of Fire & Ice",
+    "icon": "icons/fireandice.webp",
+    "url": "games/dance/",
+    "category": "Games",
+    "description": "A fun one-button rhythm game!"
+  },
+  {
+    "title": "Fireboy & Watergirl",
+    "icon": "icons/fireboy.png",
+    "url": "games/flash?href=flash/fireboy.swf",
+    "category": "Games",
+    "description": "A fun 2-player platformer!"
+  },
+  {
+    "title": "Ruffle",
+    "icon": "icons/ruffle.png",
+    "url": "apps/ruffle/index.html",
+    "category": "Apps",
+    "description": "Flash game emulator!"
+  },
+  {
+    "title": "GBA.JS",
+    "icon": "icons/gba.png",
+    "url": "apps/gbajs/index.html",
+    "category": "Apps",
+    "description": "Emulate retro games!"
+  },
+  {
+    "title": "Slope",
+    "icon": "icons/slope.webp",
+    "url": "games/slope/index.html",
+    "category": "Games",
+    "description": "Play with balls!"
+  },
+  {
+    "title": "Slowroads",
+    "icon": "games/slowroads/static/media/favicon_circle_white.eb1953e3.svg",
+    "url": "games/slowroads/index.html",
+    "category": "Games",
+    "description": "Vroom!"
+  },
+  {
+    "title": "1v1.lol",
+    "icon": "icons/1v1.jpg",
+    "url": "games/1v1/index.html",
+    "category": "Games",
+    "description": "Georgia school simulator!"
+  },
+  {
+    "title": "FNAW",
+    "icon": "icons/fnaw.png",
+    "url": "games/fnaw.html",
+    "category": "Games",
+    "description": "Five Nights at Freddy's made by the Eaglercraft developer!"
+  },
+  {
+    "title": "Time Shooter 2",
+    "icon": "icons/timeshooter.jpeg",
+    "url": "games/timeshooter/index.html",
+    "category": "Games",
+    "description": "Control time & fight bad guys!"
+  },
+  {
+    "title": "Discord",
+    "icon": "icons/discord.png",
+    "url": "apps/discord.html",
+    "category": "Apps",
+    "description": "The official Vertex discord server!"
+  },
+  {
+    "title": "Eaglercraft",
+    "icon": "icons/minecraft_old.svg",
+    "url": "games/eaglercraft.html",
+    "category": "Games",
+    "description": "Minecraft 1.5.2 ported to the web!"
+  },
+  {
+    "title": "BTD 1",
+    "icon": "icons/btd_old.jpeg",
+    "url": "games/flash?href=flash/btd1.swf",
+    "category": "Games",
+    "description": "Bloons TD 1!"
+  },
+  {
+    "title": "BTD 2",
+    "icon": "icons/btd_old.jpeg",
+    "url": "games/flash?href=flash/btd2.swf",
+    "category": "Games",
+    "description": "Bloons TD 2!"
+  },
+  {
+    "title": "BTD 3",
+    "icon": "icons/btd3.jpg",
+    "url": "games/flash?href=flash/btd3.swf",
+    "category": "Games",
+    "description": "Bloons TD 3!"
+  },
+  {
+    "title": "BTD 4",
+    "icon": "icons/btd4.webp",
+    "url": "games/flash?href=flash/btd4.swf",
+    "category": "Games",
+    "description": "Bloons TD 4!"
+  },
+  {
+    "title": "BTD 5",
+    "icon": "icons/btd5.png",
+    "url": "games/flash?href=flash/btd5.swf",
+    "category": "Games",
+    "description": "Bloons TD 5!"
+  },
+  {
+    "title": "Eaglercraft 1.2.5",
+    "icon": "icons/minecraft.svg",
+    "url": "games/eaglercraft1.2.5.html",
+    "category": "Games",
+    "description": "Minecraft 1.2.5 ported to the web!"
+  },
+  {
+    "title": "Eaglercraft b1.7.3",
+    "icon": "icons/minecraft_old.svg",
+    "url": "games/eaglercraftb1.7.3.html",
+    "category": "Games",
+    "description": "Minecraft beta 1.7.3 ported to the web!"
+  },
+  {
+    "title": "Eaglercraft b1.3",
+    "icon": "icons/minecraft_old.svg",
+    "url": "games/eaglercraftb1.3.html",
+    "category": "Games",
+    "description": "Minecraft beta 1.3 ported to the web!"
+  },
+  {
+    "title": "Eaglercraft a1.2.6",
+    "icon": "icons/minecraft_old.svg",
+    "url": "games/eaglercrafta1.2.6.html",
+    "category": "Games",
+    "description": "Minecraft alpha 1.2.6 ported to the web!"
+  },
+  {
+    "title": "Eaglercraft Infdev",
+    "icon": "icons/minecraft_old.svg",
+    "url": "games/eaglercraftinfdev.html",
+    "category": "Games",
+    "description": "Minecraft infdev ported to the web!"
+  },
+  {
+    "title": "Eaglercraft Indev",
+    "icon": "icons/minecraft_old.svg",
+    "url": "games/eaglercraftindev.html",
+    "category": "Games",
+    "description": "Minecraft indev ported to the web!"
+  },
+  {
+    "title": "Stack",
+    "icon": "icons/stack.png",
+    "url": "games/stack-game/stack.html",
+    "category": "Games",
+    "description": "Test your reaction skills!"
+  }
 ]

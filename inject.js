@@ -1,59 +1,66 @@
 // prevents GoGuardian tab closing
 function beforeUnload(event) {
-    if (localStorage.getItem('vertex_beforeunload_setting') == 'false') {
-        if (localStorage.getItem('enable-beforeunload') === 'true' || localStorage.getItem('enable-beforeunload') === null) {
-            const message = 'Are you sure you want to leave? Your changes may not be saved.';
-            event.returnValue = message;
-            return message;
-        }
+  if (localStorage.getItem("vertex_beforeunload_setting") == "false") {
+    if (
+      localStorage.getItem("enable-beforeunload") === "true" ||
+      localStorage.getItem("enable-beforeunload") === null
+    ) {
+      const message =
+        "Are you sure you want to leave? Your changes may not be saved.";
+      event.returnValue = message;
+      return message;
     }
-} 
-window.addEventListener('beforeunload', beforeUnload);
-  
+  }
+}
+window.addEventListener("beforeunload", beforeUnload);
+
 // load additional resources
-var link = document.createElement('link');
-link.href = '/assets/manifest.json';
-link.rel = 'manifest';
+var link = document.createElement("link");
+link.href = "/assets/manifest.json";
+link.rel = "manifest";
 document.head.appendChild(link);
 
-var link = document.createElement('link');
-link.href = '/assets/vertex-384x384.png';
-link.rel = 'icon';
-link.type = 'image/x-icon';
+var link = document.createElement("link");
+link.href = "/assets/vertex-384x384.png";
+link.rel = "icon";
+link.type = "image/x-icon";
 document.head.appendChild(link);
 
-var title = document.createElement('title');
-title.innerHTML = 'Vertex'
+var title = document.createElement("title");
+title.innerHTML = "Vertex";
 document.head.appendChild(title);
 
 // load service worker
-if (typeof navigator !== 'undefined') {
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/src/sw.js');
-        });
-    }
+if (typeof navigator !== "undefined") {
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("/src/sw.js");
+    });
+  }
 }
 
 // prevents unfocusing the window
-document.addEventListener("click", function() {
-    window.focus()
+document.addEventListener("click", function () {
+  window.focus();
 });
 
-
 // action bar
-document.addEventListener('DOMContentLoaded', () => {
-    localStorage.setItem('enable-beforeunload', 'true');
-    setTimeout(() => {
-        if (location.href.toString().includes('/main.html') == false || !location.href.toString().includes('/login.html') == false) {
-            if (localStorage.getItem('vertex_action_bar_setting') === 'true') {
-                var link = document.createElement('link');
-                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
-                link.rel = 'stylesheet';
-                document.head.appendChild(link);
+document.addEventListener("DOMContentLoaded", () => {
+  localStorage.setItem("enable-beforeunload", "true");
+  setTimeout(() => {
+    if (
+      location.href.toString().includes("/main.html") == false ||
+      !location.href.toString().includes("/login.html") == false
+    ) {
+      if (localStorage.getItem("vertex_action_bar_setting") === "true") {
+        var link = document.createElement("link");
+        link.href =
+          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css";
+        link.rel = "stylesheet";
+        document.head.appendChild(link);
 
-                var elem = document.createElement('div');
-                elem.innerHTML = `
+        var elem = document.createElement("div");
+        elem.innerHTML = `
                     <div class="icon-menu-pill" id="icon-menu">
                         <i class="fa-brands fa-hive icon"></i>
                         <div class="hidden-icons">
@@ -80,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
 
-                var style = document.createElement('style');
-                style.textContent = `
+        var style = document.createElement("style");
+        style.textContent = `
                     .icon-menu-pill {
                         backdrop-filter: blur(8px);
                         position: fixed;
@@ -182,34 +189,31 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 `;
 
-                document.head.appendChild(style);
-                document.body.appendChild(elem);
+        document.head.appendChild(style);
+        document.body.appendChild(elem);
 
-                const iconContainers = document.querySelectorAll('.icon-container');
-                iconContainers.forEach(container => {
-                    const tooltipText = container.getAttribute('data-tooltip');
-                    const tooltip = document.createElement('div');
-                    tooltip.className = 'tooltip';
-                    tooltip.textContent = tooltipText;
-                    container.appendChild(tooltip);
-                });
-            }
-        }
-    }, 1);
+        const iconContainers = document.querySelectorAll(".icon-container");
+        iconContainers.forEach((container) => {
+          const tooltipText = container.getAttribute("data-tooltip");
+          const tooltip = document.createElement("div");
+          tooltip.className = "tooltip";
+          tooltip.textContent = tooltipText;
+          container.appendChild(tooltip);
+        });
+      }
+    }
+  }, 1);
 });
 
-
-
 // quick-hide shortcut
-document.addEventListener('keydown', function(event) {
-    if (event.altKey && event.code === 'Backquote') {
+document.addEventListener("keydown", function (event) {
+  if (event.altKey && event.code === "Backquote") {
+    localStorage.setItem("enable-beforeunload", "false");
 
-        localStorage.setItem('enable-beforeunload', 'false')
-        
-        event.preventDefault();
+    event.preventDefault();
 
-        setTimeout(function() {
-            window.location.href = '/index.html';
-        }, 0);
-    }
+    setTimeout(function () {
+      window.location.href = "/index.html";
+    }, 0);
+  }
 });
