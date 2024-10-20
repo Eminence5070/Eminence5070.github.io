@@ -46,7 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
           flashUrl
         )}`;
       } else {
-        window.open("https://www.google.com/search?q=" + inputText, "__blank");
+        if (
+          inputText.startsWith("http://") ||
+          inputText.startsWith("https://")
+        ) {
+          location.href = inputText;
+        } else {
+          location.href = "https://www.google.com/search?q=" + inputText;
+        }
       }
     }
   });

@@ -5,5 +5,7 @@
   "editor.minimap.enabled": false,
   "git.autorefresh": true,
   "editor.formatOnSave": true,
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.NoBrowser": false,
   "files.autoSaveDelay": 1
 }

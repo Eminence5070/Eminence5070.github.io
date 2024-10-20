@@ -19,6 +19,7 @@ export const Utils = {
   getAudioFingerprint,
   getFingerprint,
   writeUUID,
+  fetchChangelog,
   fetchToken,
   fetchKey,
 };
