@@ -15,7 +15,8 @@ context-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1e1e1e; /* Slightly lighter background */
+    border-right: 1px solid #282828;
+    background-color: #202020; /* Slightly lighter background */
     transition: width 0.4s ease, height 0.4s ease; /* Smoother transition */
 }
 
@@ -61,11 +62,27 @@ context-menu:hover #changelog-btn:hover {
 context-menu:hover .text {
     display: block;
     margin: 8px;
+    top: -33.33333px;
 }
 
 context-menu i {
     font-size: 24px;
-    margin-left: 14px;
+    margin-left: 2px;
+}
+
+context-menu .fa-hive {
+    margin-top: 30px;
+    border-right: 2px solid rgb(156, 152, 152);
+    border-radius: 2px;
+    padding-right: 14px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+context-menu:hover .fa-hive {
+    margin-top: 0px;
+    border-right: 0px solid gray;
+    padding-right: 0px;
 }
 
 context-menu:hover i {
