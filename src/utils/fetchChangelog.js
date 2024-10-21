@@ -1,20 +1,36 @@
 // fetch changelog from $changelog
+const contextMenu = document.getElementById("context-menu");
+var isChangelogOpen = true;
+
 export async function fetchChangelog() {
-  fetch("data/$changelog")
-    .then((response) => response.text())
-    .then((data) => {
-      contextMenu.innerHTML = parseChangelog(data);
-      contextMenu.style.display = "block";
-      contextMenu.style.left = `77.35vw`;
-      contextMenu.style.top = `62px`;
-      isChangelogOpen = true;
-    });
-  document.addEventListener(
-    "click",
-    function () {
-      contextMenu.style.display = "none";
-      isChangelogOpen = false;
-    },
-    { once: true }
-  );
+  try {
+    const response = await fetch("data/$changelog");
+    const data = await response.text();
+    return data;
+  } catch (error) {
+    console.error("Error fetching changelog:", error);
+    throw error; // Optionally rethrow to handle errors upstream
+  }
+}
+
+export function parseChangelog(data) {
+  return data
+    .split("$")
+    .map((section) => {
+      return section
+        .split("\n")
+        .map((line) => {
+          if (line.startsWith("-")) {
+            return `<div class="context-header">${line
+              .slice(1)
+              .toUpperCase()}</div>`;
+          } else if (line.startsWith(">")) {
+            return `<div class="context-entry">${line.slice(1)}</div>`;
+          } else {
+            return "";
+          }
+        })
+        .join("");
+    })
+    .join('<hr style="border: none; margin: 10px 0;">');
 }

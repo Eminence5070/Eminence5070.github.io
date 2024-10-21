@@ -1,11 +1,5 @@
 {
-  "liveServer.settings.port": 5502,
-  "editor.tabSize": 2,
-  "editor.autoClosingQuotes": "never",
   "editor.minimap.enabled": false,
-  "git.autorefresh": true,
   "editor.formatOnSave": true,
-  "liveServer.settings.CustomBrowser": "chrome",
-  "liveServer.settings.NoBrowser": false,
-  "files.autoSaveDelay": 1
+    five
 }

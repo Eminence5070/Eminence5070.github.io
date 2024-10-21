@@ -7,7 +7,7 @@ import { getAudioFingerprint } from "./utils/audioFingerprint.js";
 import { getFingerprint } from "./utils/getFingerprint.js";
 import { writeUUID } from "./utils/writeUUID.js";
 import { fetchKey, fetchToken } from "./utils/firestore.js";
-import { fetchChangelog } from "./utils/fetchChangelog.js";
+import { fetchChangelog, parseChangelog } from "./utils/fetchChangelog.js";
 
 export const Utils = {
   checkUUID,
@@ -15,6 +15,7 @@ export const Utils = {
   ensureUUID,
   getFontFingerprint,
   fetchChangelog,
+  parseChangelog,
   getIPAddress,
   getAudioFingerprint,
   getFingerprint,
