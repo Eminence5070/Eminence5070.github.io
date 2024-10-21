@@ -1,9 +1,107 @@
 body {
-    background-color: #221a1a;
+    background-color: #191a1a;
     color: #cdd6d4;
     font-family: "Outfit", sans-serif;;
     margin: 0;
     padding: 20px;
+}
+
+context-menu {
+    width: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1e; /* Slightly lighter background */
+    transition: width 0.4s ease, height 0.4s ease; /* Smoother transition */
+}
+
+context-menu:hover {
+    width: 220px; /* Adjusted for better readability */
+}
+
+context-menu:hover h1 {
+    padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0.036);
+    height: 64px;
+    width: 200px;
+}
+
+context-menu #changelog-btn {
+    padding: 12px 15px;
+    margin: 5px 10px;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.fa-video {
+    position: relative;
+    top: -6px;
+}
+
+context-menu:hover #changelog-btn {
+    padding: 6px;
+    width: 180px;
+    margin: 8px 10px;
+}
+
+context-menu:hover #changelog-btn:hover {
+    background-color: rgba(132, 63, 167, 0.137);
+    border-radius: 8px;
+}
+
+
+context-menu:hover .text {
+    display: block;
+    margin: 8px;
+}
+
+context-menu i {
+    font-size: 24px;
+    margin-left: 14px;
+}
+
+context-menu:hover i {
+    padding-inline-start: 14px;
+    margin: 0;
+}
+
+context-menu .text {
+    display: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+context-menu h1 .text {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    left: 50px;
+    font-size: 28px;
+    top: -31px;
+}
+
+context-menu h1 {
+    padding: 0px;
+    transition: padding-left 0.5s ease-in-out, width 0.1s ease-in-out;
+    margin: 0px;
+}
+
+context-menu h1 i {
+    position: relative;
+}
+
+context-menu:hover h1 i {
+    position: relative;
+    left: 20px;
+    top: 4px;
 }
 
 * {
@@ -38,10 +136,6 @@ header {
     align-items: center;
 }
 
-header h1 {
-    margin-top: 21px;
-}
-
 .search-container {
     position: relative;
     align-self: center;
@@ -58,9 +152,9 @@ input#search-bar::placeholder {
     padding-inline-start: 50px;
     left: -45px;
     font-size: 16px;
-    border: 2px solid #513430;
+    border: 2px solid #424846;
     border-radius: 25px;
-    background-color: #2b1e1e;
+    background-color: #262626;
     color: #f0f0f0;
     width: 300px;
     transition: border-color 0.3s;
@@ -69,7 +163,7 @@ input#search-bar::placeholder {
 }
 
 #search-bar:focus {
-    border-color: #5b3b3b;
+    border-color: #545958;
     border-width: 2px;
     outline: none;
 }
@@ -77,9 +171,9 @@ input#search-bar::placeholder {
 #changelog-btn {
     padding: 10px 20px;
     font-size: 16px;
-    border: 2px solid #513430;
-    border-radius: 25px;
-    background-color: #2b1e1e;
+    border: 2px solid #424846;
+    border-radius: 100px;
+    background-color: #262626;
     color: #dedede;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
@@ -88,8 +182,8 @@ input#search-bar::placeholder {
 
 #changelog-btn:hover,
 #changelog-btn:focus {
-    background-color: #342121;
-    border-color: #5b3b3b;
+    background-color: #242424;
+    border-color: #545958;
     outline: none;
 }
 
@@ -103,13 +197,13 @@ nav {
     display: flex;
     border-radius: 25px;
     overflow: hidden;
-    border: 2px solid #513430;
+    border: 2px solid #424846;
     position: relative;
     right: -90%;
 }
 
 .filter-btn-group button {
-    background-color: #342323;
+    background-color: #262626;
     color: #dedede;
     padding: 10px 20px;
     border: none;
@@ -126,17 +220,17 @@ nav {
 }
 
 .filter-btn-group button:hover {
-    background-color: #331616;
+    background-color: #242424;
     outline: none;
 }
 
 .filter-btn-group button:focus {
-    background-color: #331616;
+    background-color: #202020;
     outline: none;
 }
 
 .filter-btn-group button:not(:last-child) {
-    border-right: 2px solid #513430;
+    border-right: 2px solid #424846;
 }
 
 #results {
@@ -149,8 +243,8 @@ nav {
 }
 
 .card {
-    background-color: #35212189;
-    border: 2px solid #482b2b;
+    background-color: #1c1c1c;
+    border: 2px solid #424846;
     padding: 20px;
     border-radius: 10px;
     cursor: pointer;
@@ -168,14 +262,14 @@ nav {
 
 .card-description {
     text-align: center;
-    color: #c7b7b7;
+    color: #b4b7b7;
     margin-top: 10px;
 }
 
 .card:hover {
-    background-color: #2a151589;
-    box-shadow: 0 10px 30px rgba(40, 31, 31, 0.5);
-    border: 2px solid #492828;
+    background-color: rgb(24, 22, 23);
+    box-shadow: 0 10px 30px rgb(40, 31, 38, 0.5);
+    border: 2px solid #4e4b4d;
     margin-top: -2%;
     position: relative;
 }
@@ -218,13 +312,13 @@ nav {
     position: fixed;
     top: 100%;
     left: 0;
-    background-color: rgba(51, 24, 24, 0.4);
+    background-color: rgba(31,31,31,0.4);
     backdrop-filter: blur(10px);
     color: #dbe1e0;
     padding: 15px;
     border-radius: 5px;
-    border: 2px solid #552d2d;
-    max-height: 50vh;
+    border: 2px solid #424846;
+    max-height: 40vh;
     overflow-y: auto;
     min-width: 19vw;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -282,3 +376,4 @@ nav {
 ::-webkit-scrollbar-thumb:hover {
   background: #545958; 
 }
+

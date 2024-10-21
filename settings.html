@@ -37,21 +37,6 @@
       <input type="checkbox" id="toggle3" class="toggle-input" />
       <label for="toggle3" class="toggle-label"></label>
     </div>
-    <div id="toggle-container" class="toggle-item">
-      <span class="toggle-text">Theme: (Coming soon)</span>
-      <select id="optg1" onchange="save()">
-        <optgroup label="Light Mode">
-          <option value="quartz">Quartz</option>
-          <option value="egypt">Egypt</option>
-        </optgroup>
-        <optgroup label="Dark Mode">
-          <option value="default" selected="selected">Dusk (Default)</option>
-          <option value="midnight">Midnight</option>
-          <option value="forest">Forest</option>
-          <option value="crimson">Crimson</option>
-        </optgroup>
-      </select>
-    </div>
     <button id="back" onClick="location.href = '/main.html'">Back</button>
   </div>
   <script>
@@ -110,18 +95,7 @@
       localStorage.setItem("vertex_autologin_setting", setting3);
     });
 
-    var opt1 = document.getElementById("optg1");
-    if (localStorage.getItem("vertex_theme") === null) {
-      localStorage.setItem("vertex_theme", "default");
-    }
-
-    optg1.value = localStorage.getItem("vertex_theme");
-
     function save() {
-      localStorage.setItem(
-        "vertex_theme",
-        document.getElementById("optg1").value
-      );
       localStorage.setItem("enable-beforeunload", "false");
       location.reload();
     }

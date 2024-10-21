@@ -18,48 +18,50 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
-    <link
-      id="stylesheet"
-      rel="stylesheet"
-      href="assets/stylesheets/main-default.css"
-    />
+    <link id="stylesheet" rel="stylesheet" href="assets/stylesheets/main.css" />
   </head>
   <body>
     <div id="app">
       <header>
+        <context-menu>
         <h1>
           <i
             style="margin-right: 9px; rotate: 90deg"
             class="fa-brands fa-hive"
           ></i
-          >Vertex
+          ><p class="text">Vertex</p>
         </h1>
         <div>
-          <button id="changelog-btn">
-            <i class="fa-solid fa-chart-column"></i>
-            Updates
-          </button>
-          <button class="button-action" id="changelog-btn">
-            <a href="/settings.html">
-              <i class="fa-solid fa-gear"></i>
-              Settings</a
-            >
-          </button>
-          <button class="button-action" id="changelog-btn">
-            <a
+            <button id="changelog-btn">
+              <a
               target="_blank"
               href="https://drive.google.com/drive/folders/1SBDC5OvQv9mF90mz8JKJq7JPUoD3qo1w?usp=sharing"
             >
-              <i style="margin-right: 2px" class="fa-solid fa-video"></i>
-              Movies</a
-            >
-          </button>
-          <button class="button-action" id="changelog-btn">
-            <a href="https://forms.gle/sK9bLb2oMiMtF4ZMA">
-              <i class="fa-solid fa-comment"></i>
-              Suggestions</a
-            >
-          </button>
+              <i class="fa-solid fa-chart-column"></i>
+              <p class="text">Updates</a></p>
+            </button>
+            <button class="button-action" id="changelog-btn">
+              <a href="/settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <p class="text">Settings</a
+              ></p>
+            </button>
+            <button class="button-action" id="changelog-btn">
+              <a
+                target="_blank"
+                href="https://drive.google.com/drive/folders/1SBDC5OvQv9mF90mz8JKJq7JPUoD3qo1w?usp=sharing"
+              ></p>
+                <i style="margin-right: 2px" class="fa-solid fa-video"></i>
+                <p class="text">Movies</a
+              ></p>
+            </button>
+            <button class="button-action" id="changelog-btn">
+              <a href="https://forms.gle/sK9bLb2oMiMtF4ZMA">
+                <i class="fa-solid fa-comment"></i>
+                <p class="text">Suggestions</a
+              ></p>
+            </button>
+          </context-menu>
         </div>
       </header>
       <nav>

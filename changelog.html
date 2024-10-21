@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/inject.js"></script>
+    <script src="src/utils.js" type="module" defer></script>
+    <style>
+      body {
+        display: flex;
+        background-color: rgb(31, 31, 31);
+        backdrop-filter: blur(10px);
+        color: #dbe1e0;
+        overflow-y: auto;
+        align-items: flex-start;
+        margin: 0px;
+        font-family: "Outfit", sans-serif;
+        user-select: none;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 25vw;
+        padding-right: 25vw;
+      }
+
+      hr {
+        border: none;
+        margin: 10px 0;
+      }
+
+      .context-header {
+        align-self: center;
+        text-align: center;
+        font-weight: bold;
+        color: #97a0a1;
+        text-transform: uppercase;
+      }
+
+      .context-entry {
+        margin-top: 10px;
+        margin-left: 10%;
+      }
+
+      .context-entry::before {
+        content: "•";
+        opacity: 0.75;
+        margin-right: 5px;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        align-self: center;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script type="module" defer>
+      import { Utils } from "./src/utils.js";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        Utils.fetchChangelog().then((response) => {
+          document.body.innerHTML = Utils.parseChangelog(response);
+        });
+
+        // Creating the home button
+        const homeButton = document.createElement("button");
+        homeButton.textContent = "Home";
+        homeButton.addEventListener("click", () => {
+          window.location.href = "/";
+        });
+
+        // Append home button after 2 seconds
+        setTimeout(() => {
+          document.body.appendChild(homeButton);
+        }, 200);
+      });
+    </script>
+  </body>
+</html>

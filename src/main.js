@@ -125,28 +125,6 @@ async function init() {
       await Utils.fetchChangelog();
     }
   }
-
-  function parseChangelog(data) {
-    return data
-      .split("$")
-      .map((section) => {
-        return section
-          .split("\n")
-          .map((line) => {
-            if (line.startsWith("-")) {
-              return `<div class="context-header">${line
-                .slice(1)
-                .toUpperCase()}</div>`;
-            } else if (line.startsWith(">")) {
-              return `<div class="context-entry">${line.slice(1)}</div>`;
-            } else {
-              return "";
-            }
-          })
-          .join("");
-      })
-      .join('<hr style="border: none; margin: 10px 0;">');
-  }
 }
 
 init();
