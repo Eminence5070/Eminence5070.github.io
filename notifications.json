@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Taco Bell Rewards",
+        "message": "Unleash the flavor with Taco Bell's explosive rewards! Sign up today to score your first taco absolutely free!",
+        "image": "/images/taco-bell.webp"
+    },    
+    {
+        "title": "Biden's Steamy Secret",
+        "message": "A raunchy secret about our former president!",
+        "image": "/images/biden.jpg"
+    },
+    {
+        "title": "Stream the Talk Tuah Podcast!",
+        "message": "Click here to stream the Talk Tuah Podcast!",
+        "image": "/images/talktuah.jfif"
+    },
+    {
+        "title": "Fortnite Free Download",
+        "message": "Download Fortnite for free! No hacks or virus! Working 2024!",
+        "image": "/images/fortnite.jfif"
+    },
+    {
+        "title": "Affordable Mold Solutions",
+        "message": "Looking for an economical way to obtain mold? Look no further! MrBeast introduces Lunchly, your go-to source for high-quality mold at unbeatable prices.",
+        "image": "/images/lunchly.jfif"
+    },    
+    {
+        "title": "Warning!",
+        "message": "Your browser is now possessed! Call (212) 897-1964 to free your browser!",
+        "image": "/images/hacked.jfif"
+    }
+]
