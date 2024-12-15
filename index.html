@@ -16,7 +16,7 @@
             let button = document.getElementById("mean-btn"); // the btn isnt mean, it calculates mean silly
             button.addEventListener("click", function() {
                 let input = document.getElementById('mean');
-                let data = input.value.split(',').map(Number); // convert input to an array
+                let data = input.value.split(' ').map(Number); // convert input to an array
                 let meaner = mean(data);
 
                 input.value = meaner;
