@@ -10,6 +10,18 @@
     <p>For financial math class!</p>
     <p>View formulas <a href="index.js">here!</a></p>
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let button = document.getElementById("mean-btn"); // the btn isnt mean, it calculates mean silly
+            button.addEventListener("click", function() {
+                let input = document.getElementById('mean');
+                let data = input.value;
+                let mean = mean(data);
+
+                input.value = mean;
+            });
+        });
+    </script>
+    <script>
         function mean(data) {
             let count = data.length; 
             let sum = 0; 
@@ -31,18 +43,6 @@
             let modes = [];
             for (let val in frequencyMap) { if (frequencyMap[val] === maxFrequency) { modes.push(Number(val)); } } return modes.length === data.length ? [] : modes; 
         }
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let button = document.getElementById("mean-btn"); // the btn isnt mean, it calculates mean silly
-            button.addEventListener("click", function() {
-                let input = document.getElementById('mean');
-                let data = input.value;
-                let mean = mean(data);
-
-                input.value = mean;
-            });
-        });
     </script>
 </body>
 </html>
