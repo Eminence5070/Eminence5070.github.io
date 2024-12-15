@@ -6,8 +6,12 @@
 </head>
 <body>
     <input id="mean"><button id="mean-btn">Calculate mean</button>
+    <br>
     <input id="med"><button id="med-btn">Calculate median</button>
+    <br>
     <input id="mod"><button id="mod-btn">Calculate mode</button>
+    <br>
+    <input id="ran"><button id="ran-btn">Calculate ramge</button>
     <p>Website made by: Cedar Quattlebaum & Oliver Burdick</p>
     <p>For financial math class!</p>
     <p>View formulas <a href="index.js">here!</a></p>
@@ -38,6 +42,16 @@
                 let input = document.getElementById('mod');
                 let data = input.value.split(' ').map(Number); // convert input to an array
                 let modeeeeeeee = mode(data);
+
+                input.value = modeeeeeeee;
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            let button = document.getElementById("ran-btn"); // the btn isnt mean, it calculates mean silly
+            button.addEventListener("click", function() {
+                let input = document.getElementById('ran');
+                let data = input.value.split(' ').map(Number); // convert input to an array
+                let modeeeeeeee = range(data);
 
                 input.value = modeeeeeeee;
             });
