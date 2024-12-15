@@ -5,16 +5,19 @@
     <title>data stuff</title>
 </head>
 <body>
-    <input id="mean"><button onclick="
-        let input = document.getElementById('mean');
-        let data = input.value;
-        let mean = mean(data);
-
-        input.value = mean;
-    ">Calculate mean</button>
+    <input id="mean"><button onclick="calcMean()">Calculate mean</button>
     <p>Website made by: Cedar Quattlebaum</p>
     <p>For financial algebra class!</p>
     <p>View formulas <a href="index.js">here!</a></p>
+    <script>
+        function calcMean() {
+            let input = document.getElementById('mean');
+            let data = input.value;
+            let mean = mean(data);
+
+            input.value = mean;
+        }
+    </script>
     <script src="/index.js" defer></script>
 </body>
 </html>
