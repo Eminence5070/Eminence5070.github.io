@@ -10,13 +10,16 @@
     <p>For financial algebra class!</p>
     <p>View formulas <a href="index.js">here!</a></p>
     <script>
-        function calcMean() {
-            let input = document.getElementById('mean');
-            let data = input.value;
-            let mean = mean(data);
+        document.addEventListener("DOMContentLoaded", function() {
+            let button = document.getElementById("meanButton");
+            button.addEventListener("click", function() {
+                let input = document.getElementById('mean');
+                let data = input.value;
+                let mean = mean(data);
 
-            input.value = mean;
-        }
+                input.value = mean;
+            });
+        });
     </script>
     <script src="/index.js" defer></script>
 </body>
