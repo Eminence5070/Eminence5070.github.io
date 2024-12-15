@@ -26,7 +26,7 @@
             let button = document.getElementById("med-btn"); // the btn isnt mean, it calculates mean silly
             button.addEventListener("click", function() {
                 let input = document.getElementById('med');
-                let data = input.value.split(',').map(Number); // convert input to an array
+                let data = input.value.split(' ').map(Number); // convert input to an array
                 let medianaaa = median(data);
 
                 input.value = medianaaa;
@@ -36,7 +36,7 @@
             let button = document.getElementById("mod-btn"); // the btn isnt mean, it calculates mean silly
             button.addEventListener("click", function() {
                 let input = document.getElementById('mod');
-                let data = input.value.split(',').map(Number); // convert input to an array
+                let data = input.value.split(' ').map(Number); // convert input to an array
                 let modeeeeeeee = mode(data);
 
                 input.value = modeeeeeeee;
