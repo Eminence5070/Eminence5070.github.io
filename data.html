@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- for income Inequality project -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Data Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #tabs {
+            margin-bottom: 10px;
+        }
+        .tab-button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            display: inline-block;
+        }
+        .active {
+            background-color: #007bff;
+            color: white;
+        }
+        #graph-container {
+            width: 100%;
+            height: 80vh;
+        }
+    </style>
+</head>
+<body>
+<script>alert('This page was made ONLY by Cedar Quattlebaum.')</script>
+<h1>Income Inequality Project</h1>
+
+<div id="tabs">
+    <div id="massachusetts-tab" class="tab-button active" onclick="changeTab('massachusetts')">Massachusetts</div>
+    <div id="mississippi-tab" class="tab-button" onclick="changeTab('mississippi')">Mississippi</div>
+    <div id="combined-tab" class="tab-button" onclick="changeTab('combined')">Combined</div>
+</div>
+
+<div>
+    <button onclick="changeGraphType('bar')">Bar Graph</button>
+    <button onclick="changeGraphType('scatter')">Scatterplot</button>
+</div>
+
+<div id="graph-container"></div>
+
+<script>
+    const years = [1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010];
+    const massachusetts_income = [2548, 2647, 2773, 2845, 2980, 3148, 3369, 3622, 3938, 4255, 4552, 4834, 5203, 5632, 6090, 6560, 7078, 7712, 8522, 9482, 10688, 11859, 12996, 14046, 15715, 16881, 18143, 19477, 21343, 22455, 23115, 23510, 24613, 25448, 26579, 27928, 29490, 31026, 32767, 34767, 38381, 39711, 39419, 40158, 42242, 44061, 47311, 49662, 51546, 50751, 52708];
+    const mississippi_income = [1267, 1359, 1397, 1534, 1590, 1722, 1879, 2048, 2250, 2496, 2736, 2974, 3327, 3736, 4056, 4360, 4887, 5375, 5917, 6634, 7168, 8007, 8394, 8746, 9509, 9974, 10324, 10916, 11737, 12707, 13353, 13973, 14881, 15656, 16724, 17470, 18360, 19219, 20173, 20681, 21628, 22806, 23202, 24060, 25287, 26716, 27827, 29432, 30736, 30220, 31213];  
+    const combined_income = massachusetts_income.map((income, i) => (income + mississippi_income[i]) / 2);
+
+    let currentTab = 'massachusetts';
+    let currentGraphType = 'scatter';
+
+    function changeTab(tab) {
+        currentTab = tab;
+        document.querySelectorAll('.tab-button').forEach(button => button.classList.remove('active'));
+        document.getElementById(`${tab}-tab`).classList.add('active');
+        updateGraph();
+    }
+
+    function changeGraphType(type) {
+        currentGraphType = type;
+        updateGraph();
+    }
+
+    function updateGraph() {
+        let data = [];
+        let incomeData = [];
+
+        if (currentTab === 'massachusetts') {
+            incomeData = massachusetts_income;
+        } else if (currentTab === 'mississippi') {
+            incomeData = mississippi_income;
+        } else {
+            incomeData = combined_income;
+        }
+
+        const trace = {
+            x: years,
+            y: incomeData,
+            mode: currentGraphType === 'scatter' ? 'markers+lines' : 'bar',
+            type: currentGraphType,
+            text: years.map((year, index) => {
+                const income = incomeData[index];
+                return income !== undefined && income !== null ? `Year: ${year}<br>Average Salary: $${income.toLocaleString()}` : `Year: ${year}<br>Average Salary: N/A`;
+            }),
+            hoverinfo: 'text'
+        };
+
+        data = [trace];
+
+        const layout = {
+            title: `${currentTab.charAt(0).toUpperCase() + currentTab.slice(1)} Average Yearly Income`,
+            xaxis: { title: 'Year' },
+            yaxis: { title: 'Average Income ($)' },
+            showlegend: false,
+            clickmode: 'event+select'
+        };
+
+        Plotly.newPlot('graph-container', data, layout);
+    }
+    updateGraph();
+</script>
+</body>
+</html>
