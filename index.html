@@ -5,13 +5,13 @@
     <title>data stuff</title>
 </head>
 <body>
-    <input id="mean"><button>Calculate mean</button>
+    <input id="mean"><button id="mean-btn">Calculate mean</button>
     <p>Website made by: Cedar Quattlebaum</p>
     <p>For financial math class!</p>
     <p>View formulas <a href="index.js">here!</a></p>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            let button = document.getElementById("meanButton");
+            let button = document.getElementById("mean=btn");
             button.addEventListener("click", function() {
                 let input = document.getElementById('mean');
                 let data = input.value;
