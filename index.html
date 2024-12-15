@@ -10,6 +10,29 @@
     <p>For financial math class!</p>
     <p>View formulas <a href="index.js">here!</a></p>
     <script>
+        function mean(data) {
+            let count = data.length; 
+            let sum = 0; 
+            data.forEach(val => { sum += val; })
+            let mean = sum / count;
+            return mean;
+        }
+
+        function median(data) {
+            data.sort((a, b) => a - b);
+            let count = data.length;
+            if (count % 2 != 0) { return data[Math.floor(count / 2)]; }
+            else { let middlenumberuno = data[count / 2 - 1]; let middlenumberdos = data[count / 2]; return (middlenumberuno + middlenumberdos) / 2; }
+        }
+
+        function mode(data) {
+            let frequencyMap = {}
+            data.forEach(val => { frequencyMap[val] = (frequencyMap[val] || 0) + 1; });
+            let modes = [];
+            for (let val in frequencyMap) { if (frequencyMap[val] === maxFrequency) { modes.push(Number(val)); } } return modes.length === data.length ? [] : modes; 
+        }
+    </script>
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
             let button = document.getElementById("mean-btn"); // the btn isnt mean, it calculates mean silly
             button.addEventListener("click", function() {
@@ -21,6 +44,5 @@
             });
         });
     </script>
-    <script src="/index.js" defer></script>
 </body>
 </html>
