@@ -13,6 +13,12 @@ function mean(data) {
     return mean; // returns the mean.
 }
 
+// function for range
+function range(data) {
+    let max = Math.max(...data); // find max
+    let min = Math.min(...data); // find min
+    return max - min; // do min calculation
+}
 
 // function for median
 function median(data) {
