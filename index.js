@@ -47,6 +47,7 @@ function mode(data) {
         frequencyMap[val] = (frequencyMap[val] || 0) + 1; // count the frequncey of each number
     });
 
+    let maxFrequency = Math.max(...Object.values(frequencyMap)); // find the max frequenaacaoee
     let modes = []; //empty list of modes... for now
     // collect all nums with highest frequencies
     for (let val in frequencyMap) {
