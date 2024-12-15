@@ -6,6 +6,8 @@
 </head>
 <body>
     <input id="mean"><button id="mean-btn">Calculate mean</button>
+    <input id="med"><button id="med-btn">Calculate median</button>
+    <input id="mod"><button id="mod-btn">Calculate mode</button>
     <p>Website made by: Cedar Quattlebaum</p>
     <p>For financial math class!</p>
     <p>View formulas <a href="index.js">here!</a></p>
@@ -18,6 +20,26 @@
                 let meaner = mean(data);
 
                 input.value = meaner;
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            let button = document.getElementById("med-btn"); // the btn isnt mean, it calculates mean silly
+            button.addEventListener("click", function() {
+                let input = document.getElementById('med');
+                let data = input.value.split(',').map(Number); // convert input to an array
+                let medianaaa = median(data);
+
+                input.value = medianaaa;
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            let button = document.getElementById("mod-btn"); // the btn isnt mean, it calculates mean silly
+            button.addEventListener("click", function() {
+                let input = document.getElementById('mod');
+                let data = input.value.split(',').map(Number); // convert input to an array
+                let modeeeeeeee = mode(data);
+
+                input.value = modeeeeeeee;
             });
         });
     </script>
