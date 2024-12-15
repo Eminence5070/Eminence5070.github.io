@@ -1,4 +1,4 @@
-// made by cedar quattlebaum
+// made by cedar quattlebum & oliver burdick
 
 // formula to find mean
 function mean(data) {
