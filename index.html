@@ -63,6 +63,7 @@
             let frequencyMap = {}
             data.forEach(val => { frequencyMap[val] = (frequencyMap[val] || 0) + 1; });
             let modes = [];
+            let maxFrequency = Math.max(...Object.values(frequencyMap));
             for (let val in frequencyMap) { if (frequencyMap[val] === maxFrequency) { modes.push(Number(val)); } } return modes.length === data.length ? [] : modes; 
         }
     </script>
