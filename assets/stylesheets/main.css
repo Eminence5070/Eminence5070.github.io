@@ -1,5 +1,14 @@
+html {
+    background-image: url(background-main.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: left;
+}
+
 body {
-    background-color: #191a1a;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    overflow: hidden;
     color: #cdd6d4;
     font-family: "Outfit", sans-serif;;
     margin: 0;
@@ -7,29 +16,42 @@ body {
 }
 
 context-menu {
+    z-index: 22;
     width: 80px;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 109.2vh;
     display: flex;
     flex-direction: column;
+    backdrop-filter: blur(24px);
     align-items: center;
-    border-right: 1px solid #282828;
-    background-color: #202020; /* Slightly lighter background */
-    transition: width 0.4s ease, height 0.4s ease; /* Smoother transition */
+    border-right: 1px solid #1110101e;
+    background-color: #0e0e0e09;
+    transition: width 1s ease, height 0.4s ease, background-color 2s, border-bottom 1s;
 }
 
 context-menu:hover {
-    width: 220px; /* Adjusted for better readability */
+    width: 220px;
+}
+
+context-menu h1 {
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+    border-bottom: 1px solid transparent;
+    transition: padding-left 0.1s ease-in-out, width 1s ease-in-out, background-color 0.5s ease-in-out, border-bottom 0.5s ease-in-out;
+    margin: 0px;
 }
 
 context-menu:hover h1 {
     padding-left: 20px;
-    background-color: rgba(255, 255, 255, 0.036);
+    background-color: rgb(255, 255, 255, 0.021); /* Background color when hovered */
+    border-bottom: 1px solid #1110101b; /* Border after hover */
     height: 64px;
     width: 200px;
+    transition: width 1s ease, background-color 0.2s ease-in-out 0.45s, border-bottom 0.5s ease-in-out 0.5s; /* Delay background and border */
 }
+
 
 context-menu #changelog-btn {
     padding: 12px 15px;
@@ -54,7 +76,8 @@ context-menu:hover #changelog-btn {
 }
 
 context-menu:hover #changelog-btn:hover {
-    background-color: rgba(132, 63, 167, 0.137);
+    backdrop-filter: blur(10px);
+    background: linear-gradient(90deg, rgba(24, 24, 24, 0.151), rgba(95, 94, 77, 0.2));
     border-radius: 8px;
 }
 
@@ -71,7 +94,9 @@ context-menu i {
 }
 
 context-menu .fa-hive {
-    margin-top: 30px;
+    margin-top: 20px;
+    position: relative;
+    top: -5px;
     border-right: 2px solid rgb(156, 152, 152);
     border-radius: 2px;
     padding-right: 14px;
@@ -96,6 +121,13 @@ context-menu .text {
     padding: 0px;
 }
 
+#embed {
+    position: absolute;
+    right: 4%;
+    width: 86%;
+    height: 85%;
+}
+
 context-menu h1 .text {
     margin: 0px;
     padding: 0px;
@@ -103,12 +135,6 @@ context-menu h1 .text {
     left: 50px;
     font-size: 28px;
     top: -31px;
-}
-
-context-menu h1 {
-    padding: 0px;
-    transition: padding-left 0.5s ease-in-out, width 0.1s ease-in-out;
-    margin: 0px;
 }
 
 context-menu h1 i {
@@ -140,6 +166,8 @@ a {
 
 #app {
     display: flex;
+    width: 100%;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -160,7 +188,7 @@ header {
 }
 
 input#search-bar::placeholder {
-    color: #a8a8a8;
+    color: #d6cfcf;
 }
 
 #search-bar {
@@ -169,10 +197,10 @@ input#search-bar::placeholder {
     padding-inline-start: 50px;
     left: -45px;
     font-size: 16px;
-    border: 2px solid #424846;
+    border: 2px solid #26262605;
     border-radius: 25px;
-    background-color: #262626;
-    color: #f0f0f0;
+    background-color: #6d604e37;
+    color: #eee7e7;
     width: 300px;
     transition: border-color 0.3s;
     position: absolute;
@@ -180,17 +208,16 @@ input#search-bar::placeholder {
 }
 
 #search-bar:focus {
-    border-color: #545958;
-    border-width: 2px;
+    border: 2px solid #26262614;
     outline: none;
 }
 
 #changelog-btn {
     padding: 10px 20px;
     font-size: 16px;
-    border: 2px solid #424846;
+    border: 2px solid #2626264a;
     border-radius: 100px;
-    background-color: #262626;
+    background-color: #ffffff04;
     color: #dedede;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
@@ -214,13 +241,13 @@ nav {
     display: flex;
     border-radius: 25px;
     overflow: hidden;
-    border: 2px solid #424846;
+    border: 2px solid #26262609;
     position: relative;
     right: -90%;
 }
 
 .filter-btn-group button {
-    background-color: #262626;
+    background-color: #6d604e37;
     color: #dedede;
     padding: 10px 20px;
     border: none;
@@ -237,22 +264,22 @@ nav {
 }
 
 .filter-btn-group button:hover {
-    background-color: #242424;
+    background-color: #6d604e42;
     outline: none;
 }
 
 .filter-btn-group button:focus {
-    background-color: #202020;
+    background-color: #6d604e42;
     outline: none;
 }
 
 .filter-btn-group button:not(:last-child) {
-    border-right: 2px solid #424846;
+    border-right: 2px solid #26262609;
 }
 
 #results {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 0px;
     padding: 20px;
     row-gap: 20px;
@@ -260,8 +287,8 @@ nav {
 }
 
 .card {
-    background-color: #1c1c1c;
-    border: 2px solid #424846;
+    background-color: #1c1c1c20;
+    border: 2px solid #26262603;
     padding: 20px;
     border-radius: 10px;
     cursor: pointer;
@@ -270,8 +297,8 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 15vw;
-    height: 15vw;
+    width: 10vw;
+    height: 10vw;
     margin-left: 4px;
     margin-right: 4px;
     aspect-ratio: 1 / 1;
@@ -279,14 +306,15 @@ nav {
 
 .card-description {
     text-align: center;
-    color: #b4b7b7;
+    color: #dce0e0;
     margin-top: 10px;
+    font-size: 10px;
 }
 
 .card:hover {
-    background-color: rgb(24, 22, 23);
+    background-color: #1c1c1c2e;
+    border: 2px solid #26262603;
     box-shadow: 0 10px 30px rgb(40, 31, 38, 0.5);
-    border: 2px solid #4e4b4d;
     margin-top: -2%;
     position: relative;
 }
@@ -294,9 +322,10 @@ nav {
 .card-icon {
     border-radius: 12px;
     display: block;
-    width: 80px;
-    height: 80px;
-    margin-bottom: -2px;
+    width: 60px;
+    position: relative;
+    height: 60px;
+    bottom: -4px;
 }
 
 .card h3 {

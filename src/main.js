@@ -1,24 +1,14 @@
 import { Utils } from "./utils.js";
 
+const changelogButton = document.getElementById("changelog-btn");
+
+changelogButton.addEventListener("click", () => {
+  Utils.loadPage("/changelog.html");
+});
+
 async function init() {
-  let correctPassword = await Utils.fetchPassword();
-
-  function handleSessionCheck() {
-    if (
-      localStorage.getItem("auth") !== correctPassword ||
-      localStorage.getItem("vertex_sso") !== "true"
-    ) {
-      localStorage.setItem("enable-beforeunload", "false");
-      alert("Session not authorized.");
-      window.location.href = "login.html";
-    }
-  }
-
-  document.addEventListener("mousemove", handleSessionCheck);
-  handleSessionCheck();
-
   let currentPage = 1;
-  let itemsPerPage = 6;
+  let itemsPerPage = 8;
   let currentFilter = "All";
   let isChangelogOpen = false;
 
@@ -87,7 +77,7 @@ async function init() {
                     <p class="card-description">${item.description}</p>
                 `;
       card.addEventListener("click", () => {
-        window.location.href = item.url;
+        Utils.loadPage(item.url, item.title);
       });
       results.appendChild(card);
     });

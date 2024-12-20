@@ -197,7 +197,7 @@
   },
   {
     "title": "Slowroads",
-    "icon": "games/slowroads/static/media/favicon_circle_white.eb1953e3.svg",
+    "icon": "icons/slowroads.webp",
     "url": "games/slowroads/index.html",
     "category": "Games",
     "description": "Vroom!"

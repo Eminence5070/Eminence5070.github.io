@@ -48,10 +48,7 @@ document.addEventListener("click", function () {
 document.addEventListener("DOMContentLoaded", () => {
   localStorage.setItem("enable-beforeunload", "true");
   setTimeout(() => {
-    if (
-      location.href.toString().includes("/main.html") == false ||
-      !location.href.toString().includes("/login.html") == false
-    ) {
+    if (location.href.toString().includes("/index.html") == false) {
       if (localStorage.getItem("vertex_action_bar_setting") === "true") {
         var link = document.createElement("link");
         link.href =
@@ -203,17 +200,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }, 1);
-});
-
-// quick-hide shortcut
-document.addEventListener("keydown", function (event) {
-  if (event.altKey && event.code === "Backquote") {
-    localStorage.setItem("enable-beforeunload", "false");
-
-    event.preventDefault();
-
-    setTimeout(function () {
-      window.location.href = "/index.html";
-    }, 0);
-  }
 });
