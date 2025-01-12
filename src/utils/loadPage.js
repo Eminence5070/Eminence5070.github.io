@@ -3,10 +3,10 @@ import { tooltip } from "./tooltip.js";
 
 export function loadPage(url, title) {
   const embedElement = document.getElementById("embed");
-  document.getElementById("results").innerHTML = "";
-  document.getElementsByClassName("search-container")[0].innerHTML = "";
-  document.getElementsByClassName("filter-btn-group")[0].innerHTML = "";
-  document.getElementById("pagination").innerHTML = "";
+  document.getElementById("results").style.display = "none";
+  document.getElementsByClassName("search-container")[0].style.display = "none";
+  document.getElementsByClassName("filter-btn-group")[0].style.display = "none";
+  document.getElementById("pagination").style.display = "none";
 
   const container = document.createElement("div");
   container.style.position = "relative";
@@ -34,7 +34,7 @@ export function loadPage(url, title) {
 
   const buttonContainer = document.createElement("div");
   buttonContainer.style.display = "flex";
-  buttonContainer.style.gap = "10px"; // Optional, for spacing between buttons
+  buttonContainer.style.gap = "10px";
 
   const homeButton = document.createElement("button");
   homeButton.style.backgroundColor = "transparent";
@@ -72,7 +72,6 @@ export function loadPage(url, title) {
   reloadIcon.classList.add("fa", "fa-sync-alt");
   reloadIcon.style.color = "rgb(255, 255, 255, 0.65)";
 
-  // Add the new "Code" button
   const codeButton = document.createElement("button");
   codeButton.style.backgroundColor = "transparent";
   codeButton.style.border = "none";
@@ -143,7 +142,6 @@ export function loadPage(url, title) {
         break;
 
       case "4":
-        // Enter JavaScript code
         const jsCode = prompt("Enter JavaScript code:");
         if (jsCode) {
           const script = document.createElement("script");
@@ -202,4 +200,20 @@ export function loadPage(url, title) {
   tooltip(fullscreenButton);
   tooltip(reloadButton);
   tooltip(codeButton);
+}
+
+export function deleteFrame(ctx) {
+  const embedElement = ctx.getElementById("embed");
+  embedElement.style.zIndex = "-1";
+  ctx.getElementById("results").style.display = "grid";
+  ctx.getElementsByClassName("search-container")[0].style.display = "block";
+  ctx.getElementsByClassName("filter-btn-group")[0].style.display = "flex";
+  ctx.getElementById("pagination").style.display = "flex";
+  if (embedElement) {
+    for (const child of embedElement.children) {
+      child.remove();
+    }
+  } else {
+    console.log("Element with ID 'embed' not found.");
+  }
 }

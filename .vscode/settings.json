@@ -1,5 +1,4 @@
 {
   "editor.minimap.enabled": false,
-  "editor.formatOnSave": true,
-    five
+  "editor.formatOnSave": true
 }

@@ -1,5 +1,5 @@
 import { fetchChangelog, parseChangelog } from "./utils/fetchChangelog.js";
-import { loadPage } from "./utils/loadPage.js";
+import { loadPage, deleteFrame } from "./utils/loadPage.js";
 import { tooltip } from "./utils/tooltip.js";
 import {
   getUnload,
@@ -17,4 +17,5 @@ export const Utils = {
   refWithoutUnload,
   setUnload,
   parseChangelog,
+  deleteFrame,
 };

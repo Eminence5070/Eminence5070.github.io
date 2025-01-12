@@ -1,4 +1,5 @@
 <head>
+  <script src="src/settings.js" type="module" defer></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
     rel="stylesheet"
@@ -12,7 +13,6 @@
     rel="stylesheet"
     href="assets/stylesheets/settings.css"
   />
-  <script src="assets/stylesheets/mapper.js"></script>
 </head>
 <body>
   <nav>
@@ -27,17 +27,7 @@
       <input type="checkbox" id="toggle1" class="toggle-input" />
       <label for="toggle1" class="toggle-label"></label>
     </div>
-    <div id="toggle-container" class="toggle-item">
-      <span class="toggle-text">Enable action bar:</span>
-      <input type="checkbox" id="toggle2" class="toggle-input" />
-      <label for="toggle2" class="toggle-label"></label>
-    </div>
-    <div id="toggle-container" class="toggle-item">
-      <span class="toggle-text">Auto-login:</span>
-      <input type="checkbox" id="toggle3" class="toggle-input" />
-      <label for="toggle3" class="toggle-label"></label>
-    </div>
-    <button id="back" onClick="location.href = '/index.html'">Back</button>
+    <button id="settings-back">Back</button>
   </div>
   <script>
     var toggle1 = document.getElementById("toggle1");
@@ -49,55 +39,9 @@
     toggle1.checked =
       localStorage.getItem("vertex_beforeunload_setting") === "true";
 
-    toggle1.addEventListener("click", () => {
-      var setting1 = localStorage.getItem("vertex_beforeunload_setting");
-      if (setting1 === null) {
-        setting1 = false;
-      } else {
-        setting1 = setting1 === "true";
-        setting1 = !setting1;
-      }
+    toggle1.addEventListener("change", () => {
+      var setting1 = toggle1.checked;
       localStorage.setItem("vertex_beforeunload_setting", setting1);
     });
-
-    var toggle2 = document.getElementById("toggle2");
-    if (localStorage.getItem("vertex_action_bar_setting") === null) {
-      localStorage.setItem("vertex_action_bar_setting", true);
-    }
-
-    toggle2.checked =
-      localStorage.getItem("vertex_action_bar_setting") === "true";
-
-    toggle2.addEventListener("click", () => {
-      var setting2 = localStorage.getItem("vertex_action_bar_setting");
-      setting2 = setting2 === "true";
-      setting2 = !setting2;
-      localStorage.setItem("vertex_action_bar_setting", setting2);
-      toggle2.checked = setting2;
-    });
-
-    var toggle3 = document.getElementById("toggle3");
-    if (localStorage.getItem("vertex_autologin_setting") === null) {
-      localStorage.setItem("vertex_autologin_setting", false);
-    }
-
-    toggle3.checked =
-      localStorage.getItem("vertex_autologin_setting") === "true";
-
-    toggle3.addEventListener("click", () => {
-      var setting3 = localStorage.getItem("vertex_autologin_setting");
-      if (setting3 === null) {
-        setting3 = false;
-      } else {
-        setting3 = setting3 === "true";
-        setting3 = !setting3;
-      }
-      localStorage.setItem("vertex_autologin_setting", setting3);
-    });
-
-    function save() {
-      localStorage.setItem("enable-beforeunload", "false");
-      location.reload();
-    }
   </script>
 </body>

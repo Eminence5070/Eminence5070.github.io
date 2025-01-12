@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         z-index: 1001;
                         background-color: rgb(255 255 255 / 9%);
                         outline: 1px solid rgb(53 52 52 / 38%);
-                        backdrop-filter: blur(3px)
+                        backdrop-filter: blur(10px)
                     }
                     .icon-container:hover .tooltip {
                         visibility: visible;
@@ -187,7 +187,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
 
         document.head.appendChild(style);
-        document.body.appendChild(elem);
 
         const iconContainers = document.querySelectorAll(".icon-container");
         iconContainers.forEach((container) => {

@@ -6,6 +6,7 @@ export function tooltip(element) {
   tooltipDiv.style.padding = "5px 10px";
   tooltipDiv.style.borderRadius = "4px";
   tooltipDiv.style.fontSize = "14px";
+  tooltipDiv.style.backdropFilter = "blur(10px)";
   tooltipDiv.style.visibility = "hidden";
   tooltipDiv.style.pointerEvents = "none";
   document.body.appendChild(tooltipDiv);
