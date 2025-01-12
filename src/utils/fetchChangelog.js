@@ -9,7 +9,7 @@ export async function fetchChangelog() {
     return data;
   } catch (error) {
     console.error("Error fetching changelog:", error);
-    throw error; // Optionally rethrow to handle errors upstream
+    throw error;
   }
 }
 

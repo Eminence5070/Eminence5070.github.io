@@ -20,6 +20,10 @@ async function init() {
     }
   );
 
+  document.getElementById("settings-wrapper").addEventListener("click", () => {
+    Utils.loadPage("/settings.html", "Settings");
+  });
+
   document.getElementById("search-bar").addEventListener("input", loadResults);
   document
     .getElementById("changelog-btn")
