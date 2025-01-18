@@ -1,0 +1,165 @@
+#crossPromoMainPanel {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial", sans-serif;
+}
+#crossPromoMainPanel #mainPanel {
+    position: relative;
+    border-top: 2px solid rgba(128, 128, 128, 0.9);
+    width: 100%;
+}
+#crossPromoMainPanel #mainSubPanel {
+    background-color: rgba(250, 250, 250, 0.9);
+    padding: 22px;
+}
+
+#crossPromoMainPanel h1, #crossPromoMainPanel h2, #crossPromoMainPanel p {
+    margin: 0;
+    color: black;
+    font-weight: normal;
+}
+#crossPromoMainPanel h1 {
+    margin-bottom: 5px;
+    
+    font-size: 1.7em;
+}
+#crossPromoMainPanel h2 {
+    margin-bottom: 3px;
+    font-size: 1.5em;
+}
+#crossPromoMainPanel p {
+    font-size: 1.3em;
+    color: black;
+}
+
+#crossPromoMainPanel .gameDiv {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20px;
+    overflow: auto;
+    padding-bottom: 2px;
+}
+
+#crossPromoMainPanel .game {
+    flex: 0 0 350px;
+    padding-bottom: 240px;
+    position: relative;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    margin-left: 22px;
+    background-color: rgba(128, 128, 128, 0.9);
+}
+
+#crossPromoMainPanel .game:first-child {
+    margin-left: 0px;
+}
+
+#crossPromoMainPanel .gameSub {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#crossPromoMainPanel .outsideContent {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#crossPromoMainPanel .contentDiv, #crossPromoMainPanel .normalContentDiv {
+    margin: 0 auto;
+}
+
+#crossPromoMainPanel .normalContentDiv {
+    padding: 12px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#crossPromoMainPanel .normalContentDiv h2, #crossPromoMainPanel .normalContentDiv p {
+    color: white;
+}
+
+#crossPromoMainPanel .normalContentDiv p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2em;
+}
+
+#crossPromoMainPanel .playButtonDiv {
+    padding: 12px;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+#crossPromoMainPanel .fillFlex {
+    flex: 1 0 0;
+}
+
+#crossPromoMainPanel .playDirection {
+    background: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.2s;
+}
+
+#crossPromoMainPanel .game:hover .playDirection {
+    background: rgba(0, 0, 0, 1);
+}
+
+#crossPromoMainPanel .playButtonDiv p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.3em;
+    transition: color 0.2s;
+}
+
+#crossPromoMainPanel .game:hover .playButtonDiv p {
+    color: rgba(255, 255, 255, 1);
+}
+
+
+#crossPromoMainPanel .promoButtons {
+    text-align: right;
+    background-color: rgba(128, 128, 128, 0.9);
+    padding: 15px;
+}
+
+#crossPromoMainPanel a {
+    text-decoration: none;
+}
+
+#crossPromoMainPanel a.buttonLike {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 12px;
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: background-color 0.2s;
+}
+#crossPromoMainPanel a.buttonLike:last-child {
+    margin-right: 0px;
+}
+
+#crossPromoMainPanel a.buttonLike:hover {
+    background: rgba(0, 0, 0, 1);
+}
+
+#crossPromoMainPanel #mainTitle {
+    
+}
+
+#crossPromoMainPanel #closeButtonP {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}

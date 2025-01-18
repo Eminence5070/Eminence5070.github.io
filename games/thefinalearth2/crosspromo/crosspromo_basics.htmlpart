@@ -1,0 +1,24 @@
+<div id="mainPanel">
+    <div id="mainSubPanel">
+        <div id="mainTitle">
+            <h1>
+                Thanks for playing #THIS_GAME_TITLE#!
+            </h1>
+            <p id="closeButtonP"><a id="crossPromoCloseButton" href="javascript:void(0);" class="buttonLike">Close</a></p>
+        </div>
+        <p>
+            Here are some more fun games by Florian van Strien.
+        </p>
+        
+        <div class="gameDiv">
+            #GAMES#
+        </div>
+    </div>
+
+    <div class="promoButtons">
+        <p>
+            <a class="buttonLike" href="https://twitter.com/FlorianStrien" target="_blank">Follow me on Twitter ></a>
+            <a class="buttonLike" href="https://florianvanstrien.nl" target="_blank">Even More Games ></a>
+        </p>
+    </div>
+</div>
