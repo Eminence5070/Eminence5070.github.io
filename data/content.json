@@ -1,5 +1,12 @@
 [
   {
+    "title": "Discord",
+    "icon": "icons/discord.png",
+    "url": "https://bkmkij85zqp9.share.zrok.io/uv/service/hvtrs8%2F-dksaopd%2Ccmm-",
+    "category": "Apps",
+    "description": "The official Vertex discord server!"
+  },
+  {
     "title": "Ultraviolet",
     "icon": "icons/uv.png",
     "url": "https://bkmkij85zqp9.share.zrok.io/",
@@ -222,13 +229,6 @@
     "url": "games/timeshooter/index.html",
     "category": "Games",
     "description": "Control time & fight bad guys!"
-  },
-  {
-    "title": "Discord",
-    "icon": "icons/discord.png",
-    "url": "apps/discord.html",
-    "category": "Apps",
-    "description": "The official Vertex discord server!"
   },
   {
     "title": "BTD 1",
