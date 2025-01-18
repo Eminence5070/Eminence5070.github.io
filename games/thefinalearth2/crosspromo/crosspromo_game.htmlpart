@@ -1,0 +1,18 @@
+<div class="game" style="background-image: url('#BACKGROUND#')">
+    <a href="#GAME_URL#" target="_blank">
+        <div class="gameSub">
+            <div class="outsideContent">
+                <div class="normalContentDiv">
+                    <h2>#GAME_TITLE#</h2>
+                    <p>#GAME_DESCRIPTION#</p>
+                </div>
+            </div>
+            <div class="fillFlex"></div>
+            <div class="playDirection">
+                <div class="playButtonDiv">
+                    <p>Play Now ></p>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

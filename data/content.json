@@ -1,5 +1,12 @@
 [
   {
+    "title": "The Final Earth 2",
+    "icon": "icons/thefinalearth2.png",
+    "url": "games/thefinalearth2/",
+    "category": "Games",
+    "description": "Verticle sci-fi city builder!"
+  },
+  {
     "title": "Discord",
     "icon": "icons/discord.png",
     "url": "https://bkmkij85zqp9.share.zrok.io/uv/service/hvtrs8%2F-dksaopd%2Ccmm-",

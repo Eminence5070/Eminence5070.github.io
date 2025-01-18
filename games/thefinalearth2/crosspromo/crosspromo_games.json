@@ -1,0 +1,32 @@
+[
+    {
+        "name": "circloO 2",
+        "description": "The growing physics platformer - with changing gravity, pulleys and more!",
+        "links": {
+            "kongregate": "https://www.kongregate.com/games/flori9/circloo-2",
+            "crazygames": "https://www.crazygames.com/game/circloo-2"
+        },
+        "image": "https://florianvanstrien.nl/crosspromo/images/circloO2_image.png",
+        "excludeConfigs": [""]
+    },
+    {
+        "name": "Stop the Darkness",
+        "description": "A mini strategy game. Upgrade the land to stop the darkness!",
+        "links": {
+            "kongregate": "https://www.kongregate.com/games/flori9/stop-the-darkness",
+            "crazygames": "https://www.crazygames.com/game/stop-the-darkness"
+        },
+        "image": "https://florianvanstrien.nl/stopTheDarknessScreen1.png",
+        "excludeConfigs": [""]
+    },
+    {
+        "name": "circloO",
+        "description": "The original physics platformer in a growing circle.",
+        "links": {
+            "kongregate": "https://www.kongregate.com/games/flori9/circloo",
+            "crazygames": "https://www.crazygames.com/game/circloo"
+        },
+        "image": "https://florianvanstrien.nl/crosspromo/images/circloO_image.png",
+        "excludeConfigs": [""]
+    }
+]
