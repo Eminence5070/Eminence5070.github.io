@@ -98,9 +98,7 @@ async function init() {
       const btn = document.createElement("button");
       btn.textContent = i;
       if (i === currentPage) {
-        btn.style.backgroundColor = "#272727";
-        btn.style.top = "2px";
-        btn.style.position = "relative";
+        btn.className = "page-btn-c";
       }
       btn.addEventListener("click", function () {
         currentPage = i;
