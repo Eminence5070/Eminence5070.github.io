@@ -183,7 +183,44 @@ export function loadPage(url, title) {
     iframe.requestFullscreen();
   });
 
-  iframe.src = url;
+  fetch(url)
+    .then((response) => response.text())
+    .then((html) => {
+      // Create a new document to properly handle the <base> tag
+      const doc = document.implementation.createHTMLDocument("temp");
+      doc.documentElement.innerHTML = html;
+
+      // Add the <base> tag to the new document's <head>
+      const baseTag = doc.createElement("base");
+      baseTag.href = new URL(url, window.location.origin).href;
+      doc.head.appendChild(baseTag);
+
+      // Create the iframe and set its srcdoc
+      const iframe = document.createElement("iframe");
+      iframe.srcdoc = doc.documentElement.innerHTML; // Use the modified HTML
+      iframe.srcdoc += `<style>body{overflow: hidden !important;}</style>`;
+      iframe.style =
+        "width: 100%; height: 100%; border: none; z-index: 9999; border-radius:8px; position:relative;top:-100%;";
+      container.appendChild(iframe);
+      // Dispatch DOMContentLoaded event
+      iframe.onload = () => {
+        let event = new Event("DOMContentLoaded");
+        iframe.contentDocument.dispatchEvent(event);
+      };
+      // Hide specific elements in the iframe
+      setInterval(() => {
+        if (iframe.contentDocument) {
+          iframe.contentDocument
+            .querySelectorAll("[id*=annotate i], [data-id=WebCommentThread]")
+            .forEach((element) => {
+              element.style.display = "none";
+            });
+        }
+      }, 10);
+    })
+    .catch((error) => {
+      console.error(`Error loading game:`, error);
+    });
   iframe.width = "100%";
   iframe.height = "100%";
   iframe.style.marginTop = "-11px";
