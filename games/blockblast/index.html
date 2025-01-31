@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5221630201042895"
-     crossorigin="anonymous"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5221630201042895"
+      crossorigin="anonymous"
+    ></script>
 
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CC4ZKKC8EF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CC4ZKKC8EF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-CC4ZKKC8EF');
+      gtag("config", "G-CC4ZKKC8EF");
 
-  let displayMode = 'browser';
-  let isPwa = false;
-  const mqStandAlone = '(display-mode: fullscreen)';
-  if (navigator.standalone || window.matchMedia(mqStandAlone).matches) {
-    displayMode = 'fullscreen';
-    isPwa = true
-  }
-  gtag('event', 'pwa_check', {'pwa': isPwa});
+      let displayMode = "browser";
+      let isPwa = false;
+      const mqStandAlone = "(display-mode: fullscreen)";
+      if (navigator.standalone || window.matchMedia(mqStandAlone).matches) {
+        displayMode = "fullscreen";
+        isPwa = true;
+      }
+      gtag("event", "pwa_check", { pwa: isPwa });
 
-//<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-</script>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+      //<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Block Blast Puzzle</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
   </head>
   <body>
     <div id="unity-container">
-      <canvas id="unity-canvas" width=1080 height=1920 tabindex="-1"></canvas>
+      <canvas
+        id="unity-canvas"
+        width="1080"
+        height="1920"
+        tabindex="-1"
+      ></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <div id="unity-warning"> </div>
+      <div id="unity-warning"></div>
     </div>
 
     <script>
@@ -50,18 +63,18 @@
         }
       });
 
-	//  window.addEventListener("orientationchange", function () {
-	// 	var orientation = window.orientation;
+      //  window.addEventListener("orientationchange", function () {
+      // 	var orientation = window.orientation;
 
-	// 	if (orientation === 90 || orientation === -90) 
-	// 	{
-	// 		alert("Landscape orientation is not supported");
+      // 	if (orientation === 90 || orientation === -90)
+      // 	{
+      // 		alert("Landscape orientation is not supported");
 
-	// 		setTimeout(function () {
-	// 			window.screen.orientation.lock("portrait-primary");
-	// 		}, 100);
-	// 	}
-	// });
+      // 		setTimeout(function () {
+      // 			window.screen.orientation.lock("portrait-primary");
+      // 		}, 100);
+      // 	}
+      // });
 
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -77,23 +90,27 @@
       // user.
       function unityShowBanner(msg, type) {
         function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+          warningBanner.style.display = warningBanner.children.length
+            ? "block"
+            : "none";
         }
-        var div = document.createElement('div');
+        var div = document.createElement("div");
         div.innerHTML = msg;
         warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        if (type == "error") div.style = "background: red; padding: 10px;";
         else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
+          if (type == "warning")
+            div.style = "background: yellow; padding: 10px;";
+          setTimeout(function () {
             warningBanner.removeChild(div);
             updateBannerVisibility();
           }, 5000);
         }
         updateBannerVisibility();
       }
-	 
-      var buildUrl = "Build";
+
+      var parentUrl = window.parent.location.origin; // Access the parent window's origin
+      var buildUrl = parentUrl + "/games/blockblast/Build";
       var loaderUrl = buildUrl + "/BlockBlast1.1-8.loader.js";
       var config = {
         dataUrl: buildUrl + "/BlockBlast1.1-8.data.unityweb",
@@ -115,10 +132,11 @@
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
+        var meta = document.createElement("meta");
+        meta.name = "viewport";
+        meta.content =
+          "width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes";
+        document.getElementsByTagName("head")[0].appendChild(meta);
       }
 
       loadingBar.style.display = "block";
@@ -128,11 +146,13 @@
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-        }).catch((message) => {
-          alert(message);
-        });
+        })
+          .then((unityInstance) => {
+            loadingBar.style.display = "none";
+          })
+          .catch((message) => {
+            alert(message);
+          });
       };
       document.body.appendChild(script);
     </script>
