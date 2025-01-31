@@ -206,18 +206,22 @@ export function loadPage(url, title) {
       iframe.onload = () => {
         let event = new Event("DOMContentLoaded");
         iframe.contentDocument.dispatchEvent(event);
-      };
-      // Hide specific elements in the iframe
-      setInterval(() => {
-        if (iframe.contentDocument) {
-          iframe.contentDocument
-            .querySelectorAll("[id*=annotate i], [data-id=WebCommentThread]")
-            .forEach((element) => {
-              element.style.display = "none";
-            });
+        const unityCanvas = iframe.contentDocument.querySelector("canvas");
+        if (unityCanvas) {
+          unityCanvas.style.width = "100%"; // Ensure canvas takes full width
+          unityCanvas.style.height = "100%"; // Ensure canvas takes full height
+
+          // Set a max-width and max-height to prevent extreme scaling
+          unityCanvas.style.maxWidth = "1920px"; // Maximum width for canvas
+          unityCanvas.style.maxHeight = "1080px"; // Maximum height for canvas
+
+          // Optionally, set the canvas to scale with the iframe size, but limit the max size
+          unityCanvas.width = Math.min(iframe.offsetWidth, 1920);
+          unityCanvas.height = Math.min(iframe.offsetHeight, 1080);
         }
-      }, 10);
+      };
     })
+
     .catch((error) => {
       console.error(`Error loading game:`, error);
     });
