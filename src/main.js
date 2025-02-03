@@ -1,16 +1,10 @@
 import { Utils } from "./utils.js";
 
-const changelogButton = document.getElementById("changelog-btn");
 
-changelogButton.addEventListener("click", () => {
-  Utils.loadPage("/changelog.html");
-});
-
-async function init() {
+export async function init() {
   let currentPage = 1;
   let itemsPerPage = 8;
   let currentFilter = "All";
-  let isChangelogOpen = false;
 
   Array.from(document.getElementsByClassName("button-action")).forEach(
     (button) => {
@@ -25,9 +19,6 @@ async function init() {
   });
 
   document.getElementById("search-bar").addEventListener("input", loadResults);
-  document
-    .getElementById("changelog-btn")
-    .addEventListener("click", toggleChangelog);
   document.querySelectorAll(".filter-btn").forEach((button) => {
     button.addEventListener("click", function () {
       currentFilter = this.getAttribute("data-filter");
@@ -105,16 +96,6 @@ async function init() {
         loadResults();
       });
       pagination.appendChild(btn);
-    }
-  }
-
-  async function toggleChangelog(event) {
-    const contextMenu = document.getElementById("context-menu");
-    if (isChangelogOpen) {
-      contextMenu.style.display = "none";
-      isChangelogOpen = false;
-    } else {
-      await Utils.fetchChangelog();
     }
   }
 }

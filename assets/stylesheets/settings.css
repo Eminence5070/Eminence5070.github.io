@@ -1,7 +1,7 @@
 body {
-    background-color: #191a1a;
-    color: #cdd6d4;
-    overflow: hidden;
+    background-color: #21202019;
+    color: #ede9e980;
+    overflow: initial;
     font-family: "Outfit", sans-serif;
     margin: 0;
     padding: 20px;
@@ -17,7 +17,7 @@ button {
     margin-top:20px;
     margin-bottom: -15px;
     border: none;
-    background-color: #303131;
+    background-color: #3031313a;
     color: #c4c4c4;
     border-radius: 5px;
     cursor: pointer;
@@ -29,21 +29,21 @@ button {
 }
 
 button:hover {
-    background-color: #292929;
+    background-color: #29292958;
 }
 
 #main {
-    scale: 1.5;
+    scale: 1.1;
     margin: 0 auto;
-    background-color: rgba(161, 203, 206, 0.019);
+    background-color: rgba(32, 36, 36, 0.2);
     border-radius: 8px;
     padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.342);
+    width: 60vw;
+    box-shadow: 0 5px 15px rgba(71, 70, 70, 0.342);
 }
 
 i {
@@ -83,7 +83,7 @@ h3 {
     height: 20px;
 }
 
-#toggle-container {
+.toggle-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -92,7 +92,7 @@ h3 {
 
 .toggle-text {
     margin-right: 10px;
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 4px;
 }
 
@@ -103,7 +103,7 @@ h3 {
 .toggle-label {
     width: 40px;
     height: 20px;
-    background-color: #ccc;
+    background-color: #4d494950;
     border-radius: 15px;
     display: block;
     cursor: pointer;
@@ -115,17 +115,17 @@ h3 {
     content: "";
     position: relative;
     top: 50%;
-    left: 5%;
+    left: 7.5%;
     width: 12px;
     height: 12px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.524);
     border-radius: 50%;
     transition: transform 0.3s;
     transform: translateY(-50%);
 }
 
 .toggle-input:checked + .toggle-label {
-    background-color: #4fd6ada1;
+    background-color: #419365a1;
 }
 
 .toggle-input:checked + .toggle-label::before {
@@ -141,4 +141,8 @@ nav {
     justify-content: center;
     align-content: center;
     align-items: center;
+}
+
+select {
+    position: relative;
 }

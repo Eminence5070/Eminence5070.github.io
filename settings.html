@@ -22,26 +22,66 @@
     <h3>Settings</h3>
   </nav>
   <div id="main">
-    <div id="toggle-container" class="toggle-item">
+    <div class="toggle-container toggle-item">
       <span class="toggle-text">Disable GoGuardian anti-close:</span>
       <input type="checkbox" id="toggle1" class="toggle-input" />
       <label for="toggle1" class="toggle-label"></label>
     </div>
+    <div class="toggle-container">
+      <span class="toggle-text" style="position: relative"
+        >Background Image:</span
+      >
+      <select id=" background-select">
+        <option value="image1" data-image="url('path/to/image1.jpg')">
+          Image 1
+        </option>
+        <option value="image2" data-image="url('path/to/image2.jpg')">
+          Image 2
+        </option>
+        <option value="image3" data-image="url('path/to/image3.jpg')">
+          Image 3
+        </option>
+      </select>
+    </div>
     <button id="settings-back">Back</button>
   </div>
-  <script>
-    var toggle1 = document.getElementById("toggle1");
+  <script type="module">
+    var back = document.getElementById("settings-back");
+    back.addEventListener("click", () => {
+      window.parent.document.querySelector('[data-tooltip="Home"]').click();
+    });
+
+    var toggleUnload = document.getElementById("toggle1");
 
     if (localStorage.getItem("vertex_beforeunload_setting") === null) {
       localStorage.setItem("vertex_beforeunload_setting", false);
     }
 
-    toggle1.checked =
+    toggleUnload.checked =
       localStorage.getItem("vertex_beforeunload_setting") === "true";
 
-    toggle1.addEventListener("change", () => {
-      var setting1 = toggle1.checked;
+    toggleUnload.addEventListener("change", () => {
+      var setting1 = toggleUnload.checked;
       localStorage.setItem("vertex_beforeunload_setting", setting1);
     });
+
+    var backgroundSelect = document.getElementById("background-select");
+    backgroundSelect.addEventListener("change", function () {
+      var selectedOption =
+        backgroundSelect.options[backgroundSelect.selectedIndex];
+      var backgroundUrl = selectedOption.getAttribute("data-image");
+      document.body.style.backgroundImage = backgroundUrl;
+      localStorage.setItem("background_image", backgroundUrl);
+    });
+    var savedBackground = localStorage.getItem("background_image");
+    if (savedBackground) {
+      document.body.style.backgroundImage = savedBackground;
+      for (var option of backgroundSelect.options) {
+        if (option.getAttribute("data-image") === savedBackground) {
+          backgroundSelect.value = option.value;
+          break;
+        }
+      }
+    }
   </script>
 </body>

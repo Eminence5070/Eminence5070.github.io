@@ -1,4 +1,4 @@
-import { fetchChangelog, parseChangelog } from "./utils/fetchChangelog.js";
+
 import { loadPage, deleteFrame } from "./utils/loadPage.js";
 import { tooltip } from "./utils/tooltip.js";
 import {
@@ -9,13 +9,11 @@ import {
 } from "./utils/closeUtils.js";
 
 export const Utils = {
-  fetchChangelog,
   loadPage,
   tooltip,
   getUnload,
   reloadWithoutUnload,
   refWithoutUnload,
   setUnload,
-  parseChangelog,
   deleteFrame,
 };
