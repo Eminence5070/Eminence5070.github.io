@@ -10073,33 +10073,34 @@ function copyTempDouble(ptr) {
   function _ShowAdsPlaceholder() 
       {
           try {
-              ShowPlaceholder();
+              // ShowPlaceholder();
   
-              function ShowPlaceholder() {
-                  var adContainer = document.getElementById("gameContainer");
+              // function ShowPlaceholder() {
+              //     var adContainer = document.getElementById("gameContainer");
+              //     adContainer.style.display = 'none';
   
-                  if (!adContainer)
-                      return;
+              //     if (!adContainer)
+              //         return;
   
-                  var AdsPlaceholderDiv = document.createElement("div");
-                  AdsPlaceholderDiv.className = 'AdsPlaceholderDiv';
-                  adContainer.appendChild(AdsPlaceholderDiv);
+              //     var AdsPlaceholderDiv = document.createElement("div");
+              //     AdsPlaceholderDiv.className = 'AdsPlaceholderDiv';
+              //     adContainer.appendChild(AdsPlaceholderDiv);
   
-                  var skipAdButton = document.createElement("div");
-                  skipAdButton.className = 'skipAdButton';
-                  adContainer.appendChild(skipAdButton);
+              //     var skipAdButton = document.createElement("div");
+              //     skipAdButton.className = 'skipAdButton';
+              //     adContainer.appendChild(skipAdButton);
   
-                  var skipAdTimer = document.createElement("div");
-                  skipAdTimer.className = 'skipAdTimer';
-                  adContainer.appendChild(skipAdTimer);
+              //     var skipAdTimer = document.createElement("div");
+              //     skipAdTimer.className = 'skipAdTimer';
+              //     adContainer.appendChild(skipAdTimer);
   
-                  if (!window.jQuery) {
-                      var jqueryUrl = '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js';
-                      loadScript(jqueryUrl, jqueryLoaded);
-                  } else {
-                      jqueryLoaded();
-                  }
-              }
+              //     if (!window.jQuery) {
+              //         var jqueryUrl = '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js';
+              //         loadScript(jqueryUrl, jqueryLoaded);
+              //     } else {
+              //         jqueryLoaded();
+              //     }
+              // }
   
               function loadScript(url, callback) {
                   var script = document.createElement("script");
@@ -10125,9 +10126,9 @@ function copyTempDouble(ptr) {
                   document.getElementsByTagName("head")[0].appendChild(script);
               }
   
-              function jqueryLoaded() {
-                  showAdsPlaceholder();
-              }
+              // function jqueryLoaded() {
+              //     showAdsPlaceholder();
+              // }
   
               openY8InNewTab = function() {
                   url = 'https://www.y8.com';
@@ -10135,68 +10136,68 @@ function copyTempDouble(ptr) {
                   win.focus();
               }
   
-              function showAdsPlaceholder() {
-                  // must happen first to insert the framework for other inserts
-                  window.setTimeout(insertAdsPlaceholderDiv(), 100);
+              // function showAdsPlaceholder() {
+              //     // must happen first to insert the framework for other inserts
+              //     window.setTimeout(insertAdsPlaceholderDiv(), 10);
   
-                  // add skip timer text
-                  window.setTimeout(function() {
-                      insertSkipTimer(3000);
-                  }, 200);
-                  window.setTimeout(function() {
-                      insertSkipTimer(2000);
-                  }, 1000);
-                  window.setTimeout(function() {
-                      insertSkipTimer(1000);
-                  }, 2000);
+              //     // add skip timer text
+              //     window.setTimeout(function() {
+              //         insertSkipTimer(3);
+              //     }, 200);
+              //     window.setTimeout(function() {
+              //         insertSkipTimer(2);
+              //     }, 1000);
+              //     window.setTimeout(function() {
+              //         insertSkipTimer(1);
+              //     }, 2000);
   
   
-                  // add skip button and remove skip timer text
-                  window.setTimeout(insertSkipButton, 3000);
-              }
+              //     // add skip button and remove skip timer text
+              //     window.setTimeout(insertSkipButton, 30);
+              // }
   
-              skipAdsPlaceholder = function() {
-                  removeAdsPlaceholderDiv();
-              }
+              // skipAdsPlaceholder = function() {
+              //     removeAdsPlaceholderDiv();
+              // }
   
-              function insertSkipTimer(_value) {
-                  var st = '<br><br>' +
-                      '<p style="color:white;background:transparent;border: none;top:5%;right:4.2%;position:fixed;>' +
-                      '<font face="Arial" size="4">' +
-                      'Skip Advertisement in ' + Math.floor(_value / 1000) +
-                      '<\/font>' +
-                      '<\/p>';
-                  $(".skipAdTimer").empty();
-                  $(".skipAdTimer").append(st);
-              }
+              // function insertSkipTimer(_value) {
+              //     var st = '<br><br>' +
+              //         '<p style="color:white;background:transparent;border: none;top:5%;right:4.2%;position:fixed;>' +
+              //         '<font face="Arial" size="4">' +
+              //         'Skip Advertisement in ' + Math.floor(_value / 1000) +
+              //         '<\/font>' +
+              //         '<\/p>';
+              //     $(".skipAdTimer").empty();
+              //     $(".skipAdTimer").append(st);
+              // }
   
-              function insertSkipButton() {
-                  var ss =
-                      '<button onclick="skipAdsPlaceholder()" style="background:transparent;border: none;top:5%;right:4.2%;position:fixed;">' +
-                      '<img src="/y8-studio/unity/config/shared/gamebreak/skip.png" alt="Close" onerror="skipAdsPlaceholder()" style="background:transparent;border: none;width:38px; height:38px;"><\/button>';
-                  $(".skipAdButton").append(ss);
-                  $(".skipAdTimer").empty();
-              }
+              // function insertSkipButton() {
+              //     var ss =
+              //         '<button onclick="skipAdsPlaceholder()" style="background:transparent;border: none;top:5%;right:4.2%;position:fixed;">' +
+              //         '<img src="/y8-studio/unity/config/shared/gamebreak/skip.png" alt="Close" onerror="skipAdsPlaceholder()" style="background:transparent;border: none;width:38px; height:38px;"><\/button>';
+              //     $(".skipAdButton").append(ss);
+              //     $(".skipAdTimer").empty();
+              // }
   
-              function insertAdsPlaceholderDiv() {
-                  var gs = getAdsPlaceholderDiv();
-                  $(".AdsPlaceholderDiv").append(gs);
-              }
+              // function insertAdsPlaceholderDiv() {
+              //     var gs = getAdsPlaceholderDiv();
+              //     $(".AdsPlaceholderDiv").append(gs);
+              // }
   
-              function removeAdsPlaceholderDiv() {
-                  if ($('.AdsPlaceholderDiv').length) {
-                      $(".AdsPlaceholderDiv").empty();
-                  }
-                  if ($('.skipAdButton').length) {
-                      $(".skipAdButton").empty();
-                  }
-                  if ($('.skipAdTimer').length) {
-                      $(".skipAdTimer").empty();
-                  }
+              // function removeAdsPlaceholderDiv() {
+              //     if ($('.AdsPlaceholderDiv').length) {
+              //         $(".AdsPlaceholderDiv").empty();
+              //     }
+              //     if ($('.skipAdButton').length) {
+              //         $(".skipAdButton").empty();
+              //     }
+              //     if ($('.skipAdTimer').length) {
+              //         $(".skipAdTimer").empty();
+              //     }
   
-                  setTimeScale();
+              //     setTimeScale();
   
-              }
+              // }
   
               setTimeScale = function() {
                   try {
@@ -10205,24 +10206,24 @@ function copyTempDouble(ptr) {
                   } catch (error) {}
               }
   
-              function getAdsPlaceholderDiv() {
-                  return (
-                      '<div style="position:absolute; top: 0; left: 0; background-color:black; z-index:2147483644; overflow:auto; width:100%; height:100%; pointer-events:auto;">' +
-                      '<div class="skipAdButton">' +
-                      '<\/div>' +
-                      '<div class="skipAdTimer">' +
-                      '<\/div>' +
-                      '<div style="text-align:center;position: relative;' +
-                      'top:30%;' +
-                      'z-index:2147483645;">' +
-                      '<div>' +
-                      '<button onclick="openY8InNewTab()">' +
-                      '<img src="/y8-studio/unity/config/shared/gamebreak/placeholder.png" alt="Y8 Placeholder Ad - Y8.com" style="background:transparent; border:none; width:300px; height:250px;"><\/button>' +
-                      '<\/div>' +
-                      '<\/div>' +
-                      '<\/div>'
-                  );
-              }
+              // function getAdsPlaceholderDiv() {
+              //     return (
+              //         '<div style="position:absolute; top: 0; left: 0; background-color:black; z-index:2147483644; overflow:auto; width:100%; height:100%; pointer-events:auto;">' +
+              //         '<div class="skipAdButton">' +
+              //         '<\/div>' +
+              //         '<div class="skipAdTimer">' +
+              //         '<\/div>' +
+              //         '<div style="text-align:center;position: relative;' +
+              //         'top:30%;' +
+              //         'z-index:2147483645;">' +
+              //         '<div>' +
+              //         '<button onclick="openY8InNewTab()">' +
+              //         '<img src="/y8-studio/unity/config/shared/gamebreak/placeholder.png" alt="Y8 Placeholder Ad - Y8.com" style="background:transparent; border:none; width:300px; height:250px;"><\/button>' +
+              //         '<\/div>' +
+              //         '<\/div>' +
+              //         '<\/div>'
+              //     );
+              // }
   
           } catch (error) {}
       }

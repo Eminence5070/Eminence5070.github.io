@@ -37,7 +37,7 @@
   {
     "title": "Motherload",
     "icon": "icons/motherload.jpg",
-    "url": "games/flash?href=flash/motherload.swf",
+    "url": "/games/flash.html?href=/games/flash/motherload.swf",
     "category": "Games",
     "description": "Mine deep into the ground!"
   },
@@ -51,7 +51,7 @@
   {
     "title": "Burrito Bison",
     "icon": "icons/burritobison.png",
-    "url": "games/flash?href=flash/burritobison.swf",
+    "url": "/games/flash.html?href=/games/flash/burritobison.swf",
     "category": "Games",
     "description": "Smash hordes of gummy bears!"
   },
@@ -140,13 +140,6 @@
     "description": "Fun aerial combat game!"
   },
   {
-    "title": "Jchabin Cars",
-    "icon": "icons/jchabin.png",
-    "url": "games/jchabin/",
-    "category": "Games",
-    "description": "Multiplayer racing game!"
-  },
-  {
     "title": "Drive Mad",
     "icon": "icons/drivemad.jpg",
     "url": "games/drivemad/",
@@ -177,7 +170,7 @@
   {
     "title": "Fireboy & Watergirl",
     "icon": "icons/fireboy.png",
-    "url": "games/flash?href=flash/fireboy.swf",
+    "url": "/games/flash.html?href=/games/flash/fireboy.swf",
     "category": "Games",
     "description": "A fun 2-player platformer!"
   },
@@ -210,13 +203,6 @@
     "description": "Vroom!"
   },
   {
-    "title": "1v1.lol",
-    "icon": "icons/1v1.jpg",
-    "url": "games/1v1/index.html",
-    "category": "Games",
-    "description": "Georgia school simulator!"
-  },
-  {
     "title": "FNAW",
     "icon": "icons/fnaw.png",
     "url": "games/fnaw.html",
@@ -233,35 +219,35 @@
   {
     "title": "BTD 1",
     "icon": "icons/btd_old.jpeg",
-    "url": "games/flash?href=flash/btd1.swf",
+    "url": "/games/flash.html?href=/games/flash/btd1.swf",
     "category": "Games",
     "description": "Bloons TD 1!"
   },
   {
     "title": "BTD 2",
     "icon": "icons/btd_old.jpeg",
-    "url": "games/flash?href=flash/btd2.swf",
+    "url": "/games/flash.html?href=/games/flash/btd2.swf",
     "category": "Games",
     "description": "Bloons TD 2!"
   },
   {
     "title": "BTD 3",
     "icon": "icons/btd3.jpg",
-    "url": "games/flash?href=flash/btd3.swf",
+    "url": "/games/flash.html?href=/games/flash/btd3.swf",
     "category": "Games",
     "description": "Bloons TD 3!"
   },
   {
     "title": "BTD 4",
     "icon": "icons/btd4.webp",
-    "url": "games/flash?href=flash/btd4.swf",
+    "url": "/games/flash.html?href=/games/flash/btd4.swf",
     "category": "Games",
     "description": "Bloons TD 4!"
   },
   {
     "title": "BTD 5",
     "icon": "icons/btd5.png",
-    "url": "games/flash?href=flash/btd5.swf",
+    "url": "/games/flash.html?href=/games/flash/btd5.swf",
     "category": "Games",
     "description": "Bloons TD 5!"
   },
