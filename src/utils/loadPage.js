@@ -44,7 +44,7 @@ export function loadPage(url, title) {
   homeButton.style.cursor = "pointer";
   homeButton.style.padding = "8px";
   homeButton.addEventListener("click", () => {
-    fetch("Eminence5070.github.io/")
+    fetch("https://Eminence5070.github.io/")
       .then((response) => response.text())
       .then((html) => {
         const iframe = document.createElement("iframe");
@@ -414,7 +414,7 @@ export function loadPage(url, title) {
             const doc = document.implementation.createHTMLDocument("temp");
             doc.documentElement.innerHTML = html;
             const baseTag = doc.createElement("base");
-            baseTag.href = new URL("Eminence5070.github.io/", currentUrl).href;
+            baseTag.href = new URL("https://Eminence5070.github.io/", currentUrl).href;
             doc.head.appendChild(baseTag);
 
             targetIframe.srcdoc =
@@ -451,7 +451,7 @@ export function loadPage(url, title) {
         doc.documentElement.innerHTML = html;
 
         const baseTag = doc.createElement("base");
-        baseTag.href = new URL("Eminence5070.github.io/", url).href;
+        baseTag.href = new URL("https://Eminence5070.github.io/", url).href;
         doc.head.appendChild(baseTag);
 
         const iframe = document.createElement("iframe");
