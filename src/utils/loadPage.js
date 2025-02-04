@@ -44,7 +44,7 @@ export function loadPage(url, title) {
   homeButton.style.cursor = "pointer";
   homeButton.style.padding = "8px";
   homeButton.addEventListener("click", () => {
-    fetch(window.location.href)
+    fetch(parentIframe.getAttribute("data-url"))
       .then((response) => response.text())
       .then((html) => {
         const iframe = document.createElement("iframe");
@@ -414,7 +414,10 @@ export function loadPage(url, title) {
             const doc = document.implementation.createHTMLDocument("temp");
             doc.documentElement.innerHTML = html;
             const baseTag = doc.createElement("base");
-            baseTag.href = new URL(currentUrl, window.location.origin).href;
+            baseTag.href = new URL(
+              currentUrl,
+              parentIframe.getAttribute("data-url")
+            ).href;
             doc.head.appendChild(baseTag);
 
             targetIframe.srcdoc =
@@ -451,7 +454,7 @@ export function loadPage(url, title) {
         doc.documentElement.innerHTML = html;
 
         const baseTag = doc.createElement("base");
-        baseTag.href = new URL(url, window.location.origin).href;
+        baseTag.href = new URL(url, parentIframe.getAttribute("data-url")).href;
         doc.head.appendChild(baseTag);
 
         const iframe = document.createElement("iframe");
