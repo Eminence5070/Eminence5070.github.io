@@ -20,7 +20,7 @@ var defaultTitle = document.title;
 var hashTags = window.frameElement.getAttribute("data-url").split("#")[1]; //substr removes the leading #
 var gameName = games[hashTags];
 
-if (hashTags.length > 0) {
+if (hashTags.length > 1) {
   console.log(`[PLAYER] Current game: ${gameName} [${hashTags}]`);
   document.title = `${gameName} on GBA Online`;
 
