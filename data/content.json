@@ -1,5 +1,13 @@
 [
   {
+    "title": "Jack Smith",
+    "new": "true",
+    "icon": "icons/jacksmith.png",
+    "url": "/games/flash.html?href=/games/flash/jacksmith.swf",
+    "category": "Games",
+    "description": "Craft awesome weapons and armor!"
+  },
+  {
     "title": "The Final Earth 2",
     "new": "true",
     "icon": "icons/thefinalearth2.png",
