@@ -212,6 +212,19 @@ input#search-bar::placeholder {
     outline: none;
 }
 
+.new-badge {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background: rgb(153 74 72);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid rgb(153 74 72);
+}
+
 #changelog-btn {
     padding: 10px 20px;
     font-size: 16px;
@@ -287,6 +300,7 @@ nav {
 }
 
 .card {
+    position: relative;
     background-color: #1c1c1c20;
     border: 2px solid #26262603;
     padding: 20px;
@@ -305,9 +319,10 @@ nav {
 }
 
 .card-description {
+    position:relative;
     text-align: center;
     color: #dce0e0;
-    margin-top: 10px;
+    top: -2px;
     font-size: 10px;
 }
 
@@ -319,18 +334,32 @@ nav {
     position: relative;
 }
 
+.new-card {
+    background-color: #6f222243;
+}
+
+.new-card:hover {
+    background-color: #6f222251;
+}
+
 .card-icon {
     border-radius: 12px;
     display: block;
-    width: 60px;
+    width: 5.5vw;
     position: relative;
-    height: 60px;
-    bottom: -4px;
+    height: 5.5vw;
+    bottom: -14px;
 }
 
 .card h3 {
+    position: relative;
+    top: 0.5vw;
+    font-size: 20px;
     text-align: center;
+    white-space: nowrap;
+    word-wrap: break-word;
 }
+
 
 #pagination {
     display: flex;

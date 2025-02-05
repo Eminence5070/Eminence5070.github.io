@@ -82,6 +82,13 @@ export async function init() {
                     <h3>${item.title}</h3>
                     <p class="card-description">${item.description}</p>
                 `;
+      if (item.new) {
+        const newBadge = document.createElement("div");
+        newBadge.classList.add("new-badge");
+        newBadge.textContent = "NEW!";
+        card.appendChild(newBadge);
+        card.classList += " new-card";
+      }
       card.addEventListener("click", () => {
         Utils.loadPage(item.url, item.title);
       });
