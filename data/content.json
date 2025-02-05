@@ -218,7 +218,7 @@
     "title": "gbaONLINE",
     "new": "true",
     "icon": "icons/gba.png",
-    "url": "apps/gbajs/index.html",
+    "url": "apps/gbajs/index.html#",
     "category": "Apps",
     "description": "Emulate retro games!"
   },
