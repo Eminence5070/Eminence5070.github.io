@@ -1,5 +1,29 @@
 [
   {
+    "title": "Pokemon Ruby",
+    "new": "true",
+    "icon": "icons/pokemonruby.png",
+    "url": "apps/gbajs/index.html#pokemon-ruby",
+    "category": "Games",
+    "description": "Battle, catch, & train Pokemon!"
+  },
+  {
+    "title": "DOOM",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/flash.html?href=/games/flash/doom.swf",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "DOS Box",
+    "new": "true",
+    "icon": "icons/dosbox.png",
+    "url": "/apps/dos/",
+    "category": "Apps",
+    "description": "Windows DOS ported to the web!"
+  },
+  {
     "title": "Jack Smith",
     "new": "true",
     "icon": "icons/jacksmith.png",
@@ -191,7 +215,8 @@
     "description": "Flash game emulator!"
   },
   {
-    "title": "GBA.JS",
+    "title": "gbaONLINE",
+    "new": "true",
     "icon": "icons/gba.png",
     "url": "apps/gbajs/index.html",
     "category": "Apps",
