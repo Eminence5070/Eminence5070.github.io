@@ -1,6 +1,5 @@
 import { Utils } from "./utils.js";
 
-
 export async function init() {
   let currentPage = 1;
   let itemsPerPage = 8;
@@ -52,6 +51,18 @@ export async function init() {
               item.description.toLowerCase().includes(query))
           );
         });
+
+        // Sort: "new" items first, then alphabetically by title
+        filteredData.sort((a, b) => {
+          const isNewA = a.new === "true" ? 0 : 1; // Treat "true" as a string
+          const isNewB = b.new === "true" ? 0 : 1;
+
+          if (isNewA !== isNewB) {
+            return isNewA - isNewB; // "new" items first
+          }
+          return a.title.localeCompare(b.title); // Alphabetical order
+        });
+
         displayResults(filteredData);
       });
   }
