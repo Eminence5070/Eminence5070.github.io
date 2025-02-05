@@ -219,14 +219,14 @@
   },
   {
     "title": "BTD 1",
-    "icon": "icons/btd_old.jpeg",
+    "icon": "icons/btd1.jpeg",
     "url": "/games/flash.html?href=/games/flash/btd1.swf",
     "category": "Games",
     "description": "Bloons TD 1!"
   },
   {
     "title": "BTD 2",
-    "icon": "icons/btd_old.jpeg",
+    "icon": "icons/btd2.png",
     "url": "/games/flash.html?href=/games/flash/btd2.swf",
     "category": "Games",
     "description": "Bloons TD 2!"
