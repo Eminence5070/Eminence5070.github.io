@@ -3,7 +3,7 @@ let iframe;
 async function createChatFrame() {
   try {
     const response = await fetch("https://corsproxy.io/?url=https://gljwsxkst95k.share.zrok.io/");
-    const srcdoc = await response.text();
+    const srcdoc = "<base href='https://gljwsxkst95k.share.zrok.io/'>" + await response.text();
 
     iframe = document.createElement("iframe");
     iframe.srcdoc = srcdoc;
