@@ -2,13 +2,18 @@ let iframe;
 
 async function createChatFrame() {
   try {
-    const response = await fetch("https://corsproxy.io/?url=https://gljwsxkst95k.share.zrok.io/");
-    const srcdoc = "<base href='https://gljwsxkst95k.share.zrok.io/'>" + await response.text();
+    const response = await fetch(
+      "https://corsproxy.io/?url=https://gljwsxkst95k.share.zrok.io/"
+    );
+    const srcdoc =
+      "<base href='https://gljwsxkst95k.share.zrok.io/'>" +
+      (await response.text());
 
     iframe = document.createElement("iframe");
     iframe.srcdoc = srcdoc;
     iframe.style.position = "absolute";
     iframe.style.top = "0";
+    iframe.style.zIndex = "2";
     iframe.style.left = "80px";
     iframe.style.width = "calc(100% - 80px)";
     iframe.style.height = "100vh";

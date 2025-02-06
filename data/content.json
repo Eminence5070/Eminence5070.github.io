@@ -1,5 +1,37 @@
 [
   {
+    "title": "Skibidi Shooter",
+    "new": "true",
+    "icon": "icons/skibidishooter.png",
+    "url": "games/skibidishooter/",
+    "category": "Games",
+    "description": "Kill all the Skibidi Toilets!"
+  },
+  {
+    "title": "Bloons Pop 3",
+    "new": "true",
+    "icon": "icons/bloonspop3.png",
+    "url": "/games/flash.html?href=/games/flash/bloonspop3.swf",
+    "category": "Games",
+    "description": "Move the Bloons around to create a match of three!"
+  },
+  {
+    "title": "Duck Life 5",
+    "new": "true",
+    "icon": "icons/ducklife5.png",
+    "url": "/games/flash.html?href=/games/flash/ducklife5.swf",
+    "category": "Games",
+    "description": "Head into the cave to search for treasure!"
+  },
+  {
+    "title": "Strike Force Heroes 2",
+    "new": "true",
+    "icon": "icons/strikeforceheroes2.jpg",
+    "url": "/games/flash.html?href=/games/flash/strike-force-heroes-2.swf",
+    "category": "Games",
+    "description": "Shooter game with fun gameplay and many different modes!"
+  },
+  {
     "title": "Pokemon Ruby",
     "new": "true",
     "icon": "icons/pokemonruby.png",
@@ -9,7 +41,6 @@
   },
   {
     "title": "DOOM",
-    "new": "true",
     "icon": "icons/doom.jpg",
     "url": "/games/flash.html?href=/games/flash/doom.swf",
     "category": "Games",
@@ -25,7 +56,6 @@
   },
   {
     "title": "Jack Smith",
-    "new": "true",
     "icon": "icons/jacksmith.png",
     "url": "/games/flash.html?href=/games/flash/jacksmith.swf",
     "category": "Games",
