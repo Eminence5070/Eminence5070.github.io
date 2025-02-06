@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <script src="/inject.js"></script>
+    <script src="/src/chat.js"></script>
     <script src="/src/lib/ResponsiveText.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,10 +49,15 @@
             >
             <button class="button-action" id="changelog-btn">
               <a href="https://forms.gle/sK9bLb2oMiMtF4ZMA">
-                <i class="fa-solid fa-comment"></i>
+                <i class="fa-solid fa-book"></i>
                 <p class="text">Suggestions</a
               ></p>
             </button>
+            <div id="chat-wrapper" onclick="toggleChat()">
+            <button class="button-action" id="changelog-btn">
+                <i class="fa-solid fa-comments"></i>
+                <p class="text">Chat</p>
+            </button></div>
           </context-menu>
       </div>
     </header>

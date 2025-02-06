@@ -33,7 +33,6 @@
   },
   {
     "title": "The Final Earth 2",
-    "new": "true",
     "icon": "icons/thefinalearth2.png",
     "url": "games/thefinalearth2/",
     "category": "Games",
@@ -216,7 +215,6 @@
   },
   {
     "title": "gbaONLINE",
-    "new": "true",
     "icon": "icons/gba.png",
     "url": "apps/gbajs/index.html#",
     "category": "Apps",
