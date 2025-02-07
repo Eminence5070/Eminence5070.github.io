@@ -1,5 +1,13 @@
 [
   {
+    "title": "Skibidi Shooter 2",
+    "new": "true",
+    "icon": "icons/skibidishooter2.png",
+    "url": "games/skibidishooter2/",
+    "category": "Games",
+    "description": "Will you survive the waves?"
+  },
+  {
     "title": "Skibidi Shooter",
     "new": "true",
     "icon": "icons/skibidishooter.png",

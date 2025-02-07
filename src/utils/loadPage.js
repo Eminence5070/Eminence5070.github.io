@@ -53,6 +53,7 @@ export function loadPage(url, title) {
         document.body.appendChild(iframe);
 
         const iframeDoc = iframe.contentWindow.document;
+
         iframeDoc.open();
         iframeDoc.write(html);
         iframeDoc.close();
