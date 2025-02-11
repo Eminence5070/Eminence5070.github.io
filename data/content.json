@@ -17,7 +17,6 @@
   },
   {
     "title": "Bloons Pop 3",
-    "new": "true",
     "icon": "icons/bloonspop3.png",
     "url": "/games/flash.html?href=/games/flash/bloonspop3.swf",
     "category": "Games",
@@ -33,7 +32,6 @@
   },
   {
     "title": "Strike Force Heroes 2",
-    "new": "true",
     "icon": "icons/strikeforceheroes2.jpg",
     "url": "/games/flash.html?href=/games/flash/strike-force-heroes-2.swf",
     "category": "Games",
@@ -41,7 +39,6 @@
   },
   {
     "title": "Pokemon Ruby",
-    "new": "true",
     "icon": "icons/pokemonruby.png",
     "url": "apps/gbajs/index.html#pokemon-ruby",
     "category": "Games",
@@ -56,7 +53,6 @@
   },
   {
     "title": "DOS Box",
-    "new": "true",
     "icon": "icons/dosbox.png",
     "url": "/apps/dos/",
     "category": "Apps",

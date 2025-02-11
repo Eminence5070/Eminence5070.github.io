@@ -458,7 +458,7 @@ export function loadPage(url, title) {
         const iframe = document.createElement("iframe");
         if (!url.includes("zrok"))
           iframe.srcdoc = doc.documentElement.innerHTML;
-        iframe.srcdoc += `<style>body{overflow: hidden !important;}</style>`;
+        iframe.srcdoc += `<style>body{overflow: hidden !important;}</style><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">`;
         iframe.setAttribute("data-url", url);
         iframe.style =
           "left: 1%;width: 98%;height: 92%;border: none;z-index: 9999;border-radius: 8px;position: absolute;top: 6%;";
