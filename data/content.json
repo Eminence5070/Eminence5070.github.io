@@ -9,7 +9,6 @@
   },
   {
     "title": "Skibidi Shooter 2",
-    "new": "true",
     "icon": "icons/skibidishooter2.png",
     "url": "games/skibidishooter2/",
     "category": "Games",
@@ -17,7 +16,6 @@
   },
   {
     "title": "Skibidi Shooter",
-    "new": "true",
     "icon": "icons/skibidishooter.png",
     "url": "games/skibidishooter/",
     "category": "Games",
@@ -32,7 +30,6 @@
   },
   {
     "title": "Duck Life 5",
-    "new": "true",
     "icon": "icons/ducklife5.png",
     "url": "/games/flash.html?href=/games/flash/ducklife5.swf",
     "category": "Games",
@@ -44,6 +41,14 @@
     "url": "/games/flash.html?href=/games/flash/strike-force-heroes-2.swf",
     "category": "Games",
     "description": "Shooter game with fun gameplay and many different modes!"
+  },
+  {
+    "title": "Pokemon FireRed Rocket Edition",
+    "new": "true",
+    "icon": "icons/pokemonfrrocket.png",
+    "url": "apps/gbajs/index.html#firered-rocket-edition",
+    "category": "Games",
+    "description": "Lie, cheat, and steal your way to the top!"
   },
   {
     "title": "Pokemon Ruby",
