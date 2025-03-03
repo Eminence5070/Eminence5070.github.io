@@ -1,7 +1,94 @@
 [
   {
-    "title": "Jerkmate Ranked",
+    "title": "Infinite Craft",
     "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/infinitecraft/infinitecraft.html",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Bloxorz",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/flash.html?href=/games/flash/bloxors.swf",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "The Impossible Quiz 2",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/flash.html?href=/games/flash/theimpossiblequiz2.swf",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Super Mario Flash 2",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/flash.html?href=/games/flash/supermarioflash2.swf",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Bubble Shooter",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/flash.html?href=/games/flash/bubbleshooter.swf",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Angry Birds",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/flash.html?href=/games/flash/angrybirds.swf",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Unfair Mario",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/flash.html?href=/games/flash/unfairmario.swf",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Strike Force Heroes 3",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/flash.html?href=/games/flash/strikeforceheroes3.swf",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Bad Piggies",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/flash.html?href=/games/flash/badpiggies.swf",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Happy Wheels",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/flash.html?href=/games/flash/happywheels.swf",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Learn 2 Fly",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/flash.html?href=/games/flash/learn2fly.swf",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Jerkmate Ranked",
     "icon": "icons/jerky.jpg",
     "url": "https://3yfjmt5qtic5.share.zrok.io/",
     "category": "Games",
@@ -44,7 +131,6 @@
   },
   {
     "title": "Pokemon FireRed Rocket Edition",
-    "new": "true",
     "icon": "icons/pokemonfrrocket.png",
     "url": "apps/gbajs/index.html#firered-rocket-edition",
     "category": "Games",
@@ -59,8 +145,9 @@
   },
   {
     "title": "DOOM",
+    "new": "true",
     "icon": "icons/doom.jpg",
-    "url": "/games/flash.html?href=/games/flash/doom.swf",
+    "url": "/games/doom.html",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },

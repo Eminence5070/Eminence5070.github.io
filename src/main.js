@@ -45,11 +45,7 @@ export async function init() {
               currentFilter === "All" || item.category === currentFilter;
           }
 
-          return (
-            categoryMatches &&
-            (item.title.toLowerCase().includes(query) ||
-              item.description.toLowerCase().includes(query))
-          );
+          return categoryMatches && item.title.toLowerCase().includes(query);
         });
 
         // Sort: "new" items first, then alphabetically by title
@@ -80,7 +76,6 @@ export async function init() {
       card.innerHTML = `
                     <img src="assets/${item.icon}" alt="Icon" class="card-icon">
                     <h3>${item.title}</h3>
-                    <p class="card-description">${item.description}</p>
                 `;
       if (item.new) {
         const newBadge = document.createElement("div");
