@@ -21,7 +21,7 @@ export function loadPage(url, title) {
   container.style.paddingBottom = "39px";
 
   const topBar = document.createElement("div");
-  topBar.style.marginTop = "-5vh";
+  topBar.style.marginTop = "-7.25vh";
   topBar.style.display = "flex";
   topBar.style.justifyContent = "space-between";
   topBar.style.alignItems = "center";
@@ -467,7 +467,7 @@ export function loadPage(url, title) {
           let event = new Event("DOMContentLoaded");
           iframe.contentDocument.dispatchEvent(event);
           const unityCanvas = iframe.contentDocument.querySelector("canvas");
-          if (unityCanvas) {
+          if (unityCanvas && url.includes("block")) {
             unityCanvas.style.width = "100%";
             unityCanvas.style.height = "100%";
 

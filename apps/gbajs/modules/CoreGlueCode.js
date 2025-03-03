@@ -12,6 +12,7 @@
 var games = {
   // "binary-id": "Game Name",
   "pokemon-ruby": "Pokemon Ruby",
+  "pokemon-silver": "Pokemon Silver",
   "firered-rocket-edition": "Pokemon FireRed Rocket Edition",
 };
 
