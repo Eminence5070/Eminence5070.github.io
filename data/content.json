@@ -1,9 +1,25 @@
 [
   {
-    "title": "Infinite Craft",
+    "title": "Swords and Sandals II",
     "new": "true",
     "icon": "icons/doom.jpg",
-    "url": "/games/infinitecraft/infinitecraft.html",
+    "url": "/games/flash.html?href=/games/flash/swordsandsandals2.swf",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Run3",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/flash.html?href=/games/flash/run3.swf",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Age of War",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/flash.html?href=/games/flash/ageofwar.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
