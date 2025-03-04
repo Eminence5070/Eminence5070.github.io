@@ -1,5 +1,13 @@
 [
   {
+    "title": "Bullet Time",
+    "new": "true",
+    "icon": "icons/doom.jpg",
+    "url": "/games/bullettime/",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
     "title": "Swords and Sandals II",
     "new": "true",
     "icon": "icons/doom.jpg",
