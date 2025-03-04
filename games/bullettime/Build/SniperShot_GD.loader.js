@@ -352,8 +352,7 @@ function createUnityInstance(e, t, n) {
   };
   for (var h in t) l[h] = t[h];
   l.streamingAssetsUrl = new URL(
-    "https://game.enjoy4fun.com/snipershotbullettime/v2/",
-    l.streamingAssetsUrl
+    "https://game.enjoy4fun.com/snipershotbullettime/v2/StreamingAssets/"
   ).href;
   var p = l.disabledCanvasEvents.slice();
   p.forEach(function (t) {
