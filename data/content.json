@@ -1,112 +1,144 @@
 [
   {
-    "title": "Bullet Time",
+    "title": "Time Shooter",
     "new": "true",
-    "icon": "icons/doom.jpg",
-    "url": "/games/bullettime/",
+    "icon": "icons/timeshooter1.png",
+    "url": "/games/timeshooter1/",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Funny Battle Simulator 2",
+    "new": "true",
+    "icon": "icons/funnybattlesimulator2.png",
+    "url": "/games/funnybattlesimulator2/",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Funny Shooter 2",
+    "new": "true",
+    "icon": "icons/funnyshooter2.png",
+    "url": "/games/funnyshooter2/",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Mine Shooter",
+    "new": "true",
+    "icon": "icons/mineshooter.png",
+    "url": "/games/mineshooter/",
+    "category": "Games",
+    "description": "Epic campaign to conquer demons across dimensions!"
+  },
+  {
+    "title": "Eggy Car",
+    "new": "true",
+    "icon": "icons/eggycar.png",
+    "url": "/games/eggycar/",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
   {
     "title": "Swords and Sandals II",
-    "new": "true",
-    "icon": "icons/doom.jpg",
+
+    "icon": "icons/swordsandsandals2.png",
     "url": "/games/flash.html?href=/games/flash/swordsandsandals2.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
   {
     "title": "Run3",
-    "new": "true",
-    "icon": "icons/doom.jpg",
+
+    "icon": "icons/run3.png",
     "url": "/games/flash.html?href=/games/flash/run3.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
   {
     "title": "Age of War",
-    "new": "true",
-    "icon": "icons/doom.jpg",
+
+    "icon": "icons/ageofwar.png",
     "url": "/games/flash.html?href=/games/flash/ageofwar.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
   {
     "title": "Bloxorz",
-    "new": "true",
-    "icon": "icons/doom.jpg",
+
+    "icon": "icons/bloxorz.png",
     "url": "/games/flash.html?href=/games/flash/bloxors.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
   {
     "title": "The Impossible Quiz 2",
-    "new": "true",
-    "icon": "icons/doom.jpg",
+
+    "icon": "icons/theimpossiblequiz2.png",
     "url": "/games/flash.html?href=/games/flash/theimpossiblequiz2.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
   {
     "title": "Super Mario Flash 2",
-    "new": "true",
-    "icon": "icons/doom.jpg",
+
+    "icon": "icons/supermarioflash2.png",
     "url": "/games/flash.html?href=/games/flash/supermarioflash2.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
   {
     "title": "Bubble Shooter",
-    "new": "true",
-    "icon": "icons/doom.jpg",
+
+    "icon": "icons/bubbleshooter.png",
     "url": "/games/flash.html?href=/games/flash/bubbleshooter.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
   {
     "title": "Angry Birds",
-    "new": "true",
-    "icon": "icons/doom.jpg",
+
+    "icon": "icons/angrybirds.png",
     "url": "/games/flash.html?href=/games/flash/angrybirds.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
   {
     "title": "Unfair Mario",
-    "new": "true",
-    "icon": "icons/doom.jpg",
+
+    "icon": "icons/unfairmario.png",
     "url": "/games/flash.html?href=/games/flash/unfairmario.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
   {
     "title": "Strike Force Heroes 3",
-    "new": "true",
-    "icon": "icons/doom.jpg",
+
+    "icon": "icons/strikeforceheroes3.png",
     "url": "/games/flash.html?href=/games/flash/strikeforceheroes3.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
   {
     "title": "Bad Piggies",
-    "new": "true",
-    "icon": "icons/doom.jpg",
+
+    "icon": "icons/badpiggies.png",
     "url": "/games/flash.html?href=/games/flash/badpiggies.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
   {
     "title": "Happy Wheels",
-    "new": "true",
-    "icon": "icons/doom.jpg",
+
+    "icon": "icons/happywheels.png",
     "url": "/games/flash.html?href=/games/flash/happywheels.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
   },
   {
     "title": "Learn 2 Fly",
-    "new": "true",
-    "icon": "icons/doom.jpg",
+
+    "icon": "icons/learn2fly.png",
     "url": "/games/flash.html?href=/games/flash/learn2fly.swf",
     "category": "Games",
     "description": "Epic campaign to conquer demons across dimensions!"
@@ -134,6 +166,7 @@
   },
   {
     "title": "Bloons Pop 3",
+    "new": "true",
     "icon": "icons/bloonspop3.png",
     "url": "/games/flash.html?href=/games/flash/bloonspop3.swf",
     "category": "Games",
@@ -169,7 +202,7 @@
   },
   {
     "title": "DOOM",
-    "new": "true",
+
     "icon": "icons/doom.jpg",
     "url": "/games/doom.html",
     "category": "Games",
