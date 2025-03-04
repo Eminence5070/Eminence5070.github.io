@@ -45,7 +45,9 @@ export async function init() {
               currentFilter === "All" || item.category === currentFilter;
           }
 
-          return categoryMatches && item.title.toLowerCase().includes(query);
+          return (
+            categoryMatches && item.title.trim().toLowerCase().includes(query)
+          );
         });
 
         // Sort: "new" items first, then alphabetically by title
