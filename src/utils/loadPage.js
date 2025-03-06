@@ -406,7 +406,10 @@ export function loadPage(url, title) {
     const targetIframe = document.querySelector("iframe[data-url]");
     if (targetIframe) {
       const currentUrl = targetIframe.getAttribute("data-url");
-      if (currentUrl.includes("zrok")) {
+      if (
+        currentUrl.includes("zrok") ||
+        currentUrl.includes("googleusercontent")
+      ) {
         targetIframe.src = currentUrl;
       } else {
         fetch(currentUrl)
@@ -444,7 +447,7 @@ export function loadPage(url, title) {
       console.error("No valid iframe found for fullscreen");
     }
   });
-  if (!url.includes("zrok")) {
+  if (!url.includes("zrok") || url.includes("googleusercontent")) {
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
@@ -456,7 +459,7 @@ export function loadPage(url, title) {
         doc.head.appendChild(baseTag);
 
         const iframe = document.createElement("iframe");
-        if (!url.includes("zrok"))
+        if (!url.includes("zrok") || url.includes("googleusercontent"))
           iframe.srcdoc = doc.documentElement.innerHTML;
         iframe.srcdoc += `<style>body{overflow: hidden !important;}</style><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">`;
         iframe.setAttribute("data-url", url);
@@ -467,7 +470,10 @@ export function loadPage(url, title) {
           let event = new Event("DOMContentLoaded");
           iframe.contentDocument.dispatchEvent(event);
           const unityCanvas = iframe.contentDocument.querySelector("canvas");
-          if (unityCanvas && (url.includes("block") || url.includes("timeshooter/"))) {
+          if (
+            unityCanvas &&
+            (url.includes("block") || url.includes("timeshooter/"))
+          ) {
             unityCanvas.style.width = "100%";
             unityCanvas.style.height = "100%";
 
