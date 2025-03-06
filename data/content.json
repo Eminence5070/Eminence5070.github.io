@@ -1,472 +1,420 @@
 [
   {
+    "title": "Angry Birds Rio",
+    "new": "true",
+    "icon": "icons/angrybirdsrio.png",
+    "url": "/games/flash.html?href=/games/flash/angrybirdrio.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Swords and Sandals Crusader",
+    "new": "true",
+    "icon": "icons/swordsandsandalscrusader.png",
+    "url": "/games/flash.html?href=/games/flash/swordsandsandalscrusader.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Don't Shoot the Puppy",
+    "new": "true",
+    "icon": "icons/dontshootthepuppy.png",
+    "url": "/games/flash.html?href=/games/flash/dontshootthepuppy.swf",
+    "category": "Games"
+  },
+  {
     "title": "Billiards",
     "new": "true",
     "icon": "icons/billiards.png",
     "url": "/games/flash.html?href=/games/flash/billiards.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Time Shooter",
     "icon": "icons/timeshooter1.png",
     "url": "/games/timeshooter1/",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Funny Battle Simulator 2",
     "icon": "icons/funnybattlesimulator2.png",
     "url": "/games/funnybattlesimulator2/",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Funny Shooter 2",
     "icon": "icons/funnyshooter2.png",
     "url": "/games/funnyshooter2/",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Mine Shooter",
     "icon": "icons/mineshooter.png",
     "url": "/games/mineshooter/",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
-  },
-  {
-    "title": "Eggy Car",
-    "icon": "icons/eggycar.png",
-    "url": "/games/eggycar/",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Swords and Sandals II",
     "icon": "icons/swordsandsandals2.png",
     "url": "/games/flash.html?href=/games/flash/swordsandsandals2.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Run3",
     "icon": "icons/run3.png",
     "url": "/games/flash.html?href=/games/flash/run3.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Age of War",
     "icon": "icons/ageofwar.png",
     "url": "/games/flash.html?href=/games/flash/ageofwar.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Bloxorz",
     "icon": "icons/bloxorz.png",
     "url": "/games/flash.html?href=/games/flash/bloxors.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "The Impossible Quiz 2",
     "icon": "icons/theimpossiblequiz2.png",
     "url": "/games/flash.html?href=/games/flash/theimpossiblequiz2.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Super Mario Flash 2",
     "icon": "icons/supermarioflash2.png",
     "url": "/games/flash.html?href=/games/flash/supermarioflash2.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Bubble Shooter",
     "icon": "icons/bubbleshooter.png",
     "url": "/games/flash.html?href=/games/flash/bubbleshooter.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Angry Birds",
     "icon": "icons/angrybirds.png",
     "url": "/games/flash.html?href=/games/flash/angrybirds.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Unfair Mario",
     "icon": "icons/unfairmario.png",
     "url": "/games/flash.html?href=/games/flash/unfairmario.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Strike Force Heroes 3",
     "icon": "icons/strikeforceheroes3.png",
     "url": "/games/flash.html?href=/games/flash/strikeforceheroes3.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Bad Piggies",
     "icon": "icons/badpiggies.png",
     "url": "/games/flash.html?href=/games/flash/badpiggies.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Happy Wheels",
     "icon": "icons/happywheels.png",
     "url": "/games/flash.html?href=/games/flash/happywheels.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Learn 2 Fly",
     "icon": "icons/learn2fly.png",
     "url": "/games/flash.html?href=/games/flash/learn2fly.swf",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "Jerkmate Ranked",
     "icon": "icons/jerky.jpg",
     "url": "https://3yfjmt5qtic5.share.zrok.io/",
-    "category": "Games",
-    "description": "Jerk with your friends!"
+    "category": "Games"
   },
   {
     "title": "Skibidi Shooter 2",
     "icon": "icons/skibidishooter2.png",
     "url": "games/skibidishooter2/",
-    "category": "Games",
-    "description": "Will you survive the waves?"
+    "category": "Games"
   },
   {
     "title": "Skibidi Shooter",
     "icon": "icons/skibidishooter.png",
     "url": "games/skibidishooter/",
-    "category": "Games",
-    "description": "Kill all the Skibidi Toilets!"
+    "category": "Games"
   },
   {
     "title": "Bloons Pop 3",
     "icon": "icons/bloonspop3.png",
     "url": "/games/flash.html?href=/games/flash/bloonspop3.swf",
-    "category": "Games",
-    "description": "Move the Bloons around to create a match of three!"
+    "category": "Games"
   },
   {
     "title": "Duck Life 5",
     "icon": "icons/ducklife5.png",
     "url": "/games/flash.html?href=/games/flash/ducklife5.swf",
-    "category": "Games",
-    "description": "Head into the cave to search for treasure!"
+    "category": "Games"
   },
   {
     "title": "Strike Force Heroes 2",
     "icon": "icons/strikeforceheroes2.jpg",
     "url": "/games/flash.html?href=/games/flash/strike-force-heroes-2.swf",
-    "category": "Games",
-    "description": "Shooter game with fun gameplay and many different modes!"
+    "category": "Games"
   },
   {
     "title": "Pokemon FireRed Rocket Edition",
     "icon": "icons/pokemonfrrocket.png",
     "url": "apps/gbajs/index.html#firered-rocket-edition",
-    "category": "Games",
-    "description": "Lie, cheat, and steal your way to the top!"
+    "category": "Games"
   },
   {
     "title": "Pokemon Ruby",
     "icon": "icons/pokemonruby.png",
     "url": "apps/gbajs/index.html#pokemon-ruby",
-    "category": "Games",
-    "description": "Battle, catch, & train Pokemon!"
+    "category": "Games"
   },
   {
     "title": "DOOM",
     "icon": "icons/doom.jpg",
     "url": "/games/doom.html",
-    "category": "Games",
-    "description": "Epic campaign to conquer demons across dimensions!"
+    "category": "Games"
   },
   {
     "title": "DOS Box",
     "icon": "icons/dosbox.png",
     "url": "/apps/dos/",
-    "category": "Apps",
-    "description": "Windows DOS ported to the web!"
+    "category": "Apps"
   },
   {
     "title": "Jack Smith",
     "icon": "icons/jacksmith.png",
     "url": "/games/flash.html?href=/games/flash/jacksmith.swf",
-    "category": "Games",
-    "description": "Craft awesome weapons and armor!"
+    "category": "Games"
   },
   {
     "title": "The Final Earth 2",
     "icon": "icons/thefinalearth2.png",
     "url": "games/thefinalearth2/",
-    "category": "Games",
-    "description": "Verticle sci-fi city builder!"
+    "category": "Games"
   },
   {
     "title": "Ultraviolet",
     "icon": "icons/uv.png",
     "url": "https://bkmkij85zqp9.share.zrok.io/",
-    "category": "Apps",
-    "description": "Unblock everything!"
+    "category": "Apps"
   },
   {
     "title": "Block Blast",
     "icon": "icons/blockblast.jpg",
     "url": "games/blockblast/",
-    "category": "Games",
-    "description": "The most addicting puzzle game!"
+    "category": "Games"
   },
   {
     "title": "2048",
     "icon": "icons/2048.png",
     "url": "games/2048",
-    "category": "Games",
-    "description": "Merge the tiles and reach 2048!"
+    "category": "Games"
   },
   {
     "title": "Tetris",
     "icon": "icons/tetris.jpg",
     "url": "games/tetris/tetris.html",
-    "category": "Games",
-    "description": "The world's favorite puzzle game!"
+    "category": "Games"
   },
   {
     "title": "Motherload",
     "icon": "icons/motherload.jpg",
     "url": "/games/flash.html?href=/games/flash/motherload.swf",
-    "category": "Games",
-    "description": "Mine deep into the ground!"
+    "category": "Games"
   },
   {
     "title": "Minecraft",
     "icon": "icons/minecraft.svg",
     "url": "games/eagx.html",
-    "category": "Games",
-    "description": "Minecraft 1.8.8 ported to the web!"
+    "category": "Games"
   },
   {
     "title": "Burrito Bison",
     "icon": "icons/burritobison.png",
     "url": "/games/flash.html?href=/games/flash/burritobison.swf",
-    "category": "Games",
-    "description": "Smash hordes of gummy bears!"
+    "category": "Games"
   },
   {
     "title": "Geometry Dash",
     "icon": "icons/geometrydash.jpg",
     "url": "games/geometrydash/",
-    "category": "Games",
-    "description": "Challenge your reflexes in Geometry Dash!"
+    "category": "Games"
   },
   {
     "title": "Pacman",
     "icon": "icons/pacman.png",
     "url": "games/pacman/index.html#bg=black&autoplay",
-    "category": "Games",
-    "description": "The retro arcade game you know and love!"
+    "category": "Games"
   },
   {
     "title": "Tanuki Sunset",
     "icon": "icons/tanukisunset.jpg",
     "url": "games/tanukisunset/",
-    "category": "Games",
-    "description": "Third-person longboard-skating game!"
+    "category": "Games"
   },
   {
     "title": "Snake",
     "icon": "icons/snake.jpg",
     "url": "games/snake/",
-    "category": "Games",
-    "description": "Play with a very long snake!"
+    "category": "Games"
   },
   {
     "title": "Super Mario 64",
     "icon": "icons/sm64.jpg",
     "url": "games/sm64/",
-    "category": "Games",
-    "description": "A classic 3D platformer!"
+    "category": "Games"
   },
   {
     "title": "Tunnel Rush",
     "icon": "icons/tunnelrush.jpg",
     "url": "games/tunnelrush/",
-    "category": "Games",
-    "description": "Navigate a 3D tunnel and avoid obstacles!"
+    "category": "Games"
   },
   {
     "title": "Drift Hunters",
     "icon": "icons/drifthunters.png",
     "url": "games/drifthunters/",
-    "category": "Games",
-    "description": "Experience improved with alcohol!"
+    "category": "Games"
   },
   {
     "title": "Territorial.io",
     "icon": "icons/territorial.png",
     "url": "games/territorial.html",
-    "category": "Games",
-    "description": "Conquer the world!"
+    "category": "Games"
   },
   {
     "title": "Tiny Fishing",
     "icon": "icons/tinyfishing.webp",
     "url": "games/tinyfishing/",
-    "category": "Games",
-    "description": "Become the best fisherman!"
+    "category": "Games"
   },
   {
     "title": "Flappy Bird",
     "icon": "icons/flappybird.jpg",
     "url": "games/flappybird/",
-    "category": "Games",
-    "description": "Flap a bird!"
+    "category": "Games"
   },
   {
     "title": "Time Shooter 3",
     "icon": "icons/timeshooter3.jpg",
     "url": "games/timeshooter3/",
-    "category": "Games",
-    "description": "More content and more fun!"
+    "category": "Games"
   },
   {
     "title": "Bitplanes",
     "icon": "icons/bitplanes.svg",
     "url": "games/bitplanes/",
-    "category": "Games",
-    "description": "Fun aerial combat game!"
+    "category": "Games"
   },
   {
     "title": "Drive Mad",
     "icon": "icons/drivemad.jpg",
     "url": "games/drivemad/",
-    "category": "Games",
-    "description": "Soberness optional!"
+    "category": "Games"
   },
   {
     "title": "Monkey Mart",
     "icon": "icons/monkeymart.jpg",
     "url": "games/monkeymart/",
-    "category": "Games",
-    "description": "Sell bananas and buy monkeys!"
+    "category": "Games"
   },
   {
     "title": "Cookie Clicker",
     "icon": "icons/cookie.webp",
     "url": "games/cookieclicker/",
-    "category": "Games",
-    "description": "Money doesn't buy happiness, cookies do!"
+    "category": "Games"
   },
   {
     "title": "A Dance of Fire & Ice",
     "icon": "icons/fireandice.webp",
     "url": "games/dance/",
-    "category": "Games",
-    "description": "A fun one-button rhythm game!"
+    "category": "Games"
   },
   {
     "title": "Fireboy & Watergirl",
     "icon": "icons/fireboy.png",
     "url": "/games/flash.html?href=/games/flash/fireboy.swf",
-    "category": "Games",
-    "description": "A fun 2-player platformer!"
+    "category": "Games"
   },
   {
     "title": "Ruffle",
     "icon": "icons/ruffle.png",
     "url": "apps/ruffle/index.html",
-    "category": "Apps",
-    "description": "Flash game emulator!"
+    "category": "Apps"
   },
   {
     "title": "gbaONLINE",
     "icon": "icons/gba.png",
     "url": "apps/gbajs/index.html#",
-    "category": "Apps",
-    "description": "Emulate retro games!"
+    "category": "Apps"
   },
   {
     "title": "Slope",
     "icon": "icons/slope.webp",
     "url": "games/slope/index.html",
-    "category": "Games",
-    "description": "Play with balls!"
+    "category": "Games"
   },
   {
     "title": "Slowroads",
     "icon": "icons/slowroads.webp",
     "url": "games/slowroads/index.html",
-    "category": "Games",
-    "description": "Vroom!"
+    "category": "Games"
   },
   {
     "title": "FNAW",
     "icon": "icons/fnaw.png",
     "url": "games/fnaw.html",
-    "category": "Games",
-    "description": "Five Nights at Freddy's made by the Eaglercraft developer!"
+    "category": "Games"
   },
   {
     "title": "Time Shooter 2",
     "icon": "icons/timeshooter.jpeg",
     "url": "games/timeshooter/index.html",
-    "category": "Games",
-    "description": "Control time & fight bad guys!"
+    "category": "Games"
   },
   {
     "title": "BTD 1",
     "icon": "icons/btd1.jpeg",
     "url": "/games/flash.html?href=/games/flash/btd1.swf",
-    "category": "Games",
-    "description": "Bloons TD 1!"
+    "category": "Games"
   },
   {
     "title": "BTD 2",
     "icon": "icons/btd2.png",
     "url": "/games/flash.html?href=/games/flash/btd2.swf",
-    "category": "Games",
-    "description": "Bloons TD 2!"
+    "category": "Games"
   },
   {
     "title": "BTD 3",
     "icon": "icons/btd3.jpg",
     "url": "/games/flash.html?href=/games/flash/btd3.swf",
-    "category": "Games",
-    "description": "Bloons TD 3!"
+    "category": "Games"
   },
   {
     "title": "BTD 4",
     "icon": "icons/btd4.webp",
     "url": "/games/flash.html?href=/games/flash/btd4.swf",
-    "category": "Games",
-    "description": "Bloons TD 4!"
+    "category": "Games"
   },
   {
     "title": "BTD 5",
     "icon": "icons/btd5.png",
     "url": "/games/flash.html?href=/games/flash/btd5.swf",
-    "category": "Games",
-    "description": "Bloons TD 5!"
+    "category": "Games"
   },
   {
     "title": "Stack",
     "icon": "icons/stack.png",
     "url": "games/stack-game/stack.html",
-    "category": "Games",
-    "description": "Test your reaction skills!"
+    "category": "Games"
   }
 ]
