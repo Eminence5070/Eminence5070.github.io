@@ -24,15 +24,6 @@
 var list = [];
 
 var in_html = "";
-for (let index = 0; index < list.length; index++) {
-  const element = list[index];
-  var currentUrl = location.href;
-  if (element.url != currentUrl && !element.notshow.includes(currentUrl)) {
-    in_html += `<li style="padding: 5px; display: inline-block;">
-        <a style="color: #ffffff;" href="${element.url}" title="${element.title}">${element.title}</a>
-      </li>`;
-  }
-}
 var html = `
 <ul style="color: #ffffff; padding: 0px; margin: 0px; font-size: 20px;">
   ${in_html}
@@ -47,7 +38,6 @@ function showHead() {
     "width: 100%; text-align: center; position: absolute; top: 0px; z-index: 999; background: rgb(119, 119, 255); opacity: 0.8;";
   e.innerHTML = html;
   e.id = "listLink";
-  document.getElementsByTagName("body")[0].appendChild(e);
 }
 // window.addEventListener('load', function() {
 //     var e = this.document.createElement("div");
