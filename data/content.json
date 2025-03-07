@@ -28,13 +28,6 @@
     "new": "true"
   },
   {
-    "title": "Pokemon White",
-    "icon": "icons/pokemonwhite.png",
-    "url": "apps/emulatorjs/index.html#pokemonwhite.nds",
-    "category": "Games",
-    "new": "true"
-  },
-  {
     "title": "EmulatorJS",
     "icon": "icons/emulatorjs.png",
     "url": "apps/emulatorjs/",
