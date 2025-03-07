@@ -1,28 +1,77 @@
 [
   {
-    "title": "Angry Birds Rio",
+    "title": "Idle Miner Tycoon",
+    "icon": "icons/idleminertycoon.png",
+    "url": "games/idleminertycoon/",
+    "category": "Games",
+    "new": "true"
+  },
+  {
+    "title": "Pokemon Emerald",
+    "icon": "icons/pokemonemerald.png",
+    "url": "apps/emulatorjs/index.html#pokemonemerald.gba",
+    "category": "Games",
+    "new": "true"
+  },
+  {
+    "title": "Pokemon Sapphire",
+    "icon": "icons/pokemonsapphire.png",
+    "url": "apps/emulatorjs/index.html#pokemonsapphire.gba",
+    "category": "Games",
+    "new": "true"
+  },
+  {
+    "title": "Pokemon FireRed",
+    "icon": "icons/pokemonfirered.png",
+    "url": "apps/emulatorjs/index.html#pokemonfirered.gba",
+    "category": "Games",
+    "new": "true"
+  },
+  {
+    "title": "Pokemon White",
+    "icon": "icons/pokemonwhite.png",
+    "url": "apps/emulatorjs/index.html#pokemonwhite.nds",
+    "category": "Games",
+    "new": "true"
+  },
+  {
+    "title": "EmulatorJS",
+    "icon": "icons/emulatorjs.png",
+    "url": "apps/emulatorjs/",
+    "category": "Apps",
+    "new": "true"
+  },
+  {
+    "title": "Pokemon FireRed Randomizer",
+    "icon": "icons/pokemonfireredrandomizer.png",
+    "url": "apps/gbajs/index.html#fireredrandomizer",
     "new": "true",
+    "category": "Games"
+  },
+  {
+    "title": "Angry Birds Rio",
+
     "icon": "icons/angrybirdsrio.png",
     "url": "/games/flash.html?href=/games/flash/angrybirdrio.swf",
     "category": "Games"
   },
   {
     "title": "Swords and Sandals Crusader",
-    "new": "true",
+
     "icon": "icons/swordsandsandalscrusader.png",
     "url": "/games/flash.html?href=/games/flash/swordsandsandalscrusader.swf",
     "category": "Games"
   },
   {
     "title": "Don't Shoot the Puppy",
-    "new": "true",
+
     "icon": "icons/dontshootthepuppy.png",
     "url": "/games/flash.html?href=/games/flash/dontshootthepuppy.swf",
     "category": "Games"
   },
   {
     "title": "Billiards",
-    "new": "true",
+
     "icon": "icons/billiards.png",
     "url": "/games/flash.html?href=/games/flash/billiards.swf",
     "category": "Games"

@@ -14,6 +14,7 @@ var games = {
   "pokemon-ruby": "Pokemon Ruby",
   "pokemon-silver": "Pokemon Silver",
   "firered-rocket-edition": "Pokemon FireRed Rocket Edition",
+  "fireredrandomizer": "Pokemon FireRed Randomizer",
 };
 
 // Change title
