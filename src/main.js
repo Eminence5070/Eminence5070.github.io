@@ -2,7 +2,7 @@ import { Utils } from "./utils.js";
 
 export async function init() {
   let currentPage = 1;
-  let itemsPerPage = 8;
+  let itemsPerPage = 10;
   let currentFilter = "All";
 
   Array.from(document.getElementsByClassName("button-action")).forEach(

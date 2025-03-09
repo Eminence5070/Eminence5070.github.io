@@ -1,44 +1,45 @@
 [
   {
+    "title": "Grand Roulette",
+    "new": "true",
+    "icon": "icons/grandroulette.png",
+    "url": "/games/flash.html?href=/games/flash/grandroulette.swf",
+    "category": "Games"
+  },
+  {
     "title": "Idle Miner Tycoon",
     "icon": "icons/idleminertycoon.png",
     "url": "games/idleminertycoon/",
-    "category": "Games",
-    "new": "true"
+    "category": "Games"
   },
   {
     "title": "Pokemon Emerald",
     "icon": "icons/pokemonemerald.png",
     "url": "apps/emulatorjs/index.html#pokemonemerald.gba",
-    "category": "Games",
-    "new": "true"
+    "category": "Games"
   },
   {
     "title": "Pokemon Sapphire",
     "icon": "icons/pokemonsapphire.png",
     "url": "apps/emulatorjs/index.html#pokemonsapphire.gba",
-    "category": "Games",
-    "new": "true"
+    "category": "Games"
   },
   {
     "title": "Pokemon FireRed",
     "icon": "icons/pokemonfirered.png",
     "url": "apps/emulatorjs/index.html#pokemonfirered.gba",
-    "category": "Games",
-    "new": "true"
+    "category": "Games"
   },
   {
     "title": "EmulatorJS",
     "icon": "icons/emulatorjs.png",
     "url": "apps/emulatorjs/",
-    "category": "Apps",
-    "new": "true"
+    "category": "Apps"
   },
   {
     "title": "Pokemon FireRed Randomizer",
     "icon": "icons/pokemonfireredrandomizer.png",
     "url": "apps/gbajs/index.html#fireredrandomizer",
-    "new": "true",
     "category": "Games"
   },
   {
