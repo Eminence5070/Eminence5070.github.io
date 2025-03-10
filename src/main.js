@@ -17,7 +17,11 @@ export async function init() {
     Utils.loadPage("/settings.html", "Settings");
   });
 
-  document.getElementById("search-bar").addEventListener("input", loadResults);
+  document.getElementById("search-bar").addEventListener("input", () => {
+    currentPage = 1;
+    loadResults();
+  });
+  
   document.querySelectorAll(".filter-btn").forEach((button) => {
     button.addEventListener("click", function () {
       currentFilter = this.getAttribute("data-filter");

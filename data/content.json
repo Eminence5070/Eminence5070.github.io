@@ -1,5 +1,124 @@
 [
   {
+    "title": "Temple Run 2",
+    "new": "true",
+    "icon": "icons/templerun2.png",
+    "url": "games/templerun2/",
+    "category": "Games"
+  },
+  {
+    "title": "Minesweeper",
+    "new": "true",
+    "icon": "icons/minesweeper.png",
+    "url": "games/minesweeper/",
+    "category": "Games"
+  },
+  {
+    "title": "Wordle",
+    "new": "true",
+    "icon": "icons/wordle.png",
+    "url": "games/wordle.html",
+    "category": "Games"
+  },
+  {
+    "title": "New Super Mario Bros",
+    "new": "true",
+    "icon": "icons/newsupermariobros.png",
+    "url": "apps/emulatorjs/index.html#newsupermariobros.nds",
+    "category": "Games"
+  },
+  {
+    "title": "Swords and Sandals",
+    "new": "true",
+    "icon": "icons/swordsandsandals.png",
+    "url": "games/flash.html?href=/games/flash/swordsandsandals.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Chess",
+    "new": "true",
+    "icon": "icons/chess.png",
+    "url": "games/flash.html?href=/games/flash/chess.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Celeste",
+    "new": "true",
+    "icon": "icons/celeste.png",
+    "url": "apps/emulatorjs/index.html#celeste.gba",
+    "category": "Games"
+  },
+  {
+    "title": "BitLife",
+    "new": "true",
+    "icon": "icons/bitlife.png",
+    "url": "games/bitlife/",
+    "category": "BitLife"
+  },
+  {
+    "title": "Banjo-Tooie",
+    "icon": "icons/banjotooie.png",
+    "new": "true",
+    "url": "apps/emulatorjs/index.html#banjotooie.n64",
+    "category": "Games"
+  },
+  {
+    "title": "Animal Crossing: Wild World",
+    "icon": "icons/animalcrossingwildworld.png",
+    "new": "true",
+    "url": "apps/emulatorjs/index.html#animalcrossingwildworld.nds",
+    "category": "Games"
+  },
+  {
+    "title": "Cluster Rush",
+    "new": "true",
+    "icon": "icons/clusterrush.png",
+    "url": "games/clusterrush/",
+    "category": "Games"
+  },
+  {
+    "title": "Weavesilk",
+    "new": "true",
+    "icon": "icons/weavesilk.png",
+    "url": "apps/weavesilk",
+    "category": "Apps"
+  },
+  {
+    "title": "WebGL Fluids",
+    "new": "true",
+    "icon": "icons/webglfluids.png",
+    "url": "apps/webglfluids",
+    "category": "Apps"
+  },
+  {
+    "title": "Zombotron 2",
+    "new": "true",
+    "icon": "icons/zombotron2.png",
+    "url": "games/flash.html?href=/games/flash/zombotron2.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Zombotron",
+    "new": "true",
+    "icon": "icons/zombotron.png",
+    "url": "games/flash.html?href=/games/flash/zombotron.swf",
+    "category": "Games"
+  },
+  {
+    "title": "10 Minutes Till Dawn",
+    "new": "true",
+    "icon": "icons/10minutestilldawn.png",
+    "url": "/games/10minutestilldawn/",
+    "category": "Games"
+  },
+  {
+    "title": "AdVenture Capitalist",
+    "new": "true",
+    "icon": "icons/adventurecapitalist.png",
+    "url": "/games/adventurecapitalist/",
+    "category": "Games"
+  },
+  {
     "title": "Grand Roulette",
     "new": "true",
     "icon": "icons/grandroulette.png",
@@ -7,7 +126,7 @@
     "category": "Games"
   },
   {
-    "title": "Idle Miner Tycoon",
+    "title": "Idle Mining Empire",
     "icon": "icons/idleminertycoon.png",
     "url": "games/idleminertycoon/",
     "category": "Games"
@@ -58,9 +177,9 @@
   },
   {
     "title": "Don't Shoot the Puppy",
-
+    "new": "true",
     "icon": "icons/dontshootthepuppy.png",
-    "url": "/games/flash.html?href=/games/flash/dontshootthepuppy.swf",
+    "url": "/games/flash.html?href=/games/flash/dontshoothtepuppy.swf",
     "category": "Games"
   },
   {
@@ -167,7 +286,7 @@
     "category": "Games"
   },
   {
-    "title": "Learn 2 Fly",
+    "title": "Learn to Fly 2",
     "icon": "icons/learn2fly.png",
     "url": "/games/flash.html?href=/games/flash/learn2fly.swf",
     "category": "Games"
@@ -425,31 +544,31 @@
     "category": "Games"
   },
   {
-    "title": "BTD 1",
+    "title": "Bloons Tower Defense 1",
     "icon": "icons/btd1.jpeg",
     "url": "/games/flash.html?href=/games/flash/btd1.swf",
     "category": "Games"
   },
   {
-    "title": "BTD 2",
+    "title": "Bloons Tower Defense 2",
     "icon": "icons/btd2.png",
     "url": "/games/flash.html?href=/games/flash/btd2.swf",
     "category": "Games"
   },
   {
-    "title": "BTD 3",
+    "title": "Bloons Tower Defense 3",
     "icon": "icons/btd3.jpg",
     "url": "/games/flash.html?href=/games/flash/btd3.swf",
     "category": "Games"
   },
   {
-    "title": "BTD 4",
-    "icon": "icons/btd4.webp",
+    "title": "Bloons Tower Defense 4",
+    "icon": "icons/btd4.png",
     "url": "/games/flash.html?href=/games/flash/btd4.swf",
     "category": "Games"
   },
   {
-    "title": "BTD 5",
+    "title": "Bloons Tower Defense 5",
     "icon": "icons/btd5.png",
     "url": "/games/flash.html?href=/games/flash/btd5.swf",
     "category": "Games"

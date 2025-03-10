@@ -1,6 +1,6 @@
 body {
     background-color: #21202019;
-    color: #ede9e980;
+    color: #ede9e9c8;
     overflow: initial;
     font-family: "Outfit", sans-serif;
     margin: 0;
@@ -145,4 +145,13 @@ nav {
 
 select {
     position: relative;
+    width: 80px;
+    height: 20px;
+    color: #ede9e9c8;
+    background-color: #4d494950;
+    border-radius: 7px;
+    display: block;
+    outline: none !important;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }

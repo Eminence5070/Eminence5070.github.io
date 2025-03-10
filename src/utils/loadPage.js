@@ -15,17 +15,16 @@ export function loadPage(url, title) {
   container.style.height = "105%";
   container.style.border = "2px solid rgb(255, 255, 255, 0.15)";
   container.style.borderRadius = "8px";
-  container.style.padding = "15px";
   container.style.backgroundColor = "rgb(255, 255, 255, 0.15)";
   container.style.boxSizing = "border-box";
-  container.style.paddingBottom = "39px";
+  container.style.padding = "0px 15px 39px";
 
   const topBar = document.createElement("div");
-  topBar.style.marginTop = "-5vh";
+
   topBar.style.display = "flex";
   topBar.style.justifyContent = "space-between";
   topBar.style.alignItems = "center";
-  topBar.style.padding = "16px 8px 8px";
+  topBar.style.padding = "-1px 8px 8px";
 
   const pageTitle = document.createElement("h2");
   pageTitle.textContent = title;
@@ -464,7 +463,7 @@ export function loadPage(url, title) {
         iframe.srcdoc += `<style>body{overflow: hidden !important;}</style><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">`;
         iframe.setAttribute("data-url", url);
         iframe.style =
-          "left: 1%;width: 98%;height: 92%;border: none;z-index: 9999;border-radius: 8px;position: absolute;top: 6%;";
+          "left: 1%;width: 98%;height: 91%;border: none;z-index: 9999;border-radius: 8px;position: absolute;";
         container.appendChild(iframe);
         iframe.onload = () => {
           let event = new Event("DOMContentLoaded");
