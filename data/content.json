@@ -1,5 +1,19 @@
 [
   {
+    "title": "Slope City",
+    "new": "true",
+    "icon": "icons/slopecity.png",
+    "url": "games/slopecity/",
+    "category": "Games"
+  },
+  {
+    "title": "Solitaire",
+    "new": "true",
+    "icon": "icons/solitaire.png",
+    "url": "games/flash.html?href=/games/flash/solitaire.swf",
+    "category": "Games"
+  },
+  {
     "title": "Temple Run 2",
     "new": "true",
     "icon": "icons/templerun2.png",
