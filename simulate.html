@@ -2,7 +2,7 @@
   placeholder="Click to simulate Annotate environment."
   onclick="
     document.body.innerHTML = '';
-    document.head.innerHTML = document.head.innerHTML + `<base href='` + '/index.html' + `'/>`;
+    document.head.innerHTML = `<base href='` + '/index.html' + `'/>`;
     fetch('/index.html') 
       .then(response => response.text())
       .then(html => {
