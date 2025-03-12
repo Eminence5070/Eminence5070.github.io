@@ -29,31 +29,43 @@
     </div>
     <div class="toggle-container">
       <span class="toggle-text" style="position: relative"
-        >Background Image:</span
+        >Background image:</span
       >
       <select id="background-select">
-        <option
-          value="image1"
-          data-image="assets/backgrounds/horizons.jpg"
-        >
+        <option value="image1" data-image="assets/backgrounds/horizons.jpg">
           Horizons
         </option>
         <option value="void" data-image="assets/backgrounds/void.jpg">
           Void
         </option>
-        <option
-          value="sunset"
-          data-image="assets/backgrounds/sunset.jpg"
-        >
+        <option value="sunset" data-image="assets/backgrounds/sunset.jpg">
           Sunset
         </option>
-        <option
-        value="crimson"
-        data-image="assets/backgrounds/crimson.jpg"
-      >
-        Crimson
-      </option> 
+        <option value="crimson" data-image="assets/backgrounds/crimson.jpg">
+          Crimson
+        </option>
       </select>
+    </div>
+    <div class="toggle-container">
+      <span class="slider-text toggle-text">Items per page:</span>
+      <div>
+        <input
+          type="range"
+          id="items-slider"
+          min="4"
+          max="16"
+          value="8"
+          step="2"
+          style="
+            margin-right: 14px;
+            /* position: relative; */
+            /* float: right; */
+            /* right: -15%; */
+          "
+        /><span id="items-value" style="right: 40px; position: absolute"
+          >9</span
+        >
+      </div>
     </div>
     <button id="settings-back">Back</button>
   </div>
@@ -62,7 +74,7 @@
     back.addEventListener("click", () => {
       window.parent.document.querySelector('[data-tooltip="Home"]').click();
     });
-//
+
     var toggleUnload = document.getElementById("toggle1");
 
     if (localStorage.getItem("vertex_beforeunload_setting") === null) {
@@ -95,5 +107,20 @@
         }
       }
     }
+
+    // Items per page slider logic
+    var itemsSlider = document.getElementById("items-slider");
+    var itemsValue = document.getElementById("items-value");
+
+    // Set the initial value from localStorage if exists
+    if (localStorage.getItem("items_per_page")) {
+      itemsSlider.value = localStorage.getItem("items_per_page");
+      itemsValue.textContent = itemsSlider.value;
+    }
+
+    itemsSlider.addEventListener("input", function () {
+      itemsValue.textContent = itemsSlider.value;
+      localStorage.setItem("items_per_page", itemsSlider.value);
+    });
   </script>
 </body>

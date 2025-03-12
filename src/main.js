@@ -2,8 +2,31 @@ import { Utils } from "./utils.js";
 
 export async function init() {
   let currentPage = 1;
-  let itemsPerPage = 10;
+  let itemsPerPage = Number(localStorage.getItem("items_per_page")) || 16;
   let currentFilter = "All";
+
+  const container = document.querySelector("#results");
+  let items = itemsPerPage;
+  let rows,
+    cols,
+    scale = 1;
+
+  if (items === 16) {
+    rows = 2;
+    cols = 8;
+    scale = 0.75;
+  } else if (items > 14) {
+    rows = 3;
+    cols = Math.ceil(items / rows);
+  } else {
+    rows = 2;
+    cols = Math.ceil(items / rows);
+  }
+
+  container.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+  container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+  container.style.transform = `scale(${scale})`;
+  container.style.transformOrigin = `center`;
 
   Array.from(document.getElementsByClassName("button-action")).forEach(
     (button) => {
@@ -21,7 +44,7 @@ export async function init() {
     currentPage = 1;
     loadResults();
   });
-  
+
   document.querySelectorAll(".filter-btn").forEach((button) => {
     button.addEventListener("click", function () {
       currentFilter = this.getAttribute("data-filter");
@@ -38,31 +61,19 @@ export async function init() {
       .then((response) => response.json())
       .then((data) => {
         const filteredData = data.filter((item) => {
-          let categoryMatches = false;
-
-          if (currentFilter === "Apps") {
-            categoryMatches = item.category === "Apps";
-          } else if (currentFilter === "Games") {
-            categoryMatches = item.category === "Games";
-          } else {
-            categoryMatches =
-              currentFilter === "All" || item.category === currentFilter;
-          }
-
+          let categoryMatches =
+            currentFilter === "All" || item.category === currentFilter;
           return (
             categoryMatches && item.title.trim().toLowerCase().includes(query)
           );
         });
 
-        // Sort: "new" items first, then alphabetically by title
         filteredData.sort((a, b) => {
-          const isNewA = a.new === "true" ? 0 : 1; // Treat "true" as a string
+          const isNewA = a.new === "true" ? 0 : 1;
           const isNewB = b.new === "true" ? 0 : 1;
-
-          if (isNewA !== isNewB) {
-            return isNewA - isNewB; // "new" items first
-          }
-          return a.title.localeCompare(b.title); // Alphabetical order
+          return isNewA !== isNewB
+            ? isNewA - isNewB
+            : a.title.localeCompare(b.title);
         });
 
         displayResults(filteredData);
@@ -73,16 +84,16 @@ export async function init() {
     const results = document.getElementById("results");
     results.innerHTML = "";
 
-    const start = (currentPage - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
+    let start = (currentPage - 1) * itemsPerPage;
+    let end = start + itemsPerPage;
 
     data.slice(start, end).forEach((item) => {
       const card = document.createElement("div");
       card.classList.add("card");
       card.innerHTML = `
-                    <img src="assets/${item.icon}" alt="Icon" class="card-icon">
-                    <h3>${item.title}</h3>
-                `;
+        <img src="assets/${item.icon}" alt="Icon" class="card-icon">
+        <h3>${item.title}</h3>
+      `;
       if (item.new) {
         const newBadge = document.createElement("div");
         newBadge.classList.add("new-badge");

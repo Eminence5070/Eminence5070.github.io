@@ -1,157 +1,171 @@
 body {
-    background-color: #21202019;
-    color: #ede9e9c8;
-    overflow: initial;
-    font-family: "Outfit", sans-serif;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  background-color: #21202019;
+  color: #ede9e9c8;
+  overflow: initial;
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 button {
-    padding: 12px 20px;
-    margin-top:20px;
-    margin-bottom: -15px;
-    border: none;
-    background-color: #3031313a;
-    color: #c4c4c4;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: "Outfit";
-    transition: background-color 0.3s, transform 0.2s;
-    width: 250px;
-    height: 50px;
-    font-size: 18px;
+  padding: 12px 20px;
+  margin-top: 20px;
+  margin-bottom: -15px;
+  border: none;
+  background-color: #3031313a;
+  color: #c4c4c4;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Outfit";
+  transition: background-color 0.3s, transform 0.2s;
+  width: 250px;
+  height: 50px;
+  font-size: 18px;
 }
 
 button:hover {
-    background-color: #29292958;
+  background-color: #29292958;
 }
 
 #main {
-    scale: 1.1;
-    margin: 0 auto;
-    background-color: rgba(32, 36, 36, 0.2);
-    border-radius: 8px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 60vw;
-    box-shadow: 0 5px 15px rgba(71, 70, 70, 0.342);
+  scale: 1.1;
+  margin: 0 auto;
+  background-color: rgba(32, 36, 36, 0.2);
+  border-radius: 8px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  box-shadow: 0 5px 15px rgba(71, 70, 70, 0.342);
 }
 
 i {
-    scale: 1.5;
-    margin-right: 0px;
-    rotate: 90deg;
-    color: #ffffff6e;
+  scale: 1.5;
+  margin-right: 0px;
+  rotate: 90deg;
+  color: #ffffff6e;
 }
 
 h1 {
-    font-weight: 400;
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.545);
-    margin-bottom: 20px;
-    text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.545);
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 h2 {
-    margin: 11px;
-    color: #ffffff6e;
+  margin: 11px;
+  color: #ffffff6e;
 }
 
 h3 {
-    font-size: 1.5em;
-    margin-top: 14px;
-    margin: 12px;
-    color: #ffffff6e;
+  font-size: 1.5em;
+  margin-top: 14px;
+  margin: 12px;
+  color: #ffffff6e;
 }
 
 #div {
-    scale: 2;
-    font-size: 1.5em;
-    margin-top: 4px;
-    width: 1px;
-    background-color: #ffffff4b;
-    border-radius: 1px;
-    height: 20px;
+  scale: 2;
+  font-size: 1.5em;
+  margin-top: 4px;
+  width: 1px;
+  background-color: #ffffff4b;
+  border-radius: 1px;
+  height: 20px;
 }
 
 .toggle-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .toggle-text {
-    margin-right: 10px;
-    font-size: 20px;
-    margin-bottom: 4px;
+  margin-right: 10px;
+  font-size: 20px;
+  margin-bottom: 4px;
 }
 
 .toggle-input {
-    display: none;
+  display: none;
 }
 
 .toggle-label {
-    width: 40px;
-    height: 20px;
-    background-color: #4d494950;
-    border-radius: 15px;
-    display: block;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  width: 40px;
+  height: 20px;
+  background-color: #4d494950;
+  border-radius: 15px;
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .toggle-label::before {
-    display: flex;
-    content: "";
-    position: relative;
-    top: 50%;
-    left: 7.5%;
-    width: 12px;
-    height: 12px;
-    background-color: rgba(255, 255, 255, 0.524);
-    border-radius: 50%;
-    transition: transform 0.3s;
-    transform: translateY(-50%);
+  display: flex;
+  content: "";
+  position: relative;
+  top: 50%;
+  left: 7.5%;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.524);
+  border-radius: 50%;
+  transition: transform 0.3s;
+  transform: translateY(-50%);
 }
 
 .toggle-input:checked + .toggle-label {
-    background-color: #419365a1;
+  background-color: #419365a1;
 }
 
 .toggle-input:checked + .toggle-label::before {
-    transform: translate(20px, -50%);
+  transform: translate(20px, -50%);
 }
 
 nav {
-    scale: 2;
-    top: 12%;
-    display: flex;
-    position: absolute;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+  scale: 2;
+  top: 12%;
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 select {
-    position: relative;
-    width: 80px;
-    height: 20px;
-    color: #ede9e9c8;
-    background-color: #4d494950;
-    border-radius: 7px;
-    display: block;
-    outline: none !important;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  position: relative;
+  width: 80px;
+  height: 20px;
+  color: #ede9e9c8;
+  background-color: #4d494950;
+  border-radius: 7px;
+  display: block;
+  outline: none !important;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.items-slider {
+  float: right;
+  position: relative;
+  width: 80px;
+  height: 20px;
+  color: #ede9e9c8;
+  background-color: #4d494950;
+  border-radius: 7px;
+  display: block;
+  outline: none !important;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }

@@ -1,70 +1,224 @@
 [
   {
-    "title": "Slope City",
+    "title": "Plants Vs Zombies",
     "new": "true",
+    "icon": "icons/plantsvszombies.png",
+    "url": "/games/plantsvszombies/",
+    "category": "Games"
+  },
+  {
+    "title": "Breaking the Bank",
+    "new": "true",
+    "icon": "icons/breakingthebank.png",
+    "url": "/games/flash.html?href=/games/flash/breakingthebank.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Age of War 2",
+    "new": "true",
+    "icon": "icons/ageofwar2.png",
+    "url": "/games/flash.html?href=/games/flash/ageofwar2.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Metal Slug Rampage",
+    "new": "true",
+    "icon": "icons/metalslugrampage.png",
+    "url": "/games/flash.html?href=/games/flash/metalslugrampage.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Mortal Kombat Karnage",
+    "new": "true",
+    "icon": "icons/mortalkombatkarnage.png",
+    "url": "/games/flash.html?href=/games/flash/mortalkombatkarnage.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Sierra 7",
+    "new": "true",
+    "icon": "icons/sierra7.png",
+    "url": "/games/flash.html?href=/games/flash/sierra7.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Super Mario Bros",
+    "new": "true",
+    "icon": "icons/supermariobros.png",
+    "url": "apps/emulatorjs/index.html#supermariobros.gba",
+    "category": "Games"
+  },
+  {
+    "title": "Mario Kart 64",
+    "new": "true",
+    "icon": "icons/mariokart64.png",
+    "url": "apps/emulatorjs/index.html#mariokart64.n64",
+    "category": "Games"
+  },
+  {
+    "title": "Duck Hunt",
+    "new": "true",
+    "icon": "icons/duckhunt.png",
+    "url": "apps/emulatorjs/index.html#duckhunt.nes",
+    "category": "Games"
+  },
+  {
+    "title": "Edge Surf",
+    "new": "true",
+    "icon": "icons/surf.png",
+    "url": "games/surf/",
+    "category": "Games"
+  },
+  {
+    "title": "Vex 7",
+    "new": "true",
+    "icon": "icons/vex7.png",
+    "url": "games/vex7/",
+    "category": "Games"
+  },
+  {
+    "title": "Retro Bowl",
+    "new": "true",
+    "icon": "icons/retrobowl.png",
+    "url": "games/retrobowl/",
+    "category": "Games"
+  },
+  {
+    "title": "Moto X3M",
+    "new": "true",
+    "icon": "icons/motox3m.png",
+    "url": "games/motox3m/",
+    "category": "Games"
+  },
+  {
+    "title": "Super Mario Kart",
+    "new": "true",
+    "icon": "icons/supermariokart.png",
+    "url": "apps/emulatorjs/index.html#supermariokart.smc",
+    "category": "Games"
+  },
+  {
+    "title": "Mega Man X",
+    "new": "true",
+    "icon": "icons/megamanx.png",
+    "url": "apps/emulatorjs/index.html#megamanx.smc",
+    "category": "Games"
+  },
+  {
+    "title": "Mortal Kombat II",
+    "new": "true",
+    "icon": "icons/mortalkombat2.png",
+    "url": "apps/emulatorjs/index.html#mortalkombat2.smc",
+    "category": "Games"
+  },
+  {
+    "title": "Duck Life 4",
+    "new": "true",
+    "icon": "icons/ducklife4.png",
+    "url": "/games/flash.html?href=/games/flash/ducklife4.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Duck Life 3",
+    "new": "true",
+    "icon": "icons/ducklife3.png",
+    "url": "/games/flash.html?href=/games/flash/ducklife3.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Duck Life 2",
+    "new": "true",
+    "icon": "icons/ducklife2.png",
+    "url": "/games/flash.html?href=/games/flash/ducklife2.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Storm the House",
+    "new": "true",
+    "icon": "icons/stormthehouse.png",
+    "url": "/games/flash.html?href=/games/flash/stormthehouse.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Duck Life",
+    "new": "true",
+    "icon": "icons/ducklife.png",
+    "url": "/games/flash.html?href=/games/flash/ducklife.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Street Fighter II",
+    "new": "true",
+    "icon": "icons/streetfighter2.png",
+    "url": "apps/emulatorjs/index.html#streetfighter2.gba",
+    "category": "Games"
+  },
+  {
+    "title": "Super Metroid",
+    "new": "true",
+    "icon": "icons/supermetroid.png",
+    "url": "apps/emulatorjs/index.html#supermetroid.sfc",
+    "category": "Games"
+  },
+  {
+    "title": "Slope City",
+
     "icon": "icons/slopecity.png",
     "url": "games/slopecity/",
     "category": "Games"
   },
   {
     "title": "Solitaire",
-    "new": "true",
+
     "icon": "icons/solitaire.png",
     "url": "games/flash.html?href=/games/flash/solitaire.swf",
     "category": "Games"
   },
   {
-    "title": "Temple Run 2",
-    "new": "true",
-    "icon": "icons/templerun2.png",
-    "url": "games/templerun2/",
-    "category": "Games"
-  },
-  {
     "title": "Minesweeper",
-    "new": "true",
+
     "icon": "icons/minesweeper.png",
     "url": "games/minesweeper/",
     "category": "Games"
   },
   {
     "title": "Wordle",
-    "new": "true",
+
     "icon": "icons/wordle.png",
     "url": "games/wordle.html",
     "category": "Games"
   },
   {
     "title": "New Super Mario Bros",
-    "new": "true",
+
     "icon": "icons/newsupermariobros.png",
     "url": "apps/emulatorjs/index.html#newsupermariobros.nds",
     "category": "Games"
   },
   {
     "title": "Swords and Sandals",
-    "new": "true",
+
     "icon": "icons/swordsandsandals.png",
     "url": "games/flash.html?href=/games/flash/swordsandsandals.swf",
     "category": "Games"
   },
   {
     "title": "Chess",
-    "new": "true",
+
     "icon": "icons/chess.png",
     "url": "games/flash.html?href=/games/flash/chess.swf",
     "category": "Games"
   },
   {
     "title": "Celeste",
-    "new": "true",
+
     "icon": "icons/celeste.png",
     "url": "apps/emulatorjs/index.html#celeste.gba",
     "category": "Games"
   },
   {
     "title": "BitLife",
-    "new": "true",
+
     "icon": "icons/bitlife.png",
     "url": "games/bitlife/",
     "category": "BitLife"
@@ -72,69 +226,62 @@
   {
     "title": "Banjo-Tooie",
     "icon": "icons/banjotooie.png",
-    "new": "true",
+
     "url": "apps/emulatorjs/index.html#banjotooie.n64",
     "category": "Games"
   },
   {
     "title": "Animal Crossing: Wild World",
     "icon": "icons/animalcrossingwildworld.png",
-    "new": "true",
+
     "url": "apps/emulatorjs/index.html#animalcrossingwildworld.nds",
     "category": "Games"
   },
   {
     "title": "Cluster Rush",
-    "new": "true",
+
     "icon": "icons/clusterrush.png",
     "url": "games/clusterrush/",
     "category": "Games"
   },
   {
     "title": "Weavesilk",
-    "new": "true",
+
     "icon": "icons/weavesilk.png",
     "url": "apps/weavesilk",
     "category": "Apps"
   },
   {
     "title": "WebGL Fluids",
-    "new": "true",
+
     "icon": "icons/webglfluids.png",
     "url": "apps/webglfluids",
     "category": "Apps"
   },
   {
     "title": "Zombotron 2",
-    "new": "true",
+
     "icon": "icons/zombotron2.png",
     "url": "games/flash.html?href=/games/flash/zombotron2.swf",
     "category": "Games"
   },
   {
     "title": "Zombotron",
-    "new": "true",
+
     "icon": "icons/zombotron.png",
     "url": "games/flash.html?href=/games/flash/zombotron.swf",
     "category": "Games"
   },
   {
     "title": "10 Minutes Till Dawn",
-    "new": "true",
+
     "icon": "icons/10minutestilldawn.png",
     "url": "/games/10minutestilldawn/",
     "category": "Games"
   },
   {
-    "title": "AdVenture Capitalist",
-    "new": "true",
-    "icon": "icons/adventurecapitalist.png",
-    "url": "/games/adventurecapitalist/",
-    "category": "Games"
-  },
-  {
     "title": "Grand Roulette",
-    "new": "true",
+
     "icon": "icons/grandroulette.png",
     "url": "/games/flash.html?href=/games/flash/grandroulette.swf",
     "category": "Games"
@@ -191,7 +338,7 @@
   },
   {
     "title": "Don't Shoot the Puppy",
-    "new": "true",
+
     "icon": "icons/dontshootthepuppy.png",
     "url": "/games/flash.html?href=/games/flash/dontshoothtepuppy.swf",
     "category": "Games"
