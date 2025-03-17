@@ -1,7 +1,20 @@
 [
   {
-    "title": "Save P Diddy",
+    "title": "Idle Breakout",
     "new": "true",
+    "icon": "icons/idlebreakout.png",
+    "url": "/games/idlebreakout/",
+    "category": "Games"
+  },
+  {
+    "title": "Plazma Burst 2",
+    "new": "true",
+    "icon": "icons/plazmaburst2.png",
+    "url": "/games/flash.html?href=/games/flash/plazmaburst2.swf",
+    "category": "Games"
+  },
+  {
+    "title": "Save P Diddy",
     "icon": "icons/savepdiddy.png",
     "url": "/games/savepdiddy/",
     "category": "Games"
@@ -127,9 +140,9 @@
   },
   {
     "title": "Moto X3M",
-
+    "new": "true",
     "icon": "icons/motox3m.png",
-    "url": "games/motox3m/",
+    "url": "/games/flash.html?href=/games/flash/motox3m.swf",
     "category": "Games"
   },
   {
