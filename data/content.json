@@ -1,5 +1,12 @@
 [
   {
+    "title": "Storm the House 2",
+    "new": "true",
+    "icon": "icons/stormthehouse2.png",
+    "url": "/games/flash.html?href=/games/flash/stormthehouse2.swf",
+    "category": "Games"
+  },
+  {
     "title": "Idle Breakout",
     "new": "true",
     "icon": "icons/idlebreakout.png",
