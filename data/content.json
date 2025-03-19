@@ -1,21 +1,25 @@
 [
   {
-    "title": "Storm the House 2",
+    "title": "Sandtrix",
+    "icon": "icons/sandtrix.png",
+    "url": "apps/emulatorjs/index.html#sandtrix.gba",
     "new": "true",
+    "category": "Games"
+  },
+  {
+    "title": "Storm the House 2",
     "icon": "icons/stormthehouse2.png",
     "url": "/games/flash.html?href=/games/flash/stormthehouse2.swf",
     "category": "Games"
   },
   {
     "title": "Idle Breakout",
-    "new": "true",
     "icon": "icons/idlebreakout.png",
     "url": "/games/idlebreakout/",
     "category": "Games"
   },
   {
     "title": "Plazma Burst 2",
-    "new": "true",
     "icon": "icons/plazmaburst2.png",
     "url": "/games/flash.html?href=/games/flash/plazmaburst2.swf",
     "category": "Games"
@@ -147,7 +151,6 @@
   },
   {
     "title": "Moto X3M",
-    "new": "true",
     "icon": "icons/motox3m.png",
     "url": "/games/flash.html?href=/games/flash/motox3m.swf",
     "category": "Games"
