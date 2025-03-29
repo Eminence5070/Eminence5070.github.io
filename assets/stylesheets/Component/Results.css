@@ -1,0 +1,9 @@
+#results {
+  display: grid;
+  margin-top: 10%;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 0px;
+  padding: 20px;
+  row-gap: 20px;
+  justify-items: center;
+}

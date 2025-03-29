@@ -4,6 +4,8 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <script src="/inject.js"></script>
     <script src="/src/chat.js"></script>
+  
+
     <script src="/src/lib/ResponsiveText.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +13,6 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vertex</title>
@@ -33,57 +34,40 @@
     </script>
     <header>
       <context-menu>
-        <h1>
-          <i
-            style="    margin-right: 5px;
-            rotate: 90deg"
-            class="fa-brands fa-hive"
-          ></i
-          ><p class="text">Vertex</p>
-        </h1>
         <div>
             <div id="settings-wrapper">
-            <button class="button-action" id="changelog-btn">
+              <button class="button-action" id="changelog-btn">
                 <i class="fa-solid fa-gear"></i>
-                <p class="text">Settings</a
-              ></p>
-            </button></div>
+              </button>
+            </div>
             <a
-            target="_blank"
-            href="https://drive.google.com/drive/folders/1SBDC5OvQv9mF90mz8JKJq7JPUoD3qo1w?usp=sharing"
-          ><button class="button-action" id="changelog-btn">
-             </p>
-                <i style="margin-right: 2px" class="fa-solid fa-video"></i>
-                <p class="text">Movies</p>
-            </button></a
+              target="_blank"
+              href="https://drive.google.com/drive/folders/1SBDC5OvQv9mF90mz8JKJq7JPUoD3qo1w?usp=sharing"
             >
+              <button class="button-action" id="changelog-btn">
+                <i style="margin-right: 2px" class="fa-solid fa-video"></i>
+              </button>
+            </a>
             <button class="button-action" id="changelog-btn">
               <a href="https://forms.gle/sK9bLb2oMiMtF4ZMA">
                 <i class="fa-solid fa-book"></i>
-                <p class="text">Suggestions</a
-              ></p>
+              </a>
             </button>
             <div id="chat-wrapper" onclick="toggleChat()">
-            <button class="button-action" id="changelog-btn">
+              <button class="button-action" id="changelog-btn">
                 <i class="fa-solid fa-comments"></i>
-                <p class="text">Chat</p>
-            </button></div>
+              </button>
+            </div>
           </context-menu>
       </div>
     </header>
     <div id="app">
-      <div id="embed" style="z-index: -2;"></div>
+      <div id="embed"></div>
       <nav>
         <div class="search-container">
           <input type="text" id="search-bar" placeholder="Search..." />
           <i
-            style="
-              z-index: 1;
-              opacity: 0.6;
-              left: -21px;
-              top: -7px;
-              position: absolute;
-            "
+            style="scale: 1.3; z-index: 1; opacity: 0.6; left: -25px; top: -8px; position: absolute;"
             class="fa-solid fa-magnifying-glass"
           ></i>
         </div>

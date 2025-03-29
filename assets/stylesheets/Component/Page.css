@@ -1,0 +1,43 @@
+#pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  background: #21242536;
+  border-radius: 100px;
+  padding: 10px 48px 16px 48px;
+}
+
+#pagination button {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 12px 18px;
+  border: none;
+  background-color: transparent;
+  color: #777;
+  border-radius: 6px;
+  min-width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+#pagination button:hover,
+#pagination .active {
+  color: #EB5160;
+}
+
+#pagination button:hover::after,
+#pagination .active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background-color: #EB5160;
+  border-radius: 2px;
+}

@@ -4,94 +4,58 @@ import { tooltip } from "./tooltip.js";
 
 export function loadPage(url, title) {
   const embedElement = document.getElementById("embed");
-  document.getElementById("results").style.display = "none";
-  document.getElementsByClassName("search-container")[0].style.display = "none";
-  document.getElementsByClassName("filter-btn-group")[0].style.display = "none";
-  document.getElementById("pagination").style.display = "none";
+  document.getElementById("results").classList.add("hidden");
+  document.getElementsByClassName("search-container")[0].classList.add("hidden");
+  document.getElementsByClassName("filter-btn-group")[0].classList.add("hidden");
+  document.getElementById("pagination").classList.add("hidden");
 
   const container = document.createElement("div");
-  container.style.position = "relative";
-  container.style.maxWidth = "140%";
-  container.style.height = "105%";
-  container.style.border = "2px solid rgb(255, 255, 255, 0.15)";
-  container.style.borderRadius = "8px";
-  container.style.backgroundColor = "rgb(255, 255, 255, 0.15)";
-  container.style.boxSizing = "border-box";
-  container.style.padding = "0px 15px 39px";
+  container.classList.add("page-container");
 
   const topBar = document.createElement("div");
-
-  topBar.style.display = "flex";
-  topBar.style.justifyContent = "space-between";
-  topBar.style.alignItems = "center";
-  topBar.style.padding = "-1px 8px 8px";
+  topBar.classList.add("page-top-bar");
 
   const pageTitle = document.createElement("h2");
   pageTitle.textContent = title;
-  pageTitle.style.margin = "12px";
-  pageTitle.style.fontSize = "18px";
-  pageTitle.style.color = "rgb(255, 255, 255, 0.65)";
+  pageTitle.classList.add("page-title");
 
   const buttonContainer = document.createElement("div");
-  buttonContainer.style.display = "flex";
-  buttonContainer.style.gap = "10px";
+  buttonContainer.classList.add("button-container");
 
-  const homeButton = document.createElement("button");
-  homeButton.style.backgroundColor = "transparent";
-  homeButton.style.border = "none";
-  homeButton.setAttribute("data-tooltip", "Home");
-  homeButton.style.cursor = "pointer";
-  homeButton.style.padding = "8px";
-  homeButton.addEventListener("click", () => {
+  // Home button
+  const homeButton = createButton("Home", "fa-home", () => {
     fetch("https://Eminence5070.github.io/")
       .then((response) => response.text())
       .then((html) => {
         const iframe = document.createElement("iframe");
-        iframe.style.display = "none";
-
+        iframe.classList.add("hidden");
         document.body.appendChild(iframe);
 
         const iframeDoc = iframe.contentWindow.document;
-
         iframeDoc.open();
         iframeDoc.write(html);
         iframeDoc.close();
 
         iframe.onload = () => {
-          document.documentElement.innerHTML =
-            iframeDoc.documentElement.innerHTML;
-
+          document.documentElement.innerHTML = iframeDoc.documentElement.innerHTML;
           setTimeout(() => {
             if (iframe && iframe.parentNode) {
               iframe.parentNode.removeChild(iframe);
             }
           }, 0);
-
           init();
         };
       })
       .catch((error) => console.error("Error loading home page:", error));
   });
 
-  const homeIcon = document.createElement("i");
-  homeIcon.classList.add("fa", "fa-home");
-  homeIcon.style.color = "rgb(255, 255, 255, 0.65)";
-
-  const importButton = document.createElement("button");
-  importButton.style.backgroundColor = "transparent";
-  importButton.style.border = "none";
-  importButton.setAttribute("data-tooltip", "Import data");
-  importButton.style.cursor = "pointer";
-  importButton.style.padding = "8px";
-  importButton.addEventListener("click", () => {
+  // Import button
+  const importButton = createButton("Import data", "fa-arrow-up-from-bracket", () => {
     (function importBrowserData() {
       const input = document.createElement("input");
       input.type = "file";
       input.accept = ".vtxdat";
-      input.style.position = "fixed";
-      input.style.top = "10px";
-      input.style.right = "10px";
-      input.style.zIndex = 1000;
+      input.classList.add("file-input");
       input.title = "Select browserData.json to import";
       input.click();
       input.addEventListener("change", function (event) {
@@ -181,13 +145,8 @@ export function loadPage(url, title) {
     })();
   });
 
-  const exportButton = document.createElement("button");
-  exportButton.style.backgroundColor = "transparent";
-  exportButton.style.border = "none";
-  exportButton.setAttribute("data-tooltip", "Export data");
-  exportButton.style.cursor = "pointer";
-  exportButton.style.padding = "8px";
-  exportButton.addEventListener("click", () => {
+  // Export button
+  const exportButton = createButton("Export data", "fa-right-to-bracket", () => {
     (async function exportBrowserData() {
       function getCookies() {
         const cookies = {};
@@ -245,14 +204,13 @@ export function loadPage(url, title) {
       };
 
       const dataStr = JSON.stringify(browserData, null, 2);
-
       const blob = new Blob([dataStr], { type: "application/json" });
       const url = URL.createObjectURL(blob);
 
       const a = document.createElement("a");
       a.href = url;
       a.download = "vertex-data.vtxdat";
-      a.style.display = "none";
+      a.classList.add("hidden");
       document.body.appendChild(a);
       a.click();
 
@@ -263,49 +221,56 @@ export function loadPage(url, title) {
     })();
   });
 
-  const exportIcon = document.createElement("i");
-  exportIcon.classList.add("fa", "fa-right-to-bracket");
-  exportIcon.style.color = "rgb(255, 255, 255, 0.65)";
+  // Fullscreen button
+  const fullscreenButton = createButton("Fullscreen", "fa-expand", () => {
+    const targetIframe = document.querySelector("iframe[data-url]");
+    if (targetIframe) {
+      targetIframe.requestFullscreen().catch((err) => {
+        console.error("Fullscreen error:", err);
+      });
+    } else {
+      console.error("No valid iframe found for fullscreen");
+    }
+  });
 
-  const importIcon = document.createElement("i");
-  importIcon.classList.add("fa", "fa-arrow-up-from-bracket");
-  importIcon.style.color = "rgb(255, 255, 255, 0.65)";
+  // Reload button
+  const reloadButton = createButton("Reload Page", "fa-sync-alt", () => {
+    const targetIframe = document.querySelector("iframe[data-url]");
+    if (targetIframe) {
+      const currentUrl = targetIframe.getAttribute("data-url");
+      if (
+        currentUrl.includes("zrok") ||
+        currentUrl.includes("googleusercontent")
+      ) {
+        targetIframe.src = currentUrl;
+      } else {
+        fetch(currentUrl)
+          .then((response) => response.text())
+          .then((html) => {
+            const doc = document.implementation.createHTMLDocument("temp");
+            doc.documentElement.innerHTML = html;
+            const baseTag = doc.createElement("base");
+            baseTag.href = currentUrl;
+            doc.head.appendChild(baseTag);
 
-  const fullscreenButton = document.createElement("button");
-  fullscreenButton.style.backgroundColor = "transparent";
-  fullscreenButton.style.border = "none";
-  fullscreenButton.setAttribute("data-tooltip", "Fullscreen");
-  fullscreenButton.style.cursor = "pointer";
-  fullscreenButton.style.padding = "8px";
+            targetIframe.srcdoc =
+              doc.documentElement.innerHTML +
+              `<style>body{overflow: hidden !important;}</style>`;
 
-  const fullscreenIcon = document.createElement("i");
-  fullscreenIcon.classList.add("fa", "fa-expand");
-  fullscreenIcon.style.color = "rgb(255, 255, 255, 0.65)";
+            targetIframe.onload = () => {
+              const event = new Event("DOMContentLoaded");
+              targetIframe.contentDocument.dispatchEvent(event);
+            };
+          })
+          .catch((error) => console.error("Error reloading iframe:", error));
+      }
+    } else {
+      console.error("No valid iframe found to reload");
+    }
+  });
 
-  const reloadButton = document.createElement("button");
-  reloadButton.style.backgroundColor = "transparent";
-  reloadButton.style.border = "none";
-  reloadButton.setAttribute("data-tooltip", "Reload Page");
-  reloadButton.style.cursor = "pointer";
-  reloadButton.style.padding = "8px";
-
-  const reloadIcon = document.createElement("i");
-  reloadIcon.classList.add("fa", "fa-sync-alt");
-  reloadIcon.style.color = "rgb(255, 255, 255, 0.65)";
-
-  const codeButton = document.createElement("button");
-  codeButton.style.backgroundColor = "transparent";
-  codeButton.style.border = "none";
-  codeButton.setAttribute("data-tooltip", "Execute");
-  codeButton.style.cursor = "pointer";
-  codeButton.style.padding = "8px";
-
-  const codeIcon = document.createElement("i");
-  codeIcon.classList.add("fa", "fa-code");
-  codeIcon.style.color = "rgb(255, 255, 255, 0.65)";
-  codeButton.appendChild(codeIcon);
-
-  codeButton.addEventListener("click", () => {
+  // Code button
+  const codeButton = createButton("Execute", "fa-code", () => {
     const userChoice = prompt(
       "Choose an option:\n" +
         "1. Upload HTML file\n" +
@@ -384,6 +349,21 @@ export function loadPage(url, title) {
     }
   });
 
+  // Helper function to create buttons with icons
+  function createButton(tooltipText, iconClass, clickHandler) {
+    const button = document.createElement("button");
+    button.classList.add("icon-button");
+    button.setAttribute("data-tooltip", tooltipText);
+    button.addEventListener("click", clickHandler);
+
+    const icon = document.createElement("i");
+    icon.classList.add("fa", iconClass, "icon");
+    button.appendChild(icon);
+
+    return button;
+  }
+
+  // Add all buttons to the container
   buttonContainer.appendChild(importButton);
   buttonContainer.appendChild(exportButton);
   buttonContainer.appendChild(homeButton);
@@ -391,61 +371,13 @@ export function loadPage(url, title) {
   buttonContainer.appendChild(reloadButton);
   buttonContainer.appendChild(codeButton);
 
-  importButton.appendChild(importIcon);
-  exportButton.appendChild(exportIcon);
-  homeButton.appendChild(homeIcon);
-  fullscreenButton.appendChild(fullscreenIcon);
-  reloadButton.appendChild(reloadIcon);
-
+  // Assemble the topBar
   topBar.appendChild(pageTitle);
   topBar.appendChild(buttonContainer);
+  container.appendChild(topBar);
 
-  const iframe = document.createElement("iframe");
-  reloadButton.addEventListener("click", () => {
-    const targetIframe = document.querySelector("iframe[data-url]");
-    if (targetIframe) {
-      const currentUrl = targetIframe.getAttribute("data-url");
-      if (
-        currentUrl.includes("zrok") ||
-        currentUrl.includes("googleusercontent")
-      ) {
-        targetIframe.src = currentUrl;
-      } else {
-        fetch(currentUrl)
-          .then((response) => response.text())
-          .then((html) => {
-            const doc = document.implementation.createHTMLDocument("temp");
-            doc.documentElement.innerHTML = html;
-            const baseTag = doc.createElement("base");
-            baseTag.href = currentUrl;
-            doc.head.appendChild(baseTag);
-
-            targetIframe.srcdoc =
-              doc.documentElement.innerHTML +
-              `<style>body{overflow: hidden !important;}</style>`;
-
-            targetIframe.onload = () => {
-              const event = new Event("DOMContentLoaded");
-              targetIframe.contentDocument.dispatchEvent(event);
-            };
-          })
-          .catch((error) => console.error("Error reloading iframe:", error));
-      }
-    } else {
-      console.error("No valid iframe found to reload");
-    }
-  });
-
-  fullscreenButton.addEventListener("click", () => {
-    const targetIframe = document.querySelector("iframe[data-url]");
-    if (targetIframe) {
-      targetIframe.requestFullscreen().catch((err) => {
-        console.error("Fullscreen error:", err);
-      });
-    } else {
-      console.error("No valid iframe found for fullscreen");
-    }
-  });
+  // Create and setup iframe
+  let iframe;
   if (!url.includes("zrok") || url.includes("googleusercontent")) {
     fetch(url)
       .then((response) => response.text())
@@ -457,14 +389,14 @@ export function loadPage(url, title) {
         baseTag.href = url;
         doc.head.appendChild(baseTag);
 
-        const iframe = document.createElement("iframe");
+        iframe = document.createElement("iframe");
         if (!url.includes("zrok") || url.includes("googleusercontent"))
           iframe.srcdoc = doc.documentElement.innerHTML;
         iframe.srcdoc += `<style>body{overflow: hidden !important;}</style><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">`;
         iframe.setAttribute("data-url", url);
-        iframe.style =
-          "left: 1%;width: 98%;height: 91%;border: none;z-index: 9999;border-radius: 8px;position: absolute;";
+        iframe.classList.add("content-iframe");
         container.appendChild(iframe);
+        
         iframe.onload = () => {
           let event = new Event("DOMContentLoaded");
           iframe.contentDocument.dispatchEvent(event);
@@ -475,44 +407,32 @@ export function loadPage(url, title) {
           ) {
             unityCanvas.style.width = "100%";
             unityCanvas.style.height = "100%";
-
             unityCanvas.style.maxWidth = "1920px";
             unityCanvas.style.maxHeight = "1080px";
-
             unityCanvas.width = Math.min(iframe.offsetWidth, 1920);
             unityCanvas.height = Math.min(iframe.offsetHeight, 1080);
           }
         };
       })
-
       .catch((error) => {
         console.error(`Error loading game:`, error);
       });
   } else {
-    const doc = document.implementation.createHTMLDocument("temp");
-    doc.documentElement.innerHTML = ``;
-    const iframe = document.createElement("iframe");
+    iframe = document.createElement("iframe");
     iframe.setAttribute("data-url", url);
-    iframe.style =
-      "left: 1%;width: 98%;height: 92%;border: none;z-index: 9999;border-radius: 8px;position: absolute;top: 6%;";
+    iframe.classList.add("external-iframe");
     iframe.src = url;
     iframe.sandbox =
       "allow-scripts allow-same-origin allow-forms allow-modals allow-pointer-lock allow-presentation allow-downloads allow-top-navigation allow-top-navigation-by-user-activation";
     container.appendChild(iframe);
   }
-  iframe.width = "100%";
-  iframe.height = "100%";
-  iframe.style.marginTop = "-11px";
-  iframe.style.border = "none";
-  iframe.style.borderRadius = "8px";
 
-  container.appendChild(topBar);
-  container.appendChild(iframe);
-
+  // Clear and show the embed element
   embedElement.innerHTML = "";
-  embedElement.style.zIndex = "1";
+  embedElement.classList.add("active");
   embedElement.appendChild(container);
 
+  // Apply tooltips to all buttons
   tooltip(importButton);
   tooltip(exportButton);
   tooltip(homeButton);
@@ -523,11 +443,13 @@ export function loadPage(url, title) {
 
 export function deleteFrame(ctx) {
   const embedElement = ctx.getElementById("embed");
-  embedElement.style.zIndex = "-1";
-  ctx.getElementById("results").style.display = "grid";
-  ctx.getElementsByClassName("search-container")[0].style.display = "block";
-  ctx.getElementsByClassName("filter-btn-group")[0].style.display = "flex";
-  ctx.getElementById("pagination").style.display = "flex";
+  embedElement.classList.remove("active");
+  
+  ctx.getElementById("results").classList.remove("hidden");
+  ctx.getElementsByClassName("search-container")[0].classList.remove("hidden");
+  ctx.getElementsByClassName("filter-btn-group")[0].classList.remove("hidden");
+  ctx.getElementById("pagination").classList.remove("hidden");
+  
   if (embedElement) {
     for (const child of embedElement.children) {
       child.remove();

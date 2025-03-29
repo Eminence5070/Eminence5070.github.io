@@ -1,0 +1,45 @@
+header {
+  margin-top: -25px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+context-menu {
+  z-index: 22;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 8vw;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(24px);
+  align-items: center;
+  border-right: 2px solid #f0e9e908;
+  background-color: #4744443d;
+  justify-content: space-around;
+}
+
+context-menu a {
+  color: #fff;
+}
+
+.button-action {
+  width: 80px;
+  height: 80px;
+  margin: 48px;
+  display: block;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #fff;
+  border-radius: 30px;
+  transition: all 0.5s ease-in-out, border-radius 3s ease-in-out;
+}
+
+.button-action:hover {
+  border-radius: 100px; 
+  background-color: rgba(205, 92, 92, 0.668);
+}
