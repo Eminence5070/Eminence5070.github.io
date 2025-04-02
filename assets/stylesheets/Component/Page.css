@@ -4,7 +4,7 @@
   align-items: center;
   gap: 12px;
   margin-top: -24px;
-  margin-bottom: 72px;
+  margin-bottom: 72px !important;
   background: #ffffff0a;
   border-radius: 100px;
   padding: 10px 48px 16px 48px;
