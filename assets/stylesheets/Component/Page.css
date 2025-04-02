@@ -3,8 +3,9 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-  margin-top: 24px;
-  background: #21242536;
+  margin-top: -24px;
+  margin-bottom: 72px;
+  background: #ffffff0a;
   border-radius: 100px;
   padding: 10px 48px 16px 48px;
 }
@@ -26,11 +27,14 @@
 }
 
 #pagination button:hover,
-#pagination .active {
-  color: #EB5160;
+#pagination button:focus,
+#pagination button.active {
+  color: #eb5160;
 }
 
 #pagination button:hover::after,
+#pagination button:focus::after,
+#pagination.active,
 #pagination .active::after {
   content: "";
   position: absolute;
@@ -38,6 +42,6 @@
   bottom: -4px;
   width: 100%;
   height: 3px;
-  background-color: #EB5160;
+  background-color: #eb5160;
   border-radius: 2px;
 }

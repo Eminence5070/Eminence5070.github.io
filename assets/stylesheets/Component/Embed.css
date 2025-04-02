@@ -7,12 +7,12 @@
   }
 
 #embed iframe {
-    height: 93% !important;
+    height: 90% !important;
     border: none;
     background: transparent;
     width: 96.1%;
     margin-left: 1%;
-    height: 91.9% !important;
+    height: 90% !important;
     outline: none;
     border: none;
 }
@@ -24,12 +24,13 @@
   
   /* Main container for the page */
   .page-container {
+    margin-top: 3%;
     position: relative;
     max-width: 140%;
-    height: 105%;
-    border: 2px solid rgba(255, 255, 255, 0.15);
+    height: 95%;
+    border: 2px solid rgba(255, 255, 255, 0.033);
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(244, 234, 234, 0.109);
     box-sizing: border-box;
     padding: 0 15px 39px;
   }
@@ -80,7 +81,7 @@
   .content-iframe {
     left: 1%;
     width: 98%;
-    height: 91%;
+    height: 80%;
     border: none;
     z-index: 9999;
     border-radius: 8px;
@@ -92,7 +93,7 @@
   .external-iframe {
     left: 1%;
     width: 98%;
-    height: 92%;
+    height: 90%;
     border: none;
     z-index: 9999;
     border-radius: 8px;

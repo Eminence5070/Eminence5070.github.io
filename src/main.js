@@ -120,6 +120,7 @@ export async function init() {
       btn.textContent = i;
       if (i === currentPage) {
         btn.className = "page-btn-c";
+        btn.classList.add("active");
       }
       btn.addEventListener("click", function () {
         currentPage = i;
