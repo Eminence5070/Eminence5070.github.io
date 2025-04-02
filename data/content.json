@@ -1,5 +1,12 @@
 [
   {
+    "title": "Unblockr",
+    "icon": "icons/unblockr.png",
+    "new": "true",
+    "url": "/sus.html",
+    "category": "Apps"
+  },
+  {
     "title": "Hex Empire",
     "icon": "icons/hexempire.png",
     "new": "true",

