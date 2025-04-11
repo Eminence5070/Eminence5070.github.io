@@ -1,4 +1,6 @@
 {
   "editor.minimap.enabled": false,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "IDX.aI.enableInlineCompletion": true,
+  "IDX.aI.enableCodebaseIndexing": true
 }

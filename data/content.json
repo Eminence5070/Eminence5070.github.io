@@ -1,51 +1,32 @@
 [
   {
-    "title": "Unblockr",
-    "icon": "icons/unblockr.png",
-    "new": "true",
-    "url": "/sus.html",
-    "category": "Apps"
-  },
-  {
     "title": "Hex Empire",
     "icon": "icons/hexempire.png",
-    "new": "true",
     "url": "/games/flash.html?href=/games/flash/hexempire.swf",
     "category": "Games"
   },
   {
     "title": "Swords and Souls",
     "icon": "icons/swordsandsouls.png",
-    "new": "true",
     "url": "/games/flash.html?href=/games/flash/swordsandsouls.swf",
     "category": "Games"
   },
   {
     "title": "Vector TD",
     "icon": "icons/vectortd.png",
-    "new": "true",
     "url": "/games/flash.html?href=/games/flash/vectortd.swf",
     "category": "Games"
   },
   {
     "title": "Stick War II: Order Empire",
     "icon": "icons/stickwar2.png",
-    "new": "true",
     "url": "/games/flash.html?href=/games/flash/stickwar2.swf",
     "category": "Games"
   },
   {
     "title": "Stick War",
     "icon": "icons/stickwar.png",
-    "new": "true",
     "url": "/games/flash.html?href=/games/flash/stickwar.swf",
-    "category": "Games"
-  },
-  {
-    "title": "Kingdom Rush",
-    "icon": "icons/kingdomrush.png",
-    "new": "true",
-    "url": "/games/flash.html?href=/games/flash/kingdomrush.swf",
     "category": "Games"
   },
   {
