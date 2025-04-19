@@ -9,7 +9,7 @@
 #embed iframe {
     height: 90% !important;
     border: none;
-    background: transparent;
+    background: #fff;
     width: 96.1%;
     margin-left: 1%;
     height: 90% !important;
@@ -17,12 +17,11 @@
     border: none;
 }
 
-/* Hide elements */
 .hidden {
     display: none !important;
   }
   
-  /* Main container for the page */
+
   .page-container {
     margin-top: 3%;
     position: relative;
@@ -35,7 +34,7 @@
     padding: 0 15px 39px;
   }
   
-  /* Top bar containing title and buttons */
+
   .page-top-bar {
     display: flex;
     justify-content: space-between;
@@ -43,20 +42,19 @@
     padding: -1px 8px 8px;
   }
   
-  /* Page title styling */
   .page-title {
     margin: 12px;
     font-size: 18px;
     color: rgba(255, 255, 255, 0.65);
   }
   
-  /* Container for action buttons */
+
   .button-container {
     display: flex;
     gap: 10px;
   }
   
-  /* Common button styling */
+
   .icon-button {
     background-color: transparent;
     border: none;
@@ -64,12 +62,11 @@
     padding: 8px;
   }
   
-  /* Icon styling */
   .icon {
     color: rgba(255, 255, 255, 0.65);
   }
   
-  /* File input positioning */
+
   .file-input {
     position: fixed;
     top: 10px;
@@ -77,7 +74,7 @@
     z-index: 1000;
   }
   
-  /* Iframe for content styling */
+
   .content-iframe {
     left: 1%;
     width: 98%;
@@ -89,7 +86,6 @@
     
   }
   
-  /* External iframe with slightly different positioning */
   .external-iframe {
     left: 1%;
     width: 98%;
@@ -101,12 +97,10 @@
     top: 6%;
   }
   
-  /* Active embed element */
   #embed.active {
     z-index: 1;
   }
   
-  /* Inactive embed element */
   #embed:not(.active) {
     z-index: -1;
   }

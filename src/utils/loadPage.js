@@ -5,8 +5,12 @@ import { tooltip } from "./tooltip.js";
 export function loadPage(url, title) {
   const embedElement = document.getElementById("embed");
   document.getElementById("results").classList.add("hidden");
-  document.getElementsByClassName("search-container")[0].classList.add("hidden");
-  document.getElementsByClassName("filter-btn-group")[0].classList.add("hidden");
+  document
+    .getElementsByClassName("search-container")[0]
+    .classList.add("hidden");
+  document
+    .getElementsByClassName("filter-btn-group")[0]
+    .classList.add("hidden");
   document.getElementById("pagination").classList.add("hidden");
 
   const container = document.createElement("div");
@@ -37,7 +41,8 @@ export function loadPage(url, title) {
         iframeDoc.close();
 
         iframe.onload = () => {
-          document.documentElement.innerHTML = iframeDoc.documentElement.innerHTML;
+          document.documentElement.innerHTML =
+            iframeDoc.documentElement.innerHTML;
           setTimeout(() => {
             if (iframe && iframe.parentNode) {
               iframe.parentNode.removeChild(iframe);
@@ -50,176 +55,189 @@ export function loadPage(url, title) {
   });
 
   // Import button
-  const importButton = createButton("Import data", "fa-arrow-up-from-bracket", () => {
-    (function importBrowserData() {
-      const input = document.createElement("input");
-      input.type = "file";
-      input.accept = ".vtxdat";
-      input.classList.add("file-input");
-      input.title = "Select browserData.json to import";
-      input.click();
-      input.addEventListener("change", function (event) {
-        const file = event.target.files[0];
-        if (!file) return;
-        const reader = new FileReader();
-        reader.onload = async function (e) {
-          let data;
-          try {
-            data = JSON.parse(e.target.result);
-          } catch (error) {
-            console.error("Invalid JSON file", error);
-            return;
-          }
-          if (data.cookies && typeof data.cookies === "object") {
-            Object.keys(data.cookies).forEach((key) => {
-              document.cookie = `${key}=${data.cookies[key]}; path=/`;
-            });
-          }
-          if (data.localStorage && typeof data.localStorage === "object") {
-            Object.keys(data.localStorage).forEach((key) => {
-              localStorage.setItem(key, data.localStorage[key]);
-            });
-          }
-          if (data.sessionStorage && typeof data.sessionStorage === "object") {
-            Object.keys(data.sessionStorage).forEach((key) => {
-              sessionStorage.setItem(key, data.sessionStorage[key]);
-            });
-          }
-          async function importIndexedDB(dbData) {
-            for (const dbName in dbData) {
-              const storesData = dbData[dbName];
-              const storeNames = Object.keys(storesData);
-              const openRequest = indexedDB.open(dbName);
-              openRequest.onupgradeneeded = function (e) {
-                const db = e.target.result;
-                storeNames.forEach((storeName) => {
-                  if (!db.objectStoreNames.contains(storeName)) {
-                    db.createObjectStore(storeName, { autoIncrement: true });
-                  }
-                });
-              };
-              openRequest.onsuccess = function (e) {
-                const db = e.target.result;
-                const transaction = db.transaction(storeNames, "readwrite");
-                storeNames.forEach((storeName) => {
-                  if (db.objectStoreNames.contains(storeName)) {
-                    const store = transaction.objectStore(storeName);
-                    const records = storesData[storeName];
-                    records.forEach((record, idx) => {
-                      if (store.keyPath === null) {
-                        store.add(record, idx).catch((err) => {
-                          console.error(
-                            `Error adding record to store ${storeName} in ${dbName}:`,
-                            err
-                          );
-                        });
-                      } else {
-                        store.add(record).catch((err) => {
-                          console.error(
-                            `Error adding record to store ${storeName} in ${dbName}:`,
-                            err
-                          );
-                        });
-                      }
-                    });
-                  }
-                });
-                transaction.oncomplete = function () {
-                  db.close();
-                };
-              };
-              openRequest.onerror = function (e) {
-                console.error(
-                  `Error opening IndexedDB database ${dbName}:`,
-                  e.target.error
-                );
-              };
+  const importButton = createButton(
+    "Import data",
+    "fa-arrow-up-from-bracket",
+    () => {
+      (function importBrowserData() {
+        const input = document.createElement("input");
+        input.type = "file";
+        input.accept = ".vtxdat";
+        input.classList.add("file-input");
+        input.title = "Select browserData.json to import";
+        input.click();
+        input.addEventListener("change", function (event) {
+          const file = event.target.files[0];
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = async function (e) {
+            let data;
+            try {
+              data = JSON.parse(e.target.result);
+            } catch (error) {
+              console.error("Invalid JSON file", error);
+              return;
             }
-          }
-          if (data.indexedDB && typeof data.indexedDB === "object") {
-            await importIndexedDB(data.indexedDB);
-          }
-        };
-        reader.readAsText(file);
-      });
-    })();
-  });
+            if (data.cookies && typeof data.cookies === "object") {
+              Object.keys(data.cookies).forEach((key) => {
+                document.cookie = `${key}=${data.cookies[key]}; path=/`;
+              });
+            }
+            if (data.localStorage && typeof data.localStorage === "object") {
+              Object.keys(data.localStorage).forEach((key) => {
+                localStorage.setItem(key, data.localStorage[key]);
+              });
+            }
+            if (
+              data.sessionStorage &&
+              typeof data.sessionStorage === "object"
+            ) {
+              Object.keys(data.sessionStorage).forEach((key) => {
+                sessionStorage.setItem(key, data.sessionStorage[key]);
+              });
+            }
+            async function importIndexedDB(dbData) {
+              for (const dbName in dbData) {
+                const storesData = dbData[dbName];
+                const storeNames = Object.keys(storesData);
+                const openRequest = indexedDB.open(dbName);
+                openRequest.onupgradeneeded = function (e) {
+                  const db = e.target.result;
+                  storeNames.forEach((storeName) => {
+                    if (!db.objectStoreNames.contains(storeName)) {
+                      db.createObjectStore(storeName, { autoIncrement: true });
+                    }
+                  });
+                };
+                openRequest.onsuccess = function (e) {
+                  const db = e.target.result;
+                  const transaction = db.transaction(storeNames, "readwrite");
+                  storeNames.forEach((storeName) => {
+                    if (db.objectStoreNames.contains(storeName)) {
+                      const store = transaction.objectStore(storeName);
+                      const records = storesData[storeName];
+                      records.forEach((record, idx) => {
+                        if (store.keyPath === null) {
+                          store.add(record, idx).catch((err) => {
+                            console.error(
+                              `Error adding record to store ${storeName} in ${dbName}:`,
+                              err
+                            );
+                          });
+                        } else {
+                          store.add(record).catch((err) => {
+                            console.error(
+                              `Error adding record to store ${storeName} in ${dbName}:`,
+                              err
+                            );
+                          });
+                        }
+                      });
+                    }
+                  });
+                  transaction.oncomplete = function () {
+                    db.close();
+                  };
+                };
+                openRequest.onerror = function (e) {
+                  console.error(
+                    `Error opening IndexedDB database ${dbName}:`,
+                    e.target.error
+                  );
+                };
+              }
+            }
+            if (data.indexedDB && typeof data.indexedDB === "object") {
+              await importIndexedDB(data.indexedDB);
+            }
+          };
+          reader.readAsText(file);
+        });
+      })();
+    }
+  );
 
   // Export button
-  const exportButton = createButton("Export data", "fa-right-to-bracket", () => {
-    (async function exportBrowserData() {
-      function getCookies() {
-        const cookies = {};
-        document.cookie.split(";").forEach((cookie) => {
-          const [key, ...v] = cookie.trim().split("=");
-          if (key) cookies[key] = v.join("=");
-        });
-        return cookies;
-      }
-
-      function getStorage(storage) {
-        const data = {};
-        for (let i = 0; i < storage.length; i++) {
-          const key = storage.key(i);
-          data[key] = storage.getItem(key);
-        }
-        return data;
-      }
-
-      async function getIndexedDBData() {
-        if (!indexedDB.databases) {
-          return "indexedDB.databases() not supported in this browser";
-        }
-        const dbList = await indexedDB.databases();
-        const result = {};
-        for (const dbInfo of dbList) {
-          const dbName = dbInfo.name;
-          if (!dbName) continue;
-          result[dbName] = {};
-          const db = await new Promise((resolve, reject) => {
-            const request = indexedDB.open(dbName);
-            request.onsuccess = () => resolve(request.result);
-            request.onerror = () => reject(request.error);
+  const exportButton = createButton(
+    "Export data",
+    "fa-right-to-bracket",
+    () => {
+      (async function exportBrowserData() {
+        function getCookies() {
+          const cookies = {};
+          document.cookie.split(";").forEach((cookie) => {
+            const [key, ...v] = cookie.trim().split("=");
+            if (key) cookies[key] = v.join("=");
           });
-          const objectStoreNames = Array.from(db.objectStoreNames);
-          for (const storeName of objectStoreNames) {
-            result[dbName][storeName] = await new Promise((resolve, reject) => {
-              const transaction = db.transaction(storeName, "readonly");
-              const store = transaction.objectStore(storeName);
-              const getAllRequest = store.getAll();
-              getAllRequest.onsuccess = () => resolve(getAllRequest.result);
-              getAllRequest.onerror = () => reject(getAllRequest.error);
-            });
-          }
-          db.close();
+          return cookies;
         }
-        return result;
-      }
 
-      const browserData = {
-        cookies: getCookies(),
-        localStorage: getStorage(localStorage),
-        sessionStorage: getStorage(sessionStorage),
-        indexedDB: await getIndexedDBData(),
-      };
+        function getStorage(storage) {
+          const data = {};
+          for (let i = 0; i < storage.length; i++) {
+            const key = storage.key(i);
+            data[key] = storage.getItem(key);
+          }
+          return data;
+        }
 
-      const dataStr = JSON.stringify(browserData, null, 2);
-      const blob = new Blob([dataStr], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
+        async function getIndexedDBData() {
+          if (!indexedDB.databases) {
+            return "indexedDB.databases() not supported in this browser";
+          }
+          const dbList = await indexedDB.databases();
+          const result = {};
+          for (const dbInfo of dbList) {
+            const dbName = dbInfo.name;
+            if (!dbName) continue;
+            result[dbName] = {};
+            const db = await new Promise((resolve, reject) => {
+              const request = indexedDB.open(dbName);
+              request.onsuccess = () => resolve(request.result);
+              request.onerror = () => reject(request.error);
+            });
+            const objectStoreNames = Array.from(db.objectStoreNames);
+            for (const storeName of objectStoreNames) {
+              result[dbName][storeName] = await new Promise(
+                (resolve, reject) => {
+                  const transaction = db.transaction(storeName, "readonly");
+                  const store = transaction.objectStore(storeName);
+                  const getAllRequest = store.getAll();
+                  getAllRequest.onsuccess = () => resolve(getAllRequest.result);
+                  getAllRequest.onerror = () => reject(getAllRequest.error);
+                }
+              );
+            }
+            db.close();
+          }
+          return result;
+        }
 
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "vertex-data.vtxdat";
-      a.classList.add("hidden");
-      document.body.appendChild(a);
-      a.click();
+        const browserData = {
+          cookies: getCookies(),
+          localStorage: getStorage(localStorage),
+          sessionStorage: getStorage(sessionStorage),
+          indexedDB: await getIndexedDBData(),
+        };
 
-      URL.revokeObjectURL(url);
-      document.body.removeChild(a);
+        const dataStr = JSON.stringify(browserData, null, 2);
+        const blob = new Blob([dataStr], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
 
-      console.log("Browser data exported as browserData.json");
-    })();
-  });
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "vertex-data.vtxdat";
+        a.classList.add("hidden");
+        document.body.appendChild(a);
+        a.click();
+
+        URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+
+        console.log("Browser data exported as browserData.json");
+      })();
+    }
+  );
 
   // Fullscreen button
   const fullscreenButton = createButton("Fullscreen", "fa-expand", () => {
@@ -349,7 +367,6 @@ export function loadPage(url, title) {
     }
   });
 
-  // Helper function to create buttons with icons
   function createButton(tooltipText, iconClass, clickHandler) {
     const button = document.createElement("button");
     button.classList.add("icon-button");
@@ -363,7 +380,6 @@ export function loadPage(url, title) {
     return button;
   }
 
-  // Add all buttons to the container
   buttonContainer.appendChild(importButton);
   buttonContainer.appendChild(exportButton);
   buttonContainer.appendChild(homeButton);
@@ -371,14 +387,13 @@ export function loadPage(url, title) {
   buttonContainer.appendChild(reloadButton);
   buttonContainer.appendChild(codeButton);
 
-  // Assemble the topBar
   topBar.appendChild(pageTitle);
   topBar.appendChild(buttonContainer);
   container.appendChild(topBar);
 
-  // Create and setup iframe
+  // Create and setop iframe
   let iframe;
-  if (!url.includes("zrok") || url.includes("googleusercontent")) {
+  if (!url.includes("zrok") && !url.includes("drive.google.com")) {
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
@@ -396,7 +411,7 @@ export function loadPage(url, title) {
         iframe.setAttribute("data-url", url);
         iframe.classList.add("content-iframe");
         container.appendChild(iframe);
-        
+
         iframe.onload = () => {
           let event = new Event("DOMContentLoaded");
           iframe.contentDocument.dispatchEvent(event);
@@ -423,16 +438,14 @@ export function loadPage(url, title) {
     iframe.classList.add("external-iframe");
     iframe.src = url;
     iframe.sandbox =
-      "allow-scripts allow-same-origin allow-forms allow-modals allow-pointer-lock allow-presentation allow-downloads allow-top-navigation allow-top-navigation-by-user-activation";
+      "allow-scripts allow-popups allow-same-origin allow-forms allow-modals allow-pointer-lock allow-presentation allow-downloads allow-top-navigation allow-top-navigation-by-user-activation";
     container.appendChild(iframe);
   }
 
-  // Clear and show the embed element
   embedElement.innerHTML = "";
   embedElement.classList.add("active");
   embedElement.appendChild(container);
 
-  // Apply tooltips to all buttons
   tooltip(importButton);
   tooltip(exportButton);
   tooltip(homeButton);
@@ -444,12 +457,12 @@ export function loadPage(url, title) {
 export function deleteFrame(ctx) {
   const embedElement = ctx.getElementById("embed");
   embedElement.classList.remove("active");
-  
+
   ctx.getElementById("results").classList.remove("hidden");
   ctx.getElementsByClassName("search-container")[0].classList.remove("hidden");
   ctx.getElementsByClassName("filter-btn-group")[0].classList.remove("hidden");
   ctx.getElementById("pagination").classList.remove("hidden");
-  
+
   if (embedElement) {
     for (const child of embedElement.children) {
       child.remove();

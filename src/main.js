@@ -1,5 +1,9 @@
 import { Utils } from "./utils.js";
 
+document.getElementById("movies").addEventListener("click", () => {
+  Utils.loadPage('https://drive.google.com/u/1/embeddedfolderview?id=1SBDC5OvQv9mF90mz8JKJq7JPUoD3qo1w&resourcekey=RESOURCE-KEY&pli=1#', 'Movies')
+})
+
 export async function init() {
   let currentPage = 1;
   let itemsPerPage = Number(localStorage.getItem("items_per_page")) || 16;
