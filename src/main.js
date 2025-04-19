@@ -133,6 +133,7 @@ export async function init() {
       pagination.appendChild(btn);
     }
   }
+  alert('btw theres gonna be a massive water gun fight on the last day of school! all day!')
 }
 
 init();
